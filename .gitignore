@@ -3,6 +3,7 @@
 *.yml
 .sass-cache/
 *.css.map
+public/stylesheets/all*
 
 # OS generated files #
 ######################
