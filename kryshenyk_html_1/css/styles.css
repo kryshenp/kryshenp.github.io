@@ -56,6 +56,7 @@ a {
 .wrapper {
   color: #3b3b3b;
   margin: 0 auto;
+  padding-bottom: 50px;
   width: 500px;
 }
 
