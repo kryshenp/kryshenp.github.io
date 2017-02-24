@@ -8,15 +8,50 @@ body {
   height: 100%;
 }
 
+li {
+  box-sizing: border-box;
+  list-style:none;
+  width: 140px;
+  height: 40px;
+  text-align:center;
+  float: left;
+  color: white;
+  -background-color: green;
+}
+
+li:hover {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  background-color: blue;
+}
+
+.first-item:hover {
+  border-left: none;
+}
+
 .wrapper {
   width: 1060px;
   margin: 0 auto;
   background-color: #fbfbfb;
   box-shadow: -4px 0 4px -4px rgba(1, 1, 1, 0.3), 4px 0 4px -4px rgba(1, 1, 1, 0.3);
-  background-color: green;
+
 }
 
 .wrapper-inner {
-  margin: 50px 46px 46px 60px;
+  margin: 0px 46px 46px 60px;
+  padding-top: 50px;
+}
+
+.menu {
+  margin-top: 40px;
   background-color: yellow;
+  height: 40px;
+  background: rgba(89,89,89,1);
+  background: -moz-linear-gradient(left, rgba(89,89,89,1), rgba(19,19,19,1));
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(89,89,89,1)), color-stop(100%, rgba(19,19,19,1)));
+  background: -webkit-linear-gradient(left, rgba(89,89,89,1), rgba(19,19,19,1));
+  background: -o-linear-gradient(left, rgba(89,89,89,1), rgba(19,19,19,1));
+  background: -ms-linear-gradient(left, rgba(89,89,89,1), rgba(19,19,19,1));
+  background: linear-gradient(rgba(94,94,94,1), rgba(67,67,67,1));
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#595959', endColorstr='#131313', GradientType=1 );
 }
