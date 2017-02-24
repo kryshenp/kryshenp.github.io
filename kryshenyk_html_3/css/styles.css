@@ -13,4 +13,10 @@ body {
   margin: 0 auto;
   background-color: #fbfbfb;
   box-shadow: -4px 0 4px -4px rgba(1, 1, 1, 0.3), 4px 0 4px -4px rgba(1, 1, 1, 0.3);
+  background-color: green;
+}
+
+.wrapper-inner {
+  margin: 50px 46px 46px 60px;
+  background-color: yellow;
 }
