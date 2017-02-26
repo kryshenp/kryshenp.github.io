@@ -27,10 +27,6 @@ h1 a {
   font-weight: lighter;
 }
 
-nav {
-  display: block;
-}
-
 nav ul {
   background: linear-gradient(rgba(94, 94, 94, 1), rgba(67, 67, 67, 1));
   height: 40px;
@@ -40,7 +36,6 @@ nav ul {
 nav li {
   border-left: 1px solid rgba(0, 0, 0, 0);
   border-right: 1px solid rgba(0, 0, 0, 0);
-  display: inline;
   float: left;
 }
 
@@ -55,11 +50,12 @@ nav .first-item:hover {
   border-left: 1px solid transparent;
 }
 
-nav li a {
+nav a {
   color: #fff;
   font-size: 11px;
-  padding: 0 42px;
+  padding: 12px 42px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+  display: block;
 }
 
 aside {
@@ -118,6 +114,10 @@ footer a {
   padding: 0 70px 0 25px;
 }
 
+footer a:last-child {
+  padding-right: 0;
+}
+
 footer a:hover {
   text-decoration: underline;
 }
@@ -158,32 +158,14 @@ footer .copyright {
   margin: 0 0 85px 50px;
 }
 
-/* few elements display fix for Firefox */
+/* for Firefox only */
 @-moz-document url-prefix() {
-  nav li {
-    padding: 14px 0;
-  }
-
-  nav li:hover {
-    padding: 14px 0;
-  }
-
-  footer ul {
-    padding-top: 15px;
-  }
-
-  footer .copyright {
-    padding-top: 15px;
+  nav a {
+    padding: 14px 42px;
   }
 }
 
-/* few elements display fix for Safari*/
-@media screen and (-webkit-min-device-pixel-ratio:0){
-  nav li {
-    padding: 12.5px 0;
-  }
-
-  nav li:hover {
-    padding: 12.5px 0;
-  }
+/* for Safari only */
+_::-webkit-:host:not(:root:root), nav a {
+  padding: 11px 42px;
 }
