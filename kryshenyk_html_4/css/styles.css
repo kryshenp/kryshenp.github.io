@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Tahoma', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  background-image: url("../img/background.jpg");
+}
+
+header {
+  background-color: #fff;
+  height: 175px;
+  color: #128aa7;
+}
+
+nav {
+  height: 28px;
+  background: linear-gradient(rgba(55, 55, 55, 1), rgba(48, 48, 48, 1));
+  border-bottom: 1px solid #000;
+}
+
+footer {
+  height: 31px;
+  text-align: center;
+  color: #fff;
+}
+
+footer p {
+  padding: 8px 0 11px 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  margin: 0 130px 0 150px;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .5);
+}
+
+.above-the-fold {
+  height: 237px;
+  background-image: url("../img/above-the-fold.jpg");
+  background-repeat: no-repeat;
+  border-top: 1px solid #128aa7;
+  border-bottom: 1px solid #128aa7;
+}
+
+.main-wrapper {
+  height: 546px;
+  background-color: white;
+}
+
+.logo {
+  float: left;
+  background-image: url("../img/logo.jpg");
+  height: inherit;
+  background-repeat: no-repeat;
+  margin: 10px 0 0 28px;
+  width: 283px;
+}
+
+.logo p {
+  padding: 100px 0 0 70px;
+}
+
+.header-right {
+  float: right;
+  margin:11px 33px 9px 0;
+}
+
+.contacts {
+  float: right;
+  background-color: green;
+  width: 125px;
+}
+
+.countries {
+  background-color: blue;
+  width: 100px;
+}
