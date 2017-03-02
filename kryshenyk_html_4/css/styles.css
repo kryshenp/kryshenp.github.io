@@ -68,16 +68,24 @@ ul {
 
 .header-right {
   float: right;
-  margin:11px 33px 9px 0;
+  margin: 10px 30px 0px 0;
+  width: 390px;
 }
 
 .contacts {
-  float: right;
-  background-color: green;
   width: 125px;
+  margin-left: 200px;
+  margin-bottom: 35px;
 }
 
 .countries {
-  background-color: blue;
-  width: 100px;
+  float: right;
+}
+
+.countries li {
+  float: left;
+  text-align: center;
+  margin-left: 8px;
+  width: 53px;
+  font-size: 10px;
 }
