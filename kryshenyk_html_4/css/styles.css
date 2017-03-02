@@ -15,16 +15,11 @@ header {
   color: #128aa7;
 }
 
-nav {
-  height: 28px;
-  background: linear-gradient(rgba(55, 55, 55, 1), rgba(48, 48, 48, 1));
-  border-bottom: 1px solid #000;
-}
-
 footer {
   height: 31px;
   text-align: center;
   color: #fff;
+  min-width: 1041px;
 }
 
 footer p {
@@ -38,6 +33,7 @@ ul {
 .wrapper {
   margin: 0 130px 0 150px;
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .5);
+  min-width: 881px;
 }
 
 .above-the-fold {
@@ -46,11 +42,12 @@ ul {
   background-repeat: no-repeat;
   border-top: 1px solid #128aa7;
   border-bottom: 1px solid #128aa7;
+  background-size: cover;
 }
 
 .main-wrapper {
   height: 546px;
-  background-color: white;
+  -background-color: red;
 }
 
 .logo {
@@ -62,13 +59,15 @@ ul {
   width: 283px;
 }
 
-.logo p {
+.logo a {
+  position: absolute;
   padding: 100px 0 0 70px;
+  text-decoration: none;
 }
 
 .header-right {
   float: right;
-  margin: 10px 30px 0px 0;
+  margin: 10px 30px 0px;
   width: 390px;
 }
 
@@ -88,4 +87,48 @@ ul {
   margin-left: 8px;
   width: 53px;
   font-size: 10px;
+}
+
+.expanding::after {
+  content: url('../img/down-triangle.png');
+  margin-left: 7px;
+}
+
+nav {
+  position: relative;
+  height: 28px;
+  background: linear-gradient(rgba(55, 55, 55, 1), rgba(48, 48, 48, 1));
+  border-bottom: 1px solid #000;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,.5);
+}
+
+nav ul {
+  margin-left: 50px;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav li a {
+  color: #fff;
+  font-size: 14px;
+  padding: 5px 33px 7px 15px;
+  text-decoration:none;
+  display: block;
+}
+
+nav li ul {
+  background-color: #303030;
+  position: absolute;
+  margin-left: 0;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .75);
+}
+
+nav li li {
+  display: none;
+}
+
+nav li:hover li {
+  display: block;
 }
