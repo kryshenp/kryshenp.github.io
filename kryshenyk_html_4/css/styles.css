@@ -93,6 +93,7 @@ nav li:hover li {
 }
 
 .logo a {
+  color: #128aa7;
   padding: 100px 0 0 70px;
   position: absolute;
   text-decoration: none;
@@ -121,7 +122,10 @@ nav li:hover li {
   margin-left: 8px;
   text-align: center;
   width: 53px;
+}
 
+.countries a {
+  color: #128aa7;
 }
 
 .wrapper {
