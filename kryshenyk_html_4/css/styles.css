@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('../img/background.jpg');
+  font-family: 'Tahoma', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+
+header {
+  background-color: #fff;
+  color: #128aa7;
+  height: 175px;
+}
+
+footer {
+  color: #fff;
+  height: 31px;
+  min-width: 1200px;
+  text-align: center;
+}
+
+footer p {
+  padding: 8px 0 11px;
+}
+
+h2 {
+  color: #424c43;
+  font-size: 18px;
+  font-weight: normal;
+  padding: 8px 0;
+  text-align: center;
+}
+
+h5 {
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+nav {
+  background: linear-gradient(rgba(55, 55, 55, 1), rgba(48, 48, 48, 1));
+  border-bottom: 1px solid #000;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
+  height: 28px;
+  position: relative;
+}
+
+nav ul {
+  margin-left: 50px;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav li a {
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  padding: 5px 33px 7px 15px;
+  text-decoration: none;
+}
+
+nav li ul {
+  background-color: #303030;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .75);
+  margin-left: 0;
+  position: absolute;
+  width: 150px;
+}
+
+nav li li {
+  display: none;
+}
+
+nav li:hover li {
+  display: block;
+}
+
+.logo {
+  background-image: url('../img/logo.jpg');
+  background-repeat: no-repeat;
+  float: left;
+  height: inherit;
+  margin: 10px 0 0 28px;
+  width: 283px;
+}
+
+.logo a {
+  padding: 100px 0 0 70px;
+  position: absolute;
+  text-decoration: none;
+}
+
+.header-right {
+  float: right;
+  margin: 10px 30px 0;
+  width: 390px;
+}
+
+.contacts {
+  float: right;
+  line-height: 17px;
+  margin: 0 0 15px 200px;
+  width: 125px;
+}
+
+.countries {
+  float: right;
+}
+
+.countries li {
+  float: left;
+  font-size: 10px;
+  margin-left: 8px;
+  text-align: center;
+  width: 53px;
+
+}
+
+.wrapper {
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .5);
+  margin: 0 130px 0 150px;
+  min-width: 917px;
+}
+
+.above-the-fold {
+  background-image: url('../img/above-the-fold.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 1px solid #128aa7;
+  border-top: 1px solid #128aa7;
+  height: 237px;
+}
+
+.main-wrapper {
+  background-color: #edeef0;
+  height: 546px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.main-wrapper a {
+  font-size: 14px;
+  line-height: 24px;
+  padding-left: 15px;
+  text-decoration: none;
+}
+
+.expanding::after {
+  content: url('../img/down-triangle.png');
+  margin-left: 7px;
+}
+
+.left-column {
+  border-left: 1px solid #c7cacf;
+  border-right: 1px solid #c7cacf;
+  float: left;
+  margin-bottom: -20000px;
+  padding-bottom: 20000px;
+  width: 21.8%;
+}
+
+.main-content {
+  background-color: #fff;
+  float: left;
+  margin-bottom: -20000px;
+  min-height: 1px;
+  padding-bottom: 20000px;
+  width: calc(57.4% - 4px);
+}
+
+.right-column {
+  border-left: 1px solid #c7cacf;
+  border-right: 1px solid #c7cacf;
+  float: left;
+  margin-bottom: -20000px;
+  padding-bottom: 20000px;
+  width: 20.8%;
+}
+
+.right-column a {
+  color: #424c43;
+}
+
+.left-column ul {
+  border-bottom: 1px solid #c7cacf;
+}
+
+.left-column a {
+  color: #424c43;
+  display: block;
+
+}
+
+.second-section {
+  padding-bottom: 185px;
+}
