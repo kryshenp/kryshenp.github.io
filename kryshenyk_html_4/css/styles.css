@@ -90,13 +90,13 @@ nav li:hover li {
   height: inherit;
   margin: 10px 0 0 28px;
   width: 283px;
+  color: #128aa7;
+  text-decoration: none;
 }
 
-.logo a {
-  color: #128aa7;
+.logo p {
   padding: 100px 0 0 70px;
   position: absolute;
-  text-decoration: none;
 }
 
 .header-right {
