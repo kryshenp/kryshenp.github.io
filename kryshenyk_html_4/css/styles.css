@@ -12,7 +12,17 @@ body {
 header {
   background-color: #fff;
   color: #128aa7;
-  height: 175px;
+  -height: 175px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  -padding-bottom: 20px;
+}
+
+header::after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 footer {
@@ -32,11 +42,6 @@ h2 {
   font-weight: normal;
   padding: 8px 0;
   text-align: center;
-}
-
-h5 {
-  font-size: 12px;
-  padding-bottom: 10px;
 }
 
 ul {
@@ -87,41 +92,53 @@ nav li:hover li {
   background-image: url('../img/logo.jpg');
   background-repeat: no-repeat;
   float: left;
-  height: inherit;
-  margin: 10px 0 0 28px;
+  height: 164px;
   width: 283px;
   color: #128aa7;
   text-decoration: none;
 }
 
 .logo p {
-  padding: 100px 0 0 70px;
-  position: absolute;
+  margin: 100px 0 0 70px;
 }
 
+/*
 .header-right {
   float: right;
-  margin: 10px 30px 0;
+  margin-top: 10px;
   width: 390px;
 }
+*/
 
 .contacts {
   float: right;
   line-height: 17px;
-  margin: 0 0 15px 200px;
-  width: 125px;
+  -margin: 0 0 15px 200px;
+  -width: 125px;
+  height: 100px;
+}
+
+.contacts h2 {
+    text-align: left;
+    color: #128aa7;
+    font-size: 12px;
+    font-weight: bold;
+    -padding-bottom: 10px;
 }
 
 .countries {
   float: right;
+  height: 40px;
+  clear: right;
 }
 
 .countries li {
-  float: left;
+  -float: left;
   font-size: 10px;
   margin-left: 8px;
   text-align: center;
   width: 53px;
+  background-image: url('../img/india-icon.jpg');
 }
 
 .countries a {
