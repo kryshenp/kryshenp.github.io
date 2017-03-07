@@ -4,9 +4,15 @@
 }
 
 body {
-  background-image: url('../img/background.jpg');
+  -background-image: url('../img/background.jpg');
   font-family: 'Tahoma', Helvetica, Arial, sans-serif;
   font-size: 12px;
+  background: #138aa8; /* Old browsers */
+background: -moz-linear-gradient(top, #138aa8 0%, #138aa8 2%, #118ba3 2%, #1688ac 2%, #108baa 3%, #138aa2 3%, #5deeff 3%, #13cee1 3%, #12cce5 3%, #11cee1 3%, #14cee3 3%, #29d3e4 5%, #31d4e7 5%, #33d5e4 6%, #4ad9e9 7%, #4edae9 7%, #80e5ef 10%, #8de7f0 10%, #cdf4f9 13%, #cdf5f7 13%, #daf8fa 14%, #dcf8fb 14%, #e4f9fc 15%, #eefcfd 17.5%, #f2fcfe 17.5%, #f8fefe 17.5%, #fbfcff 17.5%, #fafffc 17.5%, #feffff 17.5%, #fbffff 17.5%, #fffdfa 17.5%, #fffeff 17.5%, #3fc7d3 17.5%, #41c5d2 18%, #39bcce 20%, #30b3c7 23%, #23a5bd 26%, #23a5bf 26%, #1d9fb9 27%, #1d9ebb 28%, #1596b3 30%, #1091b1 32%, #0f8aac 53%, #0e82a7 63%, #0e79a3 84%, #0b76a0 88%, #0c739e 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #138aa8 0%, #138aa8 2%, #118ba3 2%, #1688ac 2%, #108baa 3%, #138aa2 3%, #5deeff 3%, #13cee1 3%, #12cce5 3%, #11cee1 3%, #14cee3 3%, #29d3e4 5%, #31d4e7 5%, #33d5e4 6%, #4ad9e9 7%, #4edae9 7%, #80e5ef 10%, #8de7f0 10%, #cdf4f9 13%, #cdf5f7 13%, #daf8fa 14%, #dcf8fb 14%, #e4f9fc 15%, #eefcfd 17.5%, #f2fcfe 17.5%, #f8fefe 17.5%, #fbfcff 17.5%, #fafffc 17.5%, #feffff 17.5%, #fbffff 17.5%, #fffdfa 17.5%, #fffeff 17.5%, #3fc7d3 17.5%, #41c5d2 18%, #39bcce 20%, #30b3c7 23%, #23a5bd 26%, #23a5bf 26%, #1d9fb9 27%, #1d9ebb 28%, #1596b3 30%, #1091b1 32%, #0f8aac 53%, #0e82a7 63%, #0e79a3 84%, #0b76a0 88%, #0c739e 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #138aa8 0%, #138aa8 2%, #118ba3 2%, #1688ac 2%, #108baa 3%, #138aa2 3%, #5deeff 3%, #13cee1 3%, #12cce5 3%, #11cee1 3%, #14cee3 3%, #29d3e4 5%, #31d4e7 5%, #33d5e4 6%, #4ad9e9 7%, #4edae9 7%, #80e5ef 10%, #8de7f0 10%, #cdf4f9 13%, #cdf5f7 13%, #daf8fa 14%, #dcf8fb 14%, #e4f9fc 15%, #eefcfd 17.5%, #f2fcfe 17.5%, #f8fefe 17.5%, #fbfcff 17.5%, #fafffc 17.5%, #feffff 17.5%, #fbffff 17.5%, #fffdfa 17.5%, #fffeff 17.5%, #3fc7d3 17.5%, #41c5d2 18%, #39bcce 20%, #30b3c7 23%, #23a5bd 26%, #23a5bf 26%, #1d9fb9 27%, #1d9ebb 28%, #1596b3 30%, #1091b1 32%, #0f8aac 53%, #0e82a7 63%, #0e79a3 84%, #0b76a0 88%, #0c739e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#138aa8', endColorstr='#0c739e',GradientType=0 ); /* IE6-9 */
+background-repeat: repeat-x;
 }
 
 header {
@@ -115,7 +121,7 @@ nav li:hover li {
   line-height: 17px;
   -margin: 0 0 15px 200px;
   -width: 125px;
-  height: 100px;
+  height: 90px;
 }
 
 .contacts h2 {
@@ -133,16 +139,49 @@ nav li:hover li {
 }
 
 .countries li {
-  -float: left;
+  float: left;
   font-size: 10px;
-  margin-left: 8px;
   text-align: center;
-  width: 53px;
-  background-image: url('../img/india-icon.jpg');
+  width: 60px;
+  background-repeat: no-repeat;
+  height: 60px;
 }
 
 .countries a {
   color: #128aa7;
+}
+
+.countries i {
+  display: inline-block;
+  content: '';
+  height: 50px;
+  width: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.india {
+  background-image: url('../img/india-icon.png');
+}
+
+.nepal {
+  background-image: url('../img/nepal-icon.png');
+}
+
+.tibet {
+  background-image: url('../img/tibet-icon.png');
+}
+
+.bhutan {
+  background-image: url('../img/bhutan-icon.png');
+}
+
+.sri_lanka {
+  background-image: url('../img/sri-lanka-icon.png');
+}
+
+.maledives {
+  background-image: url('../img/maldives-icon.png');
 }
 
 .wrapper {
@@ -162,9 +201,11 @@ nav li:hover li {
 
 .main-wrapper {
   background-color: #edeef0;
-  height: 546px;
-  overflow: hidden;
-  width: 100%;
+  -height: 546px;
+  -overflow: hidden;
+  -width: 100%;
+  display: flex;
+  -justify-content: space-between;
 }
 
 .main-wrapper a {
@@ -182,27 +223,27 @@ nav li:hover li {
 .left-column {
   border-left: 1px solid #c7cacf;
   border-right: 1px solid #c7cacf;
-  float: left;
-  margin-bottom: -20000px;
-  padding-bottom: 20000px;
+  -float: left;
+  -margin-bottom: -20000px;
+  -padding-bottom: 20000px;
   width: 21.8%;
 }
 
 .main-content {
   background-color: #fff;
-  float: left;
-  margin-bottom: -20000px;
-  min-height: 1px;
-  padding-bottom: 20000px;
+  -float: left;
+  -margin-bottom: -20000px;
+  -min-height: 1px;
+  -padding-bottom: 20000px;
   width: calc(57.4% - 4px);
 }
 
 .right-column {
   border-left: 1px solid #c7cacf;
   border-right: 1px solid #c7cacf;
-  float: left;
-  margin-bottom: -20000px;
-  padding-bottom: 20000px;
+  -float: left;
+  -margin-bottom: -20000px;
+  -padding-bottom: 20000px;
   width: 20.8%;
 }
 
