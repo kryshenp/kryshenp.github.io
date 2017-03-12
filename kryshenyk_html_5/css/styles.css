@@ -4,19 +4,19 @@
 }
 
 body {
-  background-image: url(../img/background.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
   background-attachment: fixed;
+  background-image: url('../img/background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  font-size: 14px;
   font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
   min-width: 725px;
 }
 /* Nav bar styles*/
 nav {
+  background-image: url('../img/nav-background.jpg');
   height: 36px;
-  background-image: url(../img/nav-background.jpg);
 }
 
 nav ul {
@@ -31,10 +31,10 @@ nav li {
 }
 
 nav a {
+  color: #60b5ed;
   display: inline-block;
   padding: 10px 10px 10px 12px;
   text-decoration: none;
-  color: #60b5ed;
 }
 
 .menu a:hover {
@@ -45,35 +45,16 @@ nav a {
 .login-contact {
   background: #2e7ac4;
   background: -moz-linear-gradient(top, #51b1dc 0%, #3c8fce 50%, #2e7ac4 100%);
-  background: -webkit-linear-gradient(top, #51b1dc 0%,#3c8fce 50%,#2e7ac4 100%);
-  background: linear-gradient(to bottom, #51b1dc 0%,#3c8fce 50%,#2e7ac4 100%);
-  padding: 0 11px 0 13px;
+  background: -webkit-linear-gradient(top, #51b1dc 0%, #3c8fce 50%, #2e7ac4 100%);
+  background: linear-gradient(to bottom, #51b1dc 0%, #3c8fce 50%, #2e7ac4 100%);
+  border-bottom: 1px solid #4d9ed8;
   border-left: 0 1px solid #4d9ed8;
   border-right: 1px solid #4d9ed8;
-  border-bottom: 1px solid #4d9ed8;
-}
-
-.offers a, .login-contact a {
-  color: #fff;
-}
-
-.offers a {
-  border-left: 1px solid #56a2dc;
-  padding-top: 5px;
-  padding-bottom: 0px;
-  margin-top: 3px;
-}
-
-.offers a::before {
-  content: url(../img/flag-icon.png);
-  padding-right: 10px;
-  vertical-align: -50%;
-  -webkit-filter: drop-shadow(2px 2px 2px #222);
-  filter: drop-shadow(2px 2px 2px #222);
+  padding: 0 11px 0 13px;
 }
 
 .login-contact a {
-  padding: 9px 3px 10px 3px;
+  padding: 9px 3px 10px;
   text-decoration: underline;
 }
 
@@ -81,36 +62,56 @@ nav a {
   color: #fff;
 }
 
+.offers a,
+.login-contact a {
+  color: #fff;
+}
+
+.offers a {
+  border-left: 1px solid #56a2dc;
+  margin-top: 3px;
+  padding-bottom: 0;
+  padding-top: 5px;
+}
+
+.offers a::before {
+  content: url('../img/flag-icon.png');
+  -webkit-filter: drop-shadow(2px 2px 2px #222);
+  filter: drop-shadow(2px 2px 2px #222);
+  padding-right: 10px;
+  vertical-align: -50%;
+}
+
 /* form styles */
 
 .wrapper {
-  position: absolute;
-  width: 560px;
-  height: 613px;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
   bottom: 0;
+  height: 613px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 560px;
 }
 
 .title {
-  text-align: center;
-  font-size: 24px;
-  color: #fff;
   background-color: rgba(0, 0, 0, .63);
-  margin-bottom: 2px;
+  color: #fff;
+  font-size: 24px;
   height: 62px;
+  margin-bottom: 2px;
+  text-align: center;
 }
 
 .title span {
   display: block;
-  padding: 17px 0 16px 0;
+  padding: 17px 0 16px;
 }
 
 form {
-  height: 549px;
   background-color: rgba(0, 0, 0, .63);
+  height: 549px;
   overflow: auto;
 }
 
@@ -119,42 +120,42 @@ form a {
 }
 
 .fb-btn {
-  display: flex;
-  width: 275px;
-  border-radius: 3px;
-  margin: 0 auto;
-  margin-top: 30px;
-  color: #fff;
   background: #3e5694;
   background: -moz-linear-gradient(top, #3e5694 0%, #354d89 50%, #344164 100%);
   background: -webkit-linear-gradient(top, #3e5694 0%, #354d89 50%, #344164 100%);
   background: linear-gradient(to bottom, #3e5694 0%, #354d89 50%, #344164 100%);
+  border-radius: 3px;
+  color: #fff;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 275px;
 }
 
 .fb-btn-left {
-  width: 40px;
   border-right: 1px solid #1f3d71;
   border-top: 1px solid #7389ae;
   border-top-left-radius: 3px;
+  width: 40px;
 }
 
 .fb-btn-right {
-  width: 235px;
   border-left: 1px solid #4c65a5;
   border-top: 1px solid #7389ae;
   border-top-right-radius: 3px;
+  width: 235px;
 }
 
 .fb-btn-left i {
+  font-size: 25px !important;
+  padding-bottom: 5px;
   padding-left: 12px;
   padding-top: 5px;
-  padding-bottom: 5px;
-  font-size: 25px !important;
 }
 
 .fb-btn-right span {
-  font-size: 15px;
   display: block;
+  font-size: 15px;
   padding: 8px 0 8px 30px;
 }
 
@@ -163,57 +164,59 @@ form a {
 }
 
 .separator {
-  margin: 23px 0 20px 0;
-  text-align: center;
   color: #999;
+  margin: 23px 0 20px;
+  text-align: center;
 }
 
 .line {
-  margin: 0 6px 5px 6px;
-  display: inline-block;
   background-color: #000;
-  height: 1px;
   border-top: 1px solid #666;
+  display: inline-block;
+  height: 1px;
+  margin: 0 6px 5px;
   width: 120px;
 }
 
 input {
-  margin: 0 auto;
-  display: block;
-  height: 35px;
-  width: 275px;
   background-color: #000;
-  color: #fff;
-  font-size: 14px;
-  margin-bottom: 15px;
   border-bottom: 1px solid #494a49;
-  border-top: 0;
   border-left: 0;
   border-right: 0;
-  padding-left: 20px;
+  border-top: 0;
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  height: 35px;
+  margin: 0 auto;
+  margin-bottom: 15px;
   outline: none;
+  padding-left: 20px;
+  width: 275px;
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #ccc;
+  color: #ccc;
 }
 
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #ccc;
-   opacity:  1;
+  color: #ccc;
+  opacity: 1;
 }
+
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #ccc;
-   opacity:  1;
+  color: #ccc;
+  opacity: 1;
 }
+
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:    #ccc;
+  color: #ccc;
 }
 
 input:focus {
   background-color: #1b5288;
   border-bottom: 1px solid #689bcc;
-  box-shadow: 0px 0px 7px 1px rgba(47, 123, 197, 1),  inset 0px 0px 5px 2px rgba(29, 26, 22, 0.2);
+  box-shadow: 0 0 7px 1px rgba(47, 123, 197, 1), inset 0 0 5px 2px rgba(29, 26, 22, .2);
   color: #141414;
 }
 
@@ -222,24 +225,24 @@ input:focus::-webkit-input-placeholder {
 }
 
 input:focus:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #ccc;
-   opacity:  1;
+  color: #ccc;
+  opacity: 1;
 }
 input:focus::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #ccc;
-   opacity:  1;
+  color: #ccc;
+  opacity: 1;
 }
 input:focus:-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:    #ccc;
+  color: #ccc;
 }
 
 .chbx {
-  margin-top: 14px;
+  display: inline-block;
   margin-left: 130px;
   margin-right: 5px;
-  width: 20px;
-  display: inline-block;
+  margin-top: 14px;
   vertical-align: middle;
+  width: 20px;
 }
 
 .chbx:focus {
@@ -251,22 +254,22 @@ label {
 }
 
 button {
-  color: #fff;
-  font-size: 14px;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 15px;
-  height: 35px;
-  width: 150px;
-  border-radius: 3px;
-  border-top: 1px solid #67c6e6;
+  background: linear-gradient(to bottom, rgba(80, 174, 219, 1) 0%, rgba(58, 142, 205, 1) 50%, rgba(46, 122, 196, 1) 100%);
   border-bottom: 1px solid #3686ca;
   border-left: 1px solid #489cd5;
+  border-radius: 3px;
   border-right: 1px solid #4c9dd7;
-  -webkit-box-shadow: 0px 0px 7px 1px rgba(47,123,197,1);
-  -moz-box-shadow: 0px 0px 7px 1px rgba(47,123,197,1);
-  box-shadow: 0px 0px 7px 1px rgba(47,123,197,1);
-  background: linear-gradient(to bottom, rgba(80,174,219,1) 0%, rgba(58,142,205,1) 50%, rgba(46,122,196,1) 100%);
+  border-top: 1px solid #67c6e6;
+  -moz-box-shadow: 0 0 7px 1px rgba(47, 123, 197, 1);
+  -webkit-box-shadow: 0 0 7px 1px rgba(47, 123, 197, 1);
+  box-shadow: 0 0 7px 1px rgba(47, 123, 197, 1);
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  height: 35px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  width: 150px;
 }
 
 button:hover {
@@ -278,25 +281,26 @@ button:focus {
 }
 
 .hint {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
   color: #ccc;
-  width: 300px;
+  display: block;
   font-size: 11px;
   line-height: 16px;
+  margin: 0 auto;
+  text-align: center;
+  width: 300px;
 }
 
 @media only screen and (max-height: 675px) {
   .wrapper {
-    margin-top: 80px;
     margin-bottom: 40px;
+    margin-top: 80px;
   }
 }
 
 /* for Firefox only */
 @-moz-document url-prefix() {
-  .login-contact a, nav a {
+  .login-contact a,
+  nav a {
     padding-bottom: 9px;
   }
 }
