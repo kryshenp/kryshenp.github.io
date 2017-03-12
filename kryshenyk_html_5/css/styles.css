@@ -9,4 +9,194 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  min-width: 725px;
+}
+
+nav {
+  height: 36px;
+  width: 100%;
+  background-image: url(../img/nav-background.jpg);
+}
+
+nav ul {
+  float: right;
+  list-style: none;
+  margin-right: 20px;
+}
+
+nav li {
+  float: left;
+  text-align: center;
+
+}
+
+nav a {
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 12px;
+  text-decoration: none;
+  color: #60b5ed;
+}
+
+.menu a:hover {
+  background-color: #4eabda;
+  color: #fff;
+}
+
+nav li span {
+  display: inline-block;
+}
+
+.login-contact {
+  background: #2e7ac4;
+  background: -moz-linear-gradient(top, #51b1dc 0%, #3c8fce 50%, #2e7ac4 100%);
+  background: -webkit-linear-gradient(top, #51b1dc 0%,#3c8fce 50%,#2e7ac4 100%);
+  background: linear-gradient(to bottom, #51b1dc 0%,#3c8fce 50%,#2e7ac4 100%);
+  padding-left: 13px;
+  padding-right: 11px;
+  border-left: 1px solid #4d9ed8;
+  border-right: 1px solid #4d9ed8;
+  border-bottom: 1px solid #4d9ed8;
+}
+
+.login-contact a {
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 9px;
+  text-decoration: underline;
+}
+
+
+.offers a {
+  border-left: 1px solid #56a2dc;
+  padding-top: 5px;
+  padding-bottom: 0px;
+  margin-top: 3px;
+  margin-bottom: 2px;
+}
+
+.offers a, .login-contact a {
+  color: #fff;
+}
+
+.offers a::before {
+  content: url(../img/flag-icon.png);
+  padding-right: 10px;
+  vertical-align: -50%;
+  -webkit-filter: drop-shadow(2px 2px 2px #222);
+  filter: drop-shadow(2px 2px 2px #222);
+}
+
+.login-contact span {
+  color: #fff;
+}
+
+.wrapper {
+  position: absolute;
+  width: 560px;
+  height: 613px;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.title {
+  text-align: center;
+  background-color: blue;
+  font-size: 24px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .63);
+  margin-bottom: 2px;
+  -position: relative;
+  height: 62px;
+}
+
+.title span {
+  display: block;
+  padding-top: 17px;
+  padding-bottom: 16px;
+
+}
+
+@media only screen and (max-height: 675px) {
+  .wrapper {
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
+}
+
+form {
+  height: 549px;
+  background-color: rgba(0, 0, 0, .63);
+  overflow: auto;
+}
+
+form a {
+  text-decoration: none;
+}
+
+.fb-btn {
+  display: flex;
+  width: 275px;
+  border-radius: 3px;
+  margin: 36px auto;
+  color: #fff;
+  background: #3e5694;
+  background: -moz-linear-gradient(top, #3e5694 0%, #354d89 50%, #344164 100%);
+  background: -webkit-linear-gradient(top, #3e5694 0%, #354d89 50%, #344164 100%);
+  background: linear-gradient(to bottom, #3e5694 0%, #354d89 50%, #344164 100%);
+}
+
+.fb-btn-left {
+  width: 40px;
+  border-right: 1px solid #1f3d71;
+  border-top: 1px solid #7389ae;
+  border-top-left-radius: 3px;
+}
+
+.fb-btn-right {
+  width: 235px;
+  border-left: 1px solid #4c65a5;
+  border-top: 1px solid #7389ae;
+  border-top-right-radius: 3px;
+}
+
+.fb-btn-left i {
+  padding-left: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 25px !important;
+}
+
+.fb-btn-right span {
+  font-size: 15px;
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 30px;
+}
+
+.fb-login i {
+  padding-left: 20px;
+}
+
+.separator {
+  margin-top: 33px;
+  text-align: center;
+  color: #999;
+}
+
+.line {
+  margin: 0 6px 5px 6px;
+  display: inline-block;
+  background-color: #000;
+  height: 1px;
+  border-top: 1px solid #666;
+  width: 120px;
 }
