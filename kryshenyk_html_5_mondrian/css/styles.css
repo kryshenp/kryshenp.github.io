@@ -28,7 +28,7 @@ h2 {
 }
 
 p {
-	color: white;
+	color: #fff;
 	clear: both;
 	float: right;
 	margin-right: 420px;
@@ -43,7 +43,7 @@ table {
 }
 
 td {
-  border: 10px solid black;
+  border: 10px solid #000;
 	opacity: .8;
 	background-color: #fff;
 }
