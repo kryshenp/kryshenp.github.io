@@ -48,6 +48,14 @@ td {
 	background-color: #fff;
 }
 
+.table-row {
+	height: 50px;
+}
+
+.table-row-half {
+	height: 25px;
+}
+
 .yellow {
   background-color: #fee260;
 }
