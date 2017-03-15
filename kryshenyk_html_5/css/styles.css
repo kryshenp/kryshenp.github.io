@@ -11,24 +11,30 @@ body {
   background-size: cover;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 14px;
-  min-height: 750px;
-  min-width: 725px;
+  -min-height: 750px;
+  -min-width: 725px;
 }
 /* Nav bar styles*/
 nav {
+  position: absolute;
   background-image: url('../img/nav-background.jpg');
-  height: 36px;
+  -height: 36px;
+  -float: right;
+  width: 100%;
+  min-width: 725px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 nav ul {
-  float: right;
+  -display: inline-block;
   list-style: none;
   margin-right: 20px;
 }
 
 nav li {
   float: left;
-  text-align: center;
+  -text-align: center;
 }
 
 nav a {
@@ -36,6 +42,16 @@ nav a {
   display: inline-block;
   padding: 10px 10px 10px 12px;
   text-decoration: none;
+}
+
+nav::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.wrapper-main {
+  min-width: 725px;
 }
 
 .menu a:hover {
@@ -81,19 +97,23 @@ nav a {
   filter: drop-shadow(2px 2px 2px #222);
   padding-right: 10px;
   vertical-align: -50%;
+  display: inline-block;
 }
 
 /* form styles */
 
 .wrapper {
-  bottom: 0;
-  height: 613px;
-  left: 0;
-  margin: auto;
+  height: 50%;
   position: absolute;
-  right: 0;
-  top: 0;
-  width: 560px;
+  width: 50%;
+  min-width: 560px;
+  top:50%;
+  -bottom: 0;
+  left: 50%;
+  -right: 0;
+  margin: auto;
+  transform: translate(-50%, -50%);
+
 }
 
 .title {
@@ -158,6 +178,19 @@ form a {
   display: block;
   font-size: 15px;
   padding: 8px 0 8px 30px;
+}
+
+.fb-login {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.caption {
+  display: inline;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .fb-login i {
@@ -293,10 +326,11 @@ button:focus {
 
 @media only screen and (max-height: 750px) {
   .wrapper {
-    margin-top:80px;
+
+    transform: translate(-50%, calc(-50% + 20px));
+    -margin-top:46px;
   }
 }
-
 /* for Firefox only */
 @-moz-document url-prefix() {
   .login-contact a,
