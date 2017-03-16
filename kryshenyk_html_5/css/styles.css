@@ -50,10 +50,6 @@ nav::after {
   clear: both;
 }
 
-.wrapper-main {
-  min-width: 725px;
-}
-
 .menu a:hover {
   background-color: #4eabda;
   color: #fff;
@@ -103,17 +99,28 @@ nav::after {
 /* form styles */
 
 .wrapper {
+  width: 50%;
+  -min-width: 560px;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  -height: 50%;
+  -width: 50%;
+  min-width: 360px;
+  transform: translate(-50%, -50%);
+  /*
   height: 50%;
   position: absolute;
   width: 50%;
   min-width: 560px;
   top:50%;
+  -bottom: 50%;
   -bottom: 0;
   left: 50%;
   -right: 0;
   margin: auto;
   transform: translate(-50%, -50%);
-
+*/
 }
 
 .title {
@@ -324,11 +331,10 @@ button:focus {
   width: 300px;
 }
 
-@media only screen and (max-height: 750px) {
+@media only screen and (max-height: 700px) {
   .wrapper {
-
-    transform: translate(-50%, calc(-50% + 20px));
-    -margin-top:46px;
+    -transform: translate(-50%, calc(-50% + 20px));
+    -margin-top:21px;
   }
 }
 /* for Firefox only */
