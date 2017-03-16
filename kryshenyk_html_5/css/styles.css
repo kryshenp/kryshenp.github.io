@@ -11,43 +11,38 @@ body {
   background-size: cover;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 14px;
-  -min-height: 750px;
-  -min-width: 725px;
 }
 /* Nav bar styles*/
 nav {
-  position: absolute;
   background-image: url('../img/nav-background.jpg');
-  -height: 36px;
-  -float: right;
-  width: 100%;
-  min-width: 725px;
   display: flex;
   justify-content: flex-end;
+  min-width: 725px;
+  width: 100%;
 }
 
 nav ul {
-  -display: inline-block;
   list-style: none;
-  margin-right: 20px;
 }
 
 nav li {
   float: left;
-  -text-align: center;
 }
 
 nav a {
   color: #60b5ed;
   display: inline-block;
   padding: 10px 10px 10px 12px;
-  text-decoration: none;
 }
 
 nav::after {
+  clear: both;
   content: "";
   display: table;
-  clear: both;
+}
+
+a {
+  text-decoration: none;
 }
 
 .menu a:hover {
@@ -71,63 +66,47 @@ nav::after {
   text-decoration: underline;
 }
 
-.login-contact span {
-  color: #fff;
-}
-
 .offers a,
-.login-contact a {
+.login-contact a,
+.login-contact span {
   color: #fff;
 }
 
 .offers a {
   border-left: 1px solid #56a2dc;
-  margin-top: 3px;
   padding-bottom: 0;
-  padding-top: 5px;
+  padding-top: 8px;
 }
 
 .offers a::before {
   content: url('../img/flag-icon.png');
+  display: inline-block;
   -webkit-filter: drop-shadow(2px 2px 2px #222);
   filter: drop-shadow(2px 2px 2px #222);
   padding-right: 10px;
   vertical-align: -50%;
-  display: inline-block;
 }
 
 /* form styles */
 
 .wrapper {
-  width: 50%;
-  -min-width: 560px;
-  position: absolute;
-  top:50%;
   left: 50%;
-  -height: 50%;
-  -width: 50%;
   min-width: 360px;
-  transform: translate(-50%, -50%);
-  /*
-  height: 50%;
   position: absolute;
-  width: 50%;
-  min-width: 560px;
   top:50%;
-  -bottom: 50%;
-  -bottom: 0;
-  left: 50%;
-  -right: 0;
-  margin: auto;
   transform: translate(-50%, -50%);
-*/
+  width: 50%;
+}
+
+.title,
+.fb-btn-wrapper,
+form {
+  background-color: rgba(0, 0, 0, .63);
 }
 
 .title {
-  background-color: rgba(0, 0, 0, .63);
   color: #fff;
   font-size: 24px;
-  height: 62px;
   margin-bottom: 2px;
   text-align: center;
 }
@@ -137,14 +116,8 @@ nav::after {
   padding: 17px 0 16px;
 }
 
-form {
-  background-color: rgba(0, 0, 0, .63);
-  height: 549px;
-  overflow: auto;
-}
-
-form a {
-  text-decoration: none;
+.fb-btn-wrapper {
+  padding-top: 30px;
 }
 
 .fb-btn {
@@ -156,7 +129,6 @@ form a {
   color: #fff;
   display: flex;
   margin: 0 auto;
-  margin-top: 30px;
   width: 275px;
 }
 
@@ -176,9 +148,7 @@ form a {
 
 .fb-btn-left i {
   font-size: 25px !important;
-  padding-bottom: 5px;
-  padding-left: 12px;
-  padding-top: 5px;
+  padding: 5px 12px 5px;
 }
 
 .fb-btn-right span {
@@ -206,8 +176,16 @@ form a {
 
 .separator {
   color: #999;
-  margin: 23px 0 20px;
+  padding-top: 23px;
+  padding-bottom: 20px;
   text-align: center;
+}
+
+fieldset {
+  border: none;
+  display: block;
+  margin: 0 auto;
+  width:295px;
 }
 
 .line {
@@ -226,10 +204,8 @@ input {
   border-right: 0;
   border-top: 0;
   color: #fff;
-  display: block;
   font-size: 14px;
   height: 35px;
-  margin: 0 auto;
   margin-bottom: 15px;
   outline: none;
   padding-left: 20px;
@@ -279,7 +255,6 @@ input:focus:-ms-input-placeholder { /* Internet Explorer 10-11 */
 
 .chbx {
   display: inline-block;
-  margin-left: 130px;
   margin-right: 5px;
   margin-top: 14px;
   vertical-align: middle;
@@ -329,14 +304,15 @@ button:focus {
   margin: 0 auto;
   text-align: center;
   width: 300px;
+  padding-bottom: 20px;
 }
 
 @media only screen and (max-height: 700px) {
   .wrapper {
-    -transform: translate(-50%, calc(-50% + 20px));
-    -margin-top:21px;
+    margin: 30px 0;
   }
 }
+
 /* for Firefox only */
 @-moz-document url-prefix() {
   .login-contact a,
