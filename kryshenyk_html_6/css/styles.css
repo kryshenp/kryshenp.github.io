@@ -63,31 +63,36 @@ form {
   display: flex;
   height: 25px;
   margin-left: 15px;
-  margin-bottom: 2px;
+  -margin-bottom: 2px;
   border-radius: 3px;
   position: relative;
-
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.55);
+  padding-bottom: 3px;
 }
 form a {
   font-size: 11px;
-  padding-top: 4px;
+  padding-top: 6px;
   text-decoration: none;
-  margin-left: 5.5px;
+  margin-left: 2px;
   color: #fff;
 }
+
 
 fieldset::before {
   content: url(../img/user.png);
   padding-left: 6px;
   vertical-align: middle;
+  display: inline-block;
+  padding-top: 5px;
 }
 
 fieldset input {
   width: 111px;
   height: 16px;
-  margin-right: 2px;
+  -margin-right: 2px;
   padding-left: 3px;
   line-height: 16px;
+  border: 1px solid #82949c;
 }
 
 .registration {
@@ -121,6 +126,7 @@ fieldset input {
   border-radius: 10px;
   border: 1px solid #c1c8cb;
   display: flex;
+  box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.2);
 }
 
 .communication i {
@@ -158,4 +164,99 @@ fieldset input {
   height: 120px;
   position: absolute;
   margin-top: 50px;
+}
+
+nav {
+  height: 33px;
+  background: linear-gradient(to bottom, rgb(77, 86, 99) 0%, rgb(40, 44, 48) 19%, rgb(2, 2, 2) 97%, rgb(1, 1, 1) 100%);
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-top: 6px;
+  border-radius: 3px;
+  border: 1px solid #2c345a;
+  display: flex;
+  align-items: center;
+  box-shadow: 5px 5px 5px -3px rgba(0,0,0,0.5);
+}
+
+nav ul {
+  list-style-type: none;
+  margin-left: 126px;
+  vertical-align: middle;
+  display: flex;
+}
+
+nav a {
+  color: #82949c;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13.65px;
+  padding-left: 20px;
+  padding-right: 16px;
+  padding-top: 3px;
+}
+
+.second-child {
+  padding-left: 19px;
+}
+
+.third-child {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.fourth-child {
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.fifth-child {
+  padding-left: 13px;
+  padding-right: 12px;
+}
+
+nav a:hover {
+  background: linear-gradient(to bottom, rgba(37,97,123,1) 0%, rgba(9,35,59,1) 100%);
+  border-radius: 10px;
+  color: #fff;
+}
+
+.nav-right {
+  margin-left: 40px;
+}
+
+.nav-right span{
+  font-family: Arial, sans-serif;
+  text-transform: none;
+  font-size: 11px;
+  color: #82949c;
+  letter-spacing: .4px;
+}
+
+.nav-right a:hover {
+  background: none;
+}
+
+.nav-right i {
+  padding-left: -3px;
+  -padding-top: 3px;
+  -padding-right: 8px;
+  transform: scale(-1, 1);
+  font-size: 18px;
+  color: #25617b;
+}
+
+nav .price-amount {
+  padding-left: 3px;
+  font-size: 12px;
+  color: #25617b;
+}
+
+nav .basket {
+  margin-left: 8px;
+  padding-right: 9px;
+}
+
+.total {
+  padding-right: 8px;
 }
