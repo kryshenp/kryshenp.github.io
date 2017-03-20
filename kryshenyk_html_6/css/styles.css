@@ -9,7 +9,7 @@ body {
 }
 
 .wrapper {
-  background-color: orange;
+  background-color: rgba(255, 0, 0, 0.1);
   margin: 0 auto;
   height: 100vh;
   width: 1000px;
@@ -24,6 +24,8 @@ header {
   margin-right: 6px;
   -background-color: blue;
   display: flex;
+  position: relative;
+  align-items: center;
 }
 
 .phone {
@@ -57,12 +59,13 @@ header {
 }
 
 form {
-  background-color: red;
+  background: linear-gradient(to bottom, rgba(21,103,135,1) 0%, rgba(12,51,87,1) 100%);
   display: flex;
   height: 25px;
   margin-left: 15px;
   margin-bottom: 2px;
   border-radius: 3px;
+  position: relative;
 
 }
 form a {
@@ -70,10 +73,7 @@ form a {
   padding-top: 4px;
   text-decoration: none;
   margin-left: 5.5px;
-}
-
-fieldset {
-  margin-left: 0px;
+  color: #fff;
 }
 
 fieldset::before {
@@ -82,13 +82,12 @@ fieldset::before {
   vertical-align: middle;
 }
 
-input {
+fieldset input {
   width: 111px;
   height: 16px;
   margin-right: 2px;
   padding-left: 3px;
   line-height: 16px;
-
 }
 
 .registration {
@@ -112,4 +111,51 @@ input {
   text-decoration: underline;
   margin-left: 21px;
   margin-right: 10px;
+}
+
+.communication {
+  width: 76px;
+  margin-left: 17px;
+  height: 20px;
+  margin-bottom: 4px;
+  border-radius: 10px;
+  border: 1px solid #c1c8cb;
+  display: flex;
+}
+
+.communication i {
+  color: #76848a;
+  padding-left: 3px;
+  padding-right: 3px;
+  font-size: 12px;
+  -margin: 0 auto;
+  padding-top: 2px;
+}
+
+.communication .first {
+  margin-left: 6px;
+  margin-right: 3px;
+}
+
+.communication .last {
+  font-size: 10px;
+  margin-top: 1px;
+  padding-left: 8px;
+}
+
+.above-the-fold {
+  position: relative;
+  height: 237px;
+  background-color: magenta;
+  margin-left: 46px;
+  margin-right: 46px;
+  margin-top: 9px;
+  background: url(../img/above-the-fold.jpg);
+}
+
+.above-the-fold a {
+  width: 265px;
+  height: 120px;
+  position: absolute;
+  margin-top: 50px;
 }
