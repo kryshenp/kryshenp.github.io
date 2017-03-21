@@ -177,6 +177,7 @@ nav {
   display: flex;
   align-items: center;
   box-shadow: 5px 5px 5px -3px rgba(0,0,0,0.5);
+  margin-bottom: 162px;
 }
 
 nav ul {
@@ -206,7 +207,7 @@ nav a {
 }
 
 .fourth-child {
-  padding-left: 13px;
+  padding-left: 14px;
   padding-right: 13px;
 }
 
@@ -222,7 +223,7 @@ nav a:hover {
 }
 
 .nav-right {
-  margin-left: 40px;
+  margin-left: 39px;
 }
 
 .nav-right span{
@@ -259,4 +260,24 @@ nav .basket {
 
 .total {
   padding-right: 8px;
+}
+
+.main-wrapper {
+  margin-left: 44px;
+  margin-right: 46px;
+  width: 910px;
+  height: 628px;
+  background-color: gray;
+  display: flex;
+}
+
+
+aside {
+  background-color: orange;
+  width: 192px;
+}
+
+main {
+  width: 526px;
+  background-color: magenta;
 }
