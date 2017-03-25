@@ -9,9 +9,8 @@ body {
 }
 
 .wrapper {
-  border: 1px solid gray;
+  -border: 1px solid gray;
   margin: 0 auto;
-  height: 200vh;
   width: 1000px;
 }
 
@@ -265,8 +264,8 @@ nav .basket {
 .main-wrapper {
   margin-left: 44px;
   margin-right: 46px;
-  width: 910px;
-  height: 628px;
+  width: 909px;
+  height: 626px;
   -background-color: gray;
   display: flex;
 }
@@ -274,13 +273,16 @@ nav .basket {
 
 aside {
   -background-color: orange;
-  width: 192px;
+  width: 182px;
   color: #114165;
 }
 
 main {
   width: 526px;
   background-color: magenta;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 3px;
 }
 
 .aside-title {
@@ -289,8 +291,8 @@ main {
   -background-color: green;
   margin-top: 3px;
   border: 1px solid #8b979c;
-  border-radius: 15px;
-  height: 25px;
+  border-radius: 13px;
+  -height: 25px;
   width: 180px;
   margin-bottom: 12px;
 }
@@ -308,7 +310,7 @@ main {
 }
 
 .sub {
-  margin-top: 1px;
+  margin-top: 0px;
   width: 148px;
   margin-left: 2px;
   -height: 100px;
@@ -333,6 +335,7 @@ main {
   margin-left: 35px;
   width: 130px;
   list-style-type: none;
+  margin-bottom: 0px;
 }
 
 .products-list li::before {
@@ -354,4 +357,149 @@ main {
   text-decoration: underline;
   font-weight: bold;
   font-size: 13px;
+}
+
+.right {
+  margin-top: 0px;
+  margin-bottom: 14px;
+}
+
+.second {
+  margin-left: 14px;
+  width: 133px;
+}
+
+.opposite {
+  margin-bottom: 10px;
+  margin-left: 25px;
+}
+
+.opposite li {
+  font-size: 12px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+}
+
+.opposite li::before {
+  padding-right: 13px;
+  content: none;
+}
+
+.checkbox {
+  width: 5px;
+	height: 12px;
+  margin-right: 17px;
+}
+
+.brands ul{
+  height: auto;
+  width: auto;
+  -vertical-align: top;
+  margin: auto;
+  width: 676px;
+  -align-content: center;
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 18px;
+}
+
+.brands ul li {
+  list-style-type: none;
+  margin-right: 13px;
+}
+
+.brands ul .last-brand {
+  margin-right: 0px;
+}
+
+
+.toyotires {
+  content: url(../img/toyotires.png);
+}
+
+.bridgestone {
+  content: url(../img/bridgestone.png);
+}
+
+.contintnal {
+  content: url(../img/continental.png);
+}
+
+.dooper {
+  content: url(../img/dopper.png);
+}
+
+.avon {
+  content: url(../img/avon.png);
+}
+
+.factory {
+  content: url(../img/factory.png);
+}
+
+.pirelli {
+  content: url(../img/pirelli.png);
+}
+
+.dunlop {
+  content: url(../img/dunlop.png);
+}
+
+footer {
+  height: 100px;
+  background-color: #213a4d;
+  width: auto;
+  margin-left: 45px;
+  margin-right: 45px;
+  text-align: center;
+}
+
+footer ul {
+  list-style-type: none;
+  display: flex;
+  width: 330px;
+  -margin: 0 auto;
+  margin-left: 307px;
+  padding-top: 3px;
+  margin-bottom: 8px;
+}
+
+
+footer a {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+  color: #bec6c9;
+  letter-spacing: -.25px;
+  -padding-left: 12px;
+  -padding-right: 12px;
+}
+
+footer a:hover {
+  color: #52abcb;
+}
+
+footer a:hover::after {
+  color: #bec6c9;
+}
+
+
+footer a::after {
+  content: 'I';
+  font-size: 16px;
+  -margin-top: 10px;
+  margin-left: 11px;
+  margin-right: 12px;
+}
+
+
+.last-child::after {
+  content: none;
+}
+
+footer span {
+  display: block;
+  margin: 0 auto;
+  font-size: 10px;
+  color: #7f4740;
 }
