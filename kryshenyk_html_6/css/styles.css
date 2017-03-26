@@ -9,99 +9,84 @@ body {
 }
 
 .wrapper {
-  -border: 1px solid gray;
   margin: 0 auto;
   width: 1000px;
 }
 
 header {
-  padding-top: 18px;
+  margin-top: 18px;
 }
 
 .upper {
-  margin-left: 6px;
-  margin-right: 6px;
-  -background-color: blue;
-  display: flex;
-  position: relative;
   align-items: center;
+  display: flex;
+  margin: 0 6px;
+  position: relative;
 }
 
 .phone {
-  background-color: green;
-  height: 21px;
-  width: 21px;
-  border-radius: 21px;
-  background: linear-gradient(to bottom, rgba(44, 77, 109,1) 0%, rgba(30,101,132,1) 100%); /* w3c */
-  margin-left: 46px;
-  display: flex;
   align-items: center;
+  background: linear-gradient(to bottom, rgba(44, 77, 109, 1) 0%, rgba(30, 101, 132, 1) 100%);
+  border-radius: 21px;
   display: flex;
+  height: 21px;
+  margin-left: 46px;
   margin-top: 4px;
+  width: 21px;
 }
 
 .phone i {
   color: white;
-  margin: 0 auto;
   display: block;
-  transform: rotate(18deg);
   font-size: 20px;
+  transform: rotate(18deg);
+  margin: 0 auto;
 }
 
 .phone-number {
   color: #5e696d;
   font-family: Arial, sans-serif;
   font-size: 18px;
-  padding-left: 4.5px;
   letter-spacing: .45px;
-  padding-top: 5px;
+  padding: 5px 0 0 4.5px;
 }
 
 form {
-  background: linear-gradient(to bottom, rgba(21,103,135,1) 0%, rgba(12,51,87,1) 100%);
+  background: linear-gradient(to bottom, rgba(21, 103, 135, 1) 0%, rgba(12, 51, 87, 1) 100%);
+  border-radius: 3px;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
   display: flex;
   height: 25px;
   margin-left: 15px;
-  -margin-bottom: 2px;
-  border-radius: 3px;
-  position: relative;
-  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.55);
   padding-bottom: 3px;
+  position: relative;
 }
+
 form a {
   font-size: 11px;
   padding-top: 6px;
   text-decoration: none;
-  margin-left: 2px;
+  margin-left: 4px;
   color: #fff;
 }
 
-
 fieldset::before {
   content: url(../img/user.png);
-  padding-left: 6px;
-  vertical-align: middle;
   display: inline-block;
-  padding-top: 5px;
+  padding: 5px 0 0 6px;
+  vertical-align: middle;
 }
 
 fieldset input {
-  width: 111px;
-  height: 16px;
-  -margin-right: 2px;
-  padding-left: 3px;
-  line-height: 16px;
   border: 1px solid #82949c;
+  line-height: 16px;
+  padding-left: 3px;
+  width: 111px;
 }
 
 .registration {
-  -border-left: 1px solid black;
-  -margin-top: 1px;
-  -margin-bottom: 6px;
-  -padding-top: 3px;
-  -padding-left: 5px;
-  margin-left: 1.5px;
   letter-spacing: -.25px;
+  margin-left: 1.5px;
 }
 
 .registration::before {
@@ -110,36 +95,30 @@ fieldset input {
 }
 
 .forgot-pass {
-  font-size: 12px;
   color: #bfbfbf;
+  font-size: 12px;
+  margin: 0 10px 0 21px;
   text-decoration: underline;
-  margin-left: 21px;
-  margin-right: 10px;
 }
 
 .communication {
-  width: 76px;
-  margin-left: 17px;
-  height: 20px;
-  margin-bottom: 4px;
-  border-radius: 10px;
   border: 1px solid #c1c8cb;
+  border-radius: 10px;
+  box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
   display: flex;
-  box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.2);
+  height: 20px;
+  margin: 3px 0 4px 20px;
+  width: 76px;
 }
 
 .communication i {
   color: #76848a;
-  padding-left: 3px;
-  padding-right: 3px;
   font-size: 12px;
-  -margin: 0 auto;
-  padding-top: 2px;
+  padding: 2px 3px 0 3px;
 }
 
 .communication .first {
-  margin-left: 6px;
-  margin-right: 3px;
+  margin: 0 3px 0 6px;
 }
 
 .communication .last {
@@ -149,34 +128,28 @@ fieldset input {
 }
 
 .above-the-fold {
-  position: relative;
-  height: 237px;
-  background-color:
-  margin-left: 46px;
-  margin-right: 46px;
-  margin-top: 9px;
   background: url(../img/above-the-fold.jpg);
+  height: 237px;
+  margin: 9px 46px 0 46px;
+  position: relative;
 }
 
 .above-the-fold a {
-  width: 265px;
   height: 120px;
-  position: absolute;
   margin-top: 50px;
+  position: absolute;
+  width: 265px;
 }
 
 nav {
-  height: 33px;
-  background: linear-gradient(to bottom, rgb(77, 86, 99) 0%, rgb(40, 44, 48) 19%, rgb(2, 2, 2) 97%, rgb(1, 1, 1) 100%);
-  margin-left: 45px;
-  margin-right: 45px;
-  margin-top: 6px;
-  border-radius: 3px;
-  border: 1px solid #2c345a;
-  display: flex;
   align-items: center;
-  box-shadow: 5px 5px 5px -3px rgba(0,0,0,0.5);
-  margin-bottom: 162px;
+  background: linear-gradient(to bottom, rgb(77, 86, 99) 0%, rgb(40, 44, 48) 19%, rgb(2, 2, 2) 97%, rgb(1, 1, 1) 100%);
+  border: 1px solid #2c345a;
+  border-radius: 3px;
+  box-shadow: 5px 5px 5px -3px rgba(0, 0, 0, 0.5);
+  display: flex;
+  height: 33px;
+  margin: 6px 45px 162px 45px;
 }
 
 nav ul {
@@ -188,12 +161,15 @@ nav ul {
 
 nav a {
   color: #82949c;
+  font-size: 13.65px;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 13.65px;
-  padding-left: 20px;
-  padding-right: 16px;
-  padding-top: 3px;
+  padding: 0 16px 0 20px;
+}
+
+.nav-right span {
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
 .second-child {
@@ -201,36 +177,34 @@ nav a {
 }
 
 .third-child {
-  padding-left: 14px;
-  padding-right: 14px;
+  padding: 0 14px 0 14px;
 }
 
 .fourth-child {
-  padding-left: 14px;
-  padding-right: 13px;
+  padding: 0 13px 0 14px;
 }
 
 .fifth-child {
-  padding-left: 13px;
-  padding-right: 12px;
+  padding: 0 12px 0 13px;
 }
 
 nav a:hover {
-  background: linear-gradient(to bottom, rgba(37,97,123,1) 0%, rgba(9,35,59,1) 100%);
+  background: linear-gradient(to bottom, rgba(37, 97, 123, 1) 0%, rgba(9, 35, 59, 1) 100%);
   border-radius: 10px;
   color: #fff;
+  padding-top: 3px;
 }
 
 .nav-right {
   margin-left: 39px;
 }
 
-.nav-right span{
-  font-family: Arial, sans-serif;
-  text-transform: none;
-  font-size: 11px;
+.nav-right span {
   color: #82949c;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
   letter-spacing: .4px;
+  text-transform: none;
 }
 
 .nav-right a:hover {
@@ -238,18 +212,16 @@ nav a:hover {
 }
 
 .nav-right i {
-  padding-left: -3px;
-  -padding-top: 3px;
-  -padding-right: 8px;
-  transform: scale(-1, 1);
-  font-size: 18px;
   color: #25617b;
+  display: inline-block;
+  font-size: 18px;
+  transform: scale(-1, 1);
 }
 
 nav .price-amount {
-  padding-left: 3px;
-  font-size: 12px;
   color: #25617b;
+  font-size: 12px;
+  padding-left: 3px;
 }
 
 nav .basket {
@@ -262,45 +234,43 @@ nav .basket {
 }
 
 .main-wrapper {
-  margin-left: 44px;
-  margin-right: 46px;
-  width: 909px;
-  height: 626px;
-  -background-color: gray;
   display: flex;
+  height: 626px;
+  margin: 0 46px 0 44px;
+  width: 909px;
 }
 
 
 aside {
-  -background-color: orange;
-  width: 182px;
   color: #114165;
+  width: 182px;
 }
 
 main {
-  width: 526px;
-  background-color: magenta;
-  margin-left: 10px;
-  margin-right: 10px;
+  background: linear-gradient(to bottom, rgba(229, 231, 232, 1) 0%, rgba(147, 167, 176, 1) 100%);
   border-radius: 3px;
+  margin: 0 10px;
+  width: 526px;
 }
 
 .aside-title {
-  text-transform: uppercase;
-  font-size: 12.73px;
-  -background-color: green;
-  margin-top: 3px;
   border: 1px solid #8b979c;
   border-radius: 13px;
-  -height: 25px;
+  font-size: 12.73px;
+  margin: 3px 0 12px 0;
+  text-transform: uppercase;
   width: 180px;
-  margin-bottom: 12px;
+}
+
+.main-title {
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .aside-title span::before {
   content: url(../img/paper.png);
-  vertical-align: -30%;
   display: inline-block;
+  margin-right: 2px;
+  vertical-align: -30%;
 }
 
 .aside-title span {
@@ -309,59 +279,67 @@ main {
   padding-left: 3px;
 }
 
+.right span {
+  letter-spacing: .65px;
+}
+
+.right span::before {
+  margin-right: 5px;
+}
+
+.second span::before {
+  margin-right: 5px;
+}
+
 .sub {
-  margin-top: 0px;
-  width: 148px;
-  margin-left: 2px;
-  -height: 100px;
   font-size: 14px;
-  margin-bottom: 0px;
+  margin: 0 0 0 2px;
+  width: 148px;
 }
 
 .sub span {
-  padding-top: 2px;
+  padding-top: 1px;
 }
 
 .sub span::before {
   content: url(../img/circle.png);
-  vertical-align: -30%;
   display: inline-block;
-  -vertical-align: middle;
-
+  vertical-align: -30%;
 }
 
 .products-list {
-  text-transform: none;
-  margin-left: 35px;
-  width: 130px;
   list-style-type: none;
-  margin-bottom: 0px;
+  margin: 0 0 0 35px;
+  text-transform: none;
+  width: 130px;
+}
+
+.products-list li {
+  line-height: 24px;
 }
 
 .products-list li::before {
   content: url(../img/circle-small.png);
   padding-right: 3px;
-
 }
 
 .products-list a {
   color: #465961;
-  text-decoration: none;
-  letter-spacing: .45px;
   font-size: 12px;
+  letter-spacing: .45px;
+  text-decoration: none;
 }
 
 .products-list a:hover {
   color: #0c3256;
-  font-style: italic;
-  text-decoration: underline;
-  font-weight: bold;
   font-size: 13px;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .right {
-  margin-top: 0px;
-  margin-bottom: 14px;
+  margin: 0 0 14px 0;
 }
 
 .second {
@@ -370,37 +348,37 @@ main {
 }
 
 .opposite {
-  margin-bottom: 10px;
-  margin-left: 25px;
+  margin: 2px 0 4px 25px;
 }
 
 .opposite li {
   font-size: 12px;
-  padding-top: 5px;
-  padding-bottom: 2px;
+  letter-spacing: .4px;
+  padding-bottom: 3px;
 }
 
 .opposite li::before {
-  padding-right: 13px;
   content: none;
+  padding-right: 13px;
+}
+
+.opposite input {
 }
 
 .checkbox {
-  width: 5px;
-	height: 12px;
   margin-right: 17px;
+  width: 5px;
+}
+
+label {
+  cursor: pointer;
 }
 
 .brands ul{
-  height: auto;
-  width: auto;
-  -vertical-align: top;
-  margin: auto;
-  width: 676px;
-  -align-content: center;
   display: flex;
-  margin-top: 40px;
-  margin-bottom: 18px;
+  height: auto;
+  margin: 40px auto 18px auto;
+  width: 676px;
 }
 
 .brands ul li {
@@ -411,7 +389,6 @@ main {
 .brands ul .last-brand {
   margin-right: 0px;
 }
-
 
 .toyotires {
   content: url(../img/toyotires.png);
@@ -446,33 +423,27 @@ main {
 }
 
 footer {
-  height: 100px;
   background-color: #213a4d;
-  width: auto;
-  margin-left: 45px;
-  margin-right: 45px;
+  height: 100px;
+  margin: 0 45px;
   text-align: center;
+  width: auto;
 }
 
 footer ul {
-  list-style-type: none;
   display: flex;
-  width: 330px;
-  -margin: 0 auto;
-  margin-left: 307px;
+  list-style-type: none;
+  margin: 0 0 8px 307px;
   padding-top: 3px;
-  margin-bottom: 8px;
+  width: 330px;
 }
 
-
 footer a {
+  color: #bec6c9;
   font-family: Arial, sans-serif;
   font-size: 13px;
-  text-decoration: none;
-  color: #bec6c9;
   letter-spacing: -.25px;
-  -padding-left: 12px;
-  -padding-right: 12px;
+  text-decoration: none;
 }
 
 footer a:hover {
@@ -483,23 +454,177 @@ footer a:hover::after {
   color: #bec6c9;
 }
 
-
 footer a::after {
   content: 'I';
   font-size: 16px;
-  -margin-top: 10px;
-  margin-left: 11px;
-  margin-right: 12px;
+  margin: 0 12px 0 11px;
 }
-
 
 .last-child::after {
   content: none;
 }
 
 footer span {
-  display: block;
-  margin: 0 auto;
-  font-size: 10px;
   color: #7f4740;
+  display: block;
+  font-size: 10px;
+  margin: 0 auto;
+}
+
+ button {
+   align-content: center;
+   background: linear-gradient(to bottom, rgba(37, 97, 123, 1) 0%, rgba(9, 35, 59, 1) 100%);
+   border-radius: 10px;
+   box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.15);
+   height: 25px;
+   margin: 11px 0 0 25px;
+   width: 80px;
+ }
+
+ button:hover {
+   cursor: pointer;
+ }
+
+ button span {
+   color: #e5e9ea;
+   display: block;
+   font-family: Arial, sans-serif;
+   font-size: 11px;
+   letter-spacing: .45px;
+   list-style-type: none;
+   padding-bottom: 2px;
+   text-decoration: none;
+   text-transform: uppercase;
+   margin: 0 auto;
+ }
+
+main ul {
+  align-content: center;
+  display: flex;
+  height: 175px;
+  margin: 0 14px 0 7px;
+  padding: 14px 0 12px 0;
+}
+
+ main ul li {
+   height: 125px;
+   list-style-type: none;
+   margin: 0 15px;
+   width: 140px;
+ }
+
+ main a{
+  text-align: center;
+  text-decoration: none;
+ }
+
+.pneum-title {
+  display: block;
+}
+
+.pneum-icon {
+  align-content: center;
+  border: 1px solid #bfc6c8;
+  background-color: #fff;
+  border-radius: 8px;
+  height: 128px;
+  margin: 1px 0 3px 0;
+}
+
+.pneum-icon i {
+  display: inline-block;
+  margin: 0 auto;
+  padding-top: 6px;
+  vertical-align: middle;
+}
+
+.goodyear {
+  content: url(../img/goodyear.jpg);
+}
+
+.nokian {
+  content: url(../img/nokian.jpg);
+}
+
+.hankook {
+  content: url(../img/hankook.jpg);
+}
+
+.brand-name {
+  color: #206988;
+  display: block;
+  font-size: 14.59px;
+  line-height: 14.59px;
+}
+
+.product-type {
+  color: #1f2528;
+  display: block;
+  font-size: 12.77px;
+  letter-spacing: 0px;
+  line-height: 12.77px;
+  margin: 1px 0 0 4px;
+}
+
+.pneum-price {
+  color: #114165;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: bold;
+  letter-spacing: .4px;
+  margin-left: 10px;
+}
+
+.currency {
+  font-size: 12px;
+  padding-left: 3px;
+}
+
+.products-second-row {
+  padding-bottom: 12px;
+}
+
+.nokian-name {
+  letter-spacing: .5px;
+  margin-left: 6px;
+}
+
+.hankook-type {
+  margin-left: 0px;
+}
+
+.hankook-name {
+  letter-spacing: .5px;
+  margin-left: 3px;
+}
+
+.products-third-row {
+  padding-top: 17px;
+}
+
+.type-two {
+  margin-top: 3px;
+}
+
+.type-two li {
+  margin-bottom: -2px;
+}
+
+.bolts {
+  margin-top: -1px;
+}
+
+.pneum-icon img {
+  display: none;
+}
+
+@-moz-document url-prefix() {
+  .pneum-icon img {
+    display: inline-block;
+    padding-top: 6px;
+  }
+  .checkbox {
+    width: 12px;
+  }
 }
