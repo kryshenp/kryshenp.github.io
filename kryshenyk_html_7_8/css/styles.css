@@ -56,3 +56,7 @@ footer {
   background-position: center 1070px;
   filter: blur(5px);
 }
+
+header {
+  display: flex;
+}
