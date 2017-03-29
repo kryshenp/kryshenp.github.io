@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  font-family: 'League Gothic', 'Helvetica';
+}
+
 .above-the-fold {
   background-image: url('../img/background.jpg');
   background-position: center;
@@ -10,33 +14,29 @@
   background-size: cover;
   border: 1px solid #33253a;
   height: 845px;
-  width: 100%;
+
 }
 
 .about-us {
   height: 339px;
-  width: 100%;
   background: linear-gradient(to bottom, rgba(116 ,80, 131, 1) 0%, rgba(50, 37, 57,1) 100%);
   border: 1px solid black;
 }
 
 .separator {
   height: 1px;
-  width: 100%;
   background-color: #fff;
   box-shadow: 0 8px 6px -6px black;
 }
 
 .testimonials-wrapper {
   height: 486px;
-  width: 100%;
   background-color: #f9f9f9;
   border-bottom: 1px solid #e6e6e6;
 }
 
 .sponsors {
   height: 118px;
-  width: 100%;
   background-color: #f9f9f9;
   border-top: 1px solid #fefefe;
   border-bottom: 1px solid #fefefe;
@@ -45,12 +45,21 @@
 .news {
   background-color: #ececec;
   height: 387px;
-  width: 100%;
   border-top: 1px solid #d8d8d8;
 }
 
+.above-the-fold,
+.about-us,
+.separator,
+.testimonials-wrapper,
+.sponsors,
+.news,
 footer {
   width: 100%;
+}
+
+
+footer {
   height: 114px;
   background-image: url('../img/background.jpg');
   background-position: center 1070px;
@@ -58,5 +67,60 @@ footer {
 }
 
 header {
+  align-items: center;
   display: flex;
+  width: 960px;
+  height: 36px;
+  margin: 70px auto;
+  justify-content: space-between;
+}
+
+.logo a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 48px;
+
+}
+
+.white {
+  color: #fff;
+}
+
+.logo-first {
+  text-shadow: -1px 2px 1px rgba(0, 0, 0, .3);
+}
+
+.logo-last {
+  background: -webkit-gradient(linear, left top, left bottom, from(#745083), to(#33263a));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav {
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav li {
+  padding: 0 20px 0 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 7px 2px 7px;
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, .3);
+}
+
+nav a:hover {
+  border-bottom: 2px solid #edbfff;
+}
+
+.nav-last {
+  padding-right: 0;
 }
