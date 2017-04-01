@@ -11,26 +11,28 @@
     <div class="wrapper">
       <header>
         <div class="upper">
-          <div class="phone"><i class="fa fa-phone" aria-hidden="true"></i></div>
-          <span class="phone-number">(044)123-45-67 (044)567-89-10</span>
-          <form class="" action="index.html" method="post">
-            <fieldset>
+          <div class="phone">
+            <div class="phone-icon-container">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+            </div>
+            <p class="phone-number">(044)123-45-67 (044)567-89-10</p>
+          </div>
+          <form class="login-form" action="index.html" method="post">
+            <fieldset class="login-field">
               <input type="text" name="name" value="" placeholder="логин">
               <input type="password" name="password" value="" placeholder="пароль">
             </fieldset>
-            <a href="#">вход</a>
+            <input class="submit" type="submit" name="enter" value="вход">
             <a class="registration" href="#">регистрация</a>
             <a class="forgot-pass" href="#">забыли пароль?</a>
           </form>
           <div class="communication">
-            <i class="fa fa-home first" aria-hidden="true"></i>
-            <i class="fa fa-sitemap" aria-hidden="true"></i>
-            <i class="fa fa-envelope-o last" aria-hidden="true"></i>
+            <a href="#"><i class="fa fa-home first" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-sitemap" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-envelope-o last" aria-hidden="true"></i></a>
           </div>
         </div>
-        <div class="above-the-fold">
-          <a href="#"></a>
-        </div>
+        <img class="above-the-fold" src="./img/above-the-fold.jpg" alt="">
       </header>
       <nav>
         <ul>
@@ -45,43 +47,209 @@
               <i class="fa fa-shopping-cart" aria-hidden="true"></i>
               <span>товаров:</span><span class="price-amount">0</span>
             </a>
-            <span class="total">на сумму:</span><span class="price-amount">0,00 грн.</span>
+            <p>
+              <span class="total">на сумму:</span>
+              <span class="price-amount">0,00 грн.</span>
+          </p>
         </div>
       </nav>
       <div class="main-wrapper">
         <aside class="">
-          <div class="aside-title main-title">
+          <h1 class="aside-title main-title">
             <span>каталог продукции:</span>
-          </div>
-          <div class="aside-title sub">
-            <span>шины:</span>
-          </div>
-          <ul class="products-list">
-            <li><a href="#">Наименование 1</a></li>
-            <li><a href="#">Наименование 2</a></li>
-            <li><a href="#">Наименование 3</a></li>
-            <li><a href="#">Наименование 4</a></li>
-          </ul>
-          <div class="aside-title sub type-next">
-            <span>диски:</span>
-          </div>
-            <ul class="products-list disks">
+          </h1>
+          <section>
+            <h2 class="sub">шины:</h2>
+            <ul class="products-list">
               <li><a href="#">Наименование 1</a></li>
               <li><a href="#">Наименование 2</a></li>
               <li><a href="#">Наименование 3</a></li>
               <li><a href="#">Наименование 4</a></li>
             </ul>
-            <div class="aside-title sub">
+          </section>
+          <section>
+            <h2 class="sub type-next">
+              <span>диски:</span>
+            </h2>
+              <ul class="products-list disks">
+                <li><a href="#">Наименование 1</a></li>
+                <li><a href="#">Наименование 2</a></li>
+                <li><a href="#">Наименование 3</a></li>
+                <li><a href="#">Наименование 4</a></li>
+              </ul>
+          </section>
+          <section>
+            <h2 class="sub">
               <span>болты:</span>
-            </div>
+            </h2>
               <ul class="products-list bolts">
                 <li><a href="#">Наименование 1</a></li>
                 <li><a href="#">Наименование 2</a></li>
                 <li><a href="#">Наименование 3</a></li>
                 <li><a href="#">Наименование 4</a></li>
               </ul>
+          </section>
         </aside>
         <main>
+          <ul>
+            <li>
+              <a href="#">
+                <figure>
+                  <figcaption class="fig-title">
+                    <p class="brand-name">Goodyear</p>
+                    <p class="product-type">Ultra Grip Extreme</p>
+                  </figcaption>
+                  <figcaption>
+                    <p class="pneum-price">90.00 грн</p>
+                  </figcaption>
+                  <figcaption class="fig-price"></figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure>
+                  <figcaption class="fig-title">
+                    <p class="brand-name">Goodyear</p>
+                    <p class="product-type">Ultra Grip Extreme</p>
+                  </figcaption>
+                  <div class="pneum-icon">
+                    <img src="img/goodyear.jpg" alt="pneum">
+                  </div>
+                  <figcaption>
+                    <p class="pneum-price">90.00 грн</p>
+                  </figcaption>
+                  <figcaption class="fig-price"></figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure>
+                  <figcaption class="fig-title">
+                    <p class="brand-name">Goodyear</p>
+                    <p class="product-type">Ultra Grip Extreme</p>
+                  </figcaption>
+                  <div class="pneum-icon">
+                    <img src="img/goodyear.jpg" alt="pneum">
+                  </div>
+                  <figcaption>
+                    <p class="pneum-price">90.00 грн</p>
+                  </figcaption>
+                  <figcaption class="fig-price"></figcaption>
+                </figure>
+              </a>
+            </li>
+          </ul>
+
+          <ul>
+            <li>
+              <a href="#">
+                <figure>
+                  <figcaption class="fig-title">
+                    <p class="brand-name">Goodyear</p>
+                    <p class="product-type">Ultra Grip Extreme</p>
+                  </figcaption>
+                  <div class="pneum-icon">
+                    <img src="img/nokian.jpg" alt="pneum">
+                  </div>
+                  <figcaption>
+                    <p class="pneum-price">90.00 грн</p>
+                  </figcaption>
+                  <figcaption class="fig-price"></figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure>
+                  <figcaption class="fig-title">
+                    <p class="brand-name">Goodyear</p>
+                    <p class="product-type">Ultra Grip Extreme</p>
+                  </figcaption>
+                  <div class="pneum-icon">
+                    <img src="img/nokian.jpg" alt="pneum">
+                  </div>
+                  <figcaption>
+                    <p class="pneum-price">90.00 грн</p>
+                  </figcaption>
+                  <figcaption class="fig-price"></figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure>
+                  <figcaption class="fig-title">
+                    <p class="brand-name">Goodyear</p>
+                    <p class="product-type">Ultra Grip Extreme</p>
+                  </figcaption>
+                  <div class="pneum-icon">
+                    <img src="img/nokian.jpg" alt="pneum">
+                  </div>
+                  <figcaption>
+                    <p class="pneum-price">90.00 грн</p>
+                  </figcaption>
+                  <figcaption class="fig-price"></figcaption>
+                </figure>
+              </a>
+            </li>
+          </ul>
+
+          <ul>
+            <li>
+              <a href="#">
+                <figure>
+                  <figcaption class="fig-title">
+                    <p class="brand-name">Goodyear</p>
+                    <p class="product-type">Ultra Grip Extreme</p>
+                  </figcaption>
+                  <div class="pneum-icon">
+                    <img src="img/hankook.jpg" alt="pneum">
+                  </div>
+                  <figcaption>
+                    <p class="pneum-price">90.00 грн</p>
+                  </figcaption>
+                  <figcaption class="fig-price"></figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure>
+                  <figcaption class="fig-title">
+                    <p class="brand-name">Goodyear</p>
+                    <p class="product-type">Ultra Grip Extreme</p>
+                  </figcaption>
+                  <div class="pneum-icon">
+                    <img src="img/hankook.jpg" alt="pneum">
+                  </div>
+                  <figcaption>
+                    <p class="pneum-price">90.00 грн</p>
+                  </figcaption>
+                  <figcaption class="fig-price"></figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure>
+                  <figcaption class="fig-title">
+                    <p class="brand-name">Goodyear</p>
+                    <p class="product-type">Ultra Grip Extreme</p>
+                  </figcaption>
+                  <div class="pneum-icon">
+                    <img src="img/hankook.jpg" alt="pneum">
+                  </div>
+                  <figcaption>
+                    <p class="pneum-price">90.00 грн</p>
+                  </figcaption>
+                  <figcaption class="fig-price"></figcaption>
+                </figure>
+              </a>
+            </li>
+          </ul>
+          <!--
           <ul>
             <li><a href="#">
                   <div class="pneum-title">
@@ -195,29 +363,29 @@
                   </div>
               </a>
             </li>
-          </ul>
+          </ul>-->
         </main>
         <aside class="">
-          <div class="aside-title main-title right">
-            <span>бренды:</span>
-          </div>
-          <div class="aside-title sub second">
-            <span>шины:</span>
-          </div>
-          <ul class="products-list opposite">
-            <li><input type="checkbox" name="Бренд 1" value="brand1" id="checkbox1" class="checkbox"><label for="checkbox1">Бренд 1</label></li>
-            <li><input type="checkbox" name="Бренд 1" value="brand1" id="checkbox2" class="checkbox"><label for="checkbox2">Бренд 2</label></li>
-            <li><input type="checkbox" name="Бренд 1" value="brand1" id="checkbox3" class="checkbox"><label for="checkbox3">Бренд 3</label></li>
-          </ul>
-          <div class="aside-title sub second">
-            <span>диски:</span>
-          </div>
-            <ul class="products-list opposite type-two">
-              <li><input type="checkbox" name="Бренд 1" value="brand1" id="checkbox4" class="checkbox"><label for="checkbox4">Бренд 1</label></li>
-              <li><input type="checkbox" name="Бренд 1" value="brand1" id="checkbox5" class="checkbox"><label for="checkbox5">Бренд 2</label></li>
-              <li><input type="checkbox" name="Бренд 1" value="brand1" id="checkbox6" class="checkbox"><label for="checkbox6">Бренд 3</label></li>
-            </ul>
+          <h1 class="right">бренды:</h1>
+          <form class="" action="index.html" method="post">
+            <fieldset>
+              <h2 class="second">шины:</h2>
+              <ul class="products-list opposite">
+                <li><input type="checkbox" name="Бренд 1" value="brand1" id="checkbox1" class="checkbox"><label for="checkbox1">Бренд 1</label></li>
+                <li><input type="checkbox" name="Бренд 1" value="brand1" id="checkbox2" class="checkbox"><label for="checkbox2">Бренд 2</label></li>
+                <li><input type="checkbox" name="Бренд 1" value="brand1" id="checkbox3" class="checkbox"><label for="checkbox3">Бренд 3</label></li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <h2 class="second">диски:</h2>
+                <ul class="products-list opposite type-two">
+                  <li><input type="checkbox" name="Бренд 1" value="brand1" id="checkbox4" class="checkbox"><label for="checkbox4">Бренд 1</label></li>
+                  <li><input type="checkbox" name="Бренд 1" value="brand1" id="checkbox5" class="checkbox"><label for="checkbox5">Бренд 2</label></li>
+                  <li><input type="checkbox" name="Бренд 1" value="brand1" id="checkbox6" class="checkbox"><label for="checkbox6">Бренд 3</label></li>
+                </ul>
+            </fieldset>
             <button type="button" name="button"><span>выбрать</span></button>
+          </form>
         </aside>
       </div>
       <div class="brands">
@@ -239,7 +407,7 @@
           <li><a href="#">Статьи</a></li>
           <li><a href="#" class="last-child">Контакты</a></li>
         </ul>
-        <span>Создание сайта © Global Vision</span>
+        <p>Создание сайта © Global Vision</p>
       </footer>
     </div>
   </body>

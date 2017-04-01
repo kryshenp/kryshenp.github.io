@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Lucida Sans Unicode", "Times New Roman";
+  font-family: "Lucida Sans Unicode", Helvetica, sans-serif;
 }
 
 .wrapper {
@@ -26,21 +26,24 @@ header {
 
 .phone {
   align-items: center;
-  background: linear-gradient(to bottom, rgba(44, 77, 109, 1) 0%, rgba(30, 101, 132, 1) 100%);
-  border-radius: 21px;
   display: flex;
-  height: 21px;
   margin-left: 46px;
   margin-top: 4px;
+}
+
+.phone-icon-container {
+  margin-top: 5px;
+  border-radius: 21px;
   width: 21px;
+  background: linear-gradient(to bottom, rgba(44, 77, 109, 1) 0%, rgba(30, 101, 132, 1) 100%);
 }
 
 .phone i {
+  padding-left: 3px;
   color: white;
   display: block;
   font-size: 20px;
   transform: rotate(18deg);
-  margin: 0 auto;
 }
 
 .phone-number {
@@ -51,7 +54,7 @@ header {
   padding: 5px 0 0 4.5px;
 }
 
-form {
+.login-form {
   background: linear-gradient(to bottom, rgba(21, 103, 135, 1) 0%, rgba(12, 51, 87, 1) 100%);
   border-radius: 3px;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -62,39 +65,49 @@ form {
   position: relative;
 }
 
-form a {
+.login-form a,
+.submit {
   font-size: 11px;
-  padding-top: 6px;
   text-decoration: none;
-  margin-left: 4px;
   color: #fff;
 }
 
-fieldset::before {
+.login-field::before {
   content: url(../img/user.png);
   display: inline-block;
   padding: 5px 0 0 6px;
   vertical-align: middle;
 }
 
-fieldset input {
+.login-field input {
   border: 1px solid #82949c;
   line-height: 16px;
   padding-left: 3px;
   width: 111px;
 }
 
+.submit {
+  background: none;
+  margin-left: 4px;
+}
+
+.submit:hover {
+  cursor: pointer;
+}
+
 .registration {
+  padding-top: 5px;
   letter-spacing: -.25px;
-  margin-left: 1.5px;
 }
 
 .registration::before {
   content: '|';
   padding-right: 4px;
+  padding-left: 4px;
 }
 
 .forgot-pass {
+  padding-top: 4px;
   color: #bfbfbf;
   font-size: 12px;
   margin: 0 10px 0 21px;
@@ -109,6 +122,13 @@ fieldset input {
   height: 20px;
   margin: 3px 0 4px 20px;
   width: 76px;
+}
+
+.communication a {
+  text-decoration: none;
+  vertical-align: middle;
+  display: flex;
+  padding-top: 2px;
 }
 
 .communication i {
@@ -128,17 +148,9 @@ fieldset input {
 }
 
 .above-the-fold {
-  background: url(../img/above-the-fold.jpg);
   height: 237px;
   margin: 9px 46px 0 46px;
   position: relative;
-}
-
-.above-the-fold a {
-  height: 120px;
-  margin-top: 50px;
-  position: absolute;
-  width: 265px;
 }
 
 nav {
@@ -167,8 +179,11 @@ nav a {
   padding: 0 16px 0 20px;
 }
 
+nav p {
+  float: right;
+}
+
 .nav-right span {
-  display: inline-block;
   margin-bottom: 10px;
 }
 
@@ -229,17 +244,11 @@ nav .basket {
   padding-right: 9px;
 }
 
-.total {
-  padding-right: 8px;
-}
-
 .main-wrapper {
   display: flex;
-  height: 626px;
+  -height: 626px;
   margin: 0 46px 0 44px;
-  width: 909px;
 }
-
 
 aside {
   color: #114165;
@@ -251,9 +260,11 @@ main {
   border-radius: 3px;
   margin: 0 10px;
   width: 526px;
+  height:628px;
+  display: flex;
 }
 
-.aside-title {
+h1, h2 {
   border: 1px solid #8b979c;
   border-radius: 13px;
   font-size: 12.73px;
@@ -262,21 +273,18 @@ main {
   width: 180px;
 }
 
-.main-title {
+h1 {
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
-}
-
-.aside-title span::before {
-  content: url(../img/paper.png);
-  display: inline-block;
-  margin-right: 2px;
-  vertical-align: -30%;
-}
-
-.aside-title span {
   display: inline-block;
   height: 25px;
   padding-left: 3px;
+}
+
+h1::before {
+  content: url(../img/paper.png);
+  display: inline-block;
+  margin-right: 0px;
+  vertical-align: middle;
 }
 
 .right span {
@@ -291,20 +299,21 @@ main {
   margin-right: 5px;
 }
 
-.sub {
+h2 {
   font-size: 14px;
   margin: 0 0 0 2px;
   width: 148px;
+  height: 25px;
 }
 
-.sub span {
-  padding-top: 1px;
-}
 
-.sub span::before {
+h2::before {
   content: url(../img/circle.png);
   display: inline-block;
-  vertical-align: -30%;
+  vertical-align: middle;
+  padding-left: 3px;
+  padding-right: 5px;
+
 }
 
 .products-list {
@@ -464,7 +473,7 @@ footer a::after {
   content: none;
 }
 
-footer span {
+footer p {
   color: #7f4740;
   display: block;
   font-size: 10px;
@@ -500,16 +509,13 @@ footer span {
 
 main ul {
   align-content: center;
-  display: flex;
-  height: 175px;
-  margin: 0 14px 0 7px;
+  margin-left: 4px;
   padding: 14px 0 12px 0;
 }
 
  main ul li {
-   height: 125px;
    list-style-type: none;
-   margin: 0 15px;
+   margin: 14px 15px 20px 15px;
    width: 140px;
  }
 
@@ -529,14 +535,15 @@ main ul {
   border-radius: 8px;
   height: 128px;
   margin: 1px 0 3px 0;
+  z-index: 1;
 }
 
-.pneum-icon i {
-  display: inline-block;
-  margin: 0 auto;
-  padding-top: 6px;
-  vertical-align: middle;
+figure img {
+  padding-top: 5px;
+
 }
+
+
 
 .goodyear {
   content: url(../img/goodyear.jpg);
@@ -563,17 +570,15 @@ main ul {
   font-size: 12.77px;
   letter-spacing: 0px;
   line-height: 12.77px;
-  margin: 1px 0 0 4px;
+  margin-top: 1px;
 }
 
 .pneum-price {
   color: #114165;
   font-family: Arial, sans-serif;
-  font-size: 16px;
   font-style: italic;
   font-weight: bold;
   letter-spacing: .4px;
-  margin-left: 10px;
 }
 
 .currency {
@@ -601,6 +606,7 @@ main ul {
 
 .products-third-row {
   padding-top: 17px;
+  padding-bottom: 40px;
 }
 
 .type-two {
@@ -615,8 +621,8 @@ main ul {
   margin-top: -1px;
 }
 
-.pneum-icon img {
-  display: none;
+figure img {
+  z-index: 10;
 }
 
 @-moz-document url-prefix() {
