@@ -71,7 +71,7 @@ header {
   display: flex;
   width: 960px;
   height: 36px;
-  margin: 70px auto;
+  margin: 70px auto 180px auto;
   justify-content: space-between;
 }
 
@@ -130,6 +130,7 @@ nav a:hover {
   width: 100%;
   height: 400px;
   background-color: rgba(0, 0, 0, .2);
+  margin-bottom: 90px;
 }
 
 .slider-content {
@@ -174,11 +175,14 @@ nav a:hover {
 h1 {
   font-size: 60px;
   color: #fefefe;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
   font-size: 32px;
   color: #edbfff;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
 }
 
 .slider-content-text p {
@@ -186,19 +190,84 @@ h2 {
   font-size: 18px;
   color: #fff;
   font-weight: 100;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 .play-btn {
   position: absolute;
-  top: 100px;
+  top: 150px;
   left: 135px;
   z-index: 1;
 }
 
 .phones i {
   position: absolute;
-  top: 125px;
+  top: 175px;
   left: 168px;
   z-index: 2;
   font-size: 26px;
+}
+
+.slider-pins {
+  height: 17px;
+  width: 96px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.pin {
+  height: 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 12px;
+  margin-left: 3px;
+  margin-right: 3px;
+  border: 3px solid rgba(0, 0, 0, .2);
+  border-radius: 12px;
+}
+
+.pin-active {
+  background-color: #fff;
+  border: 3px solid rgba(0, 0, 0, .8);
+}
+
+.about-us-columns {
+  width: 950px;
+  margin: 0 auto;
+  display: flex;
+  color: #fff;
+}
+
+.about-us-columns p {
+  font-family: 'OpenSans', Helvetica, sans-serif;
+  font-size: 16px;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 1);
+}
+
+.about {
+  margin-right: 60px;
+  margin-top: 78px;
+}
+
+.about h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+  -padding-left: 50px;
+}
+
+.about h3::before {
+  margin-left: -100px;
+  content: url('../img/blobs.png');
+}
+
+.about a {
+  margin-top: 25px;
+  float: right;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-right: 30px;
+}
+
+.about a:hover {
+  text-shadow: rgb(255, 255, 255) 0px 0px 7px;
 }
