@@ -5,16 +5,18 @@
 
 body {
   font-family: 'League Gothic', 'Helvetica', sans-serif;
+  max-width: 2400px;
+  font-weight: lighter;
 }
 
 .above-the-fold {
   background-image: url('../img/background.jpg');
   background-position: center;
   background-repeat: no-repeat;
-  -background-size: cover;
   height: 845px;
   border-top: 1px solid rgba(1,1,1,0);
   border-bottom: 1px solid #33253a;
+
 }
 
 .about-us {
@@ -47,7 +49,7 @@ body {
   background-color: #ececec;
   height: 387px;
   border-top: 1px solid #d8d8d8;
-  box-shadow: 0px 3px 3px 0px rgba(0,0,0,.9);
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,.6);
 }
 
 .above-the-fold,
@@ -63,9 +65,18 @@ footer {
 
 footer {
   height: 114px;
-  background-image: url('../img/background.jpg');
+  position: absolute;
+}
+
+footer::before {
   background-position: center 1070px;
+  content: "";
+  background-image: url('../img/background.jpg');
+  position: absolute;
+  width : 100%;
+  height: 100%;
   filter: blur(5px);
+  z-index: -1;
 }
 
 header {
@@ -143,20 +154,9 @@ nav a:hover {
 .slider-content {
   margin: 0 auto;
   width: 960px;
-  -background-color: orange;
+  display: flex;
+  justify-content: space-between;
   height: 350px;
-}
-
-.left-arrow {
-  align-self: center;
-  -margin-left: 400px;
-  -padding-right: 295px;
-}
-
-.right-arrow {
-  align-self: center;
-  -padding-left: 295px;
-  -margin-right: 400px;
 }
 
 .slider i {
@@ -165,11 +165,11 @@ nav a:hover {
 }
 
 .phones {
-  width: 1130px;
+  width: 270px;
   height: 370px;
   background-image: url('../img/phones.png');
-  margin-right: 75px;
-  margin-left: 120px;
+  -margin-right: 75px;
+  -margin-left: 120px;
   margin-top: -20px;
   position: relative;
 }
@@ -179,6 +179,7 @@ nav a:hover {
 }
 
 .slider-content-text {
+  width: 500px;
   margin-top: 80px;
 }
 
@@ -186,12 +187,15 @@ h1 {
   font-size: 60px;
   color: #fefefe;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  font-weight: lighter;
 }
 
 h2 {
   font-size: 32px;
   color: #edbfff;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  font-weight: lighter;
 
 }
 
@@ -253,6 +257,7 @@ h2 {
   font-size: 16px;
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 1);
   margin-left: 57px;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 .about {
@@ -265,6 +270,9 @@ h3 {
   -padding-left: 50px;
   display: inline-block;
   margin-left: 30px;
+  font-weight: lighter;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
 }
 
 .about a {
@@ -283,7 +291,6 @@ h3 {
 .about-icon {
   width: 30px;
   height: 27px;
-  -background-color: orange;
   display: inline-block;
 }
 
@@ -303,7 +310,6 @@ h3 {
 
 .testimonials-container {
   position: absolute;
-  -background-color: orange;
   height: 320px;
   width: 960px;
   margin-top: 100px;
@@ -351,7 +357,6 @@ h3 {
   position: absolute;
   height: 50px;
   width: 50px;
-  -background-color: red;
   border-radius: 50px;
   margin-left: -25px;
   top: 20px;
@@ -418,6 +423,7 @@ h3 {
   margin-left: 0;
   margin-top: 20px;
   margin-bottom: 20px;
+  font-weight: lighter;
 }
 
 .testimonials-right-content {
@@ -540,16 +546,14 @@ h3 {
 
 .news-container {
   margin: 100px auto 0 auto;
-  height: 200px;
+  height: 250px;
   width: 960px;
-  border: 1px solid red;
   display: flex;
 }
 
 .news-container div {
   width: 280px;
   height: 200px;
-  background-color: gray;
 }
 
 .news-1, .news-2 {
@@ -557,7 +561,6 @@ h3 {
 }
 
 .news-1 {
-  display: flex;
   text-transform: uppercase;
 
 }
@@ -565,8 +568,193 @@ h3 {
 .news-1 h1 {
   font-size: 48px;
   color: #454545;
+  display: inline-block;
+  font-weight: lighter;
 }
 
 .news-1 .er {
   color: #b9b9b9;
+  display: inline-block;
+  padding-left: 3px;
+  font-weight: lighter;
+}
+
+.news-1 h4 {
+  font-family: 'Georgia', 'Helvetica', sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  text-transform: none;
+  color: #c5c5c5;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 1);
+  padding-bottom: 5px;
+}
+
+.news p {
+  font-family: 'OpenSans', 'Helvetica', sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+  text-transform: none;
+  line-height: 24px;
+  color: #787878;
+}
+
+.news h3 {
+  margin: 0;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 1);
+  color: #454545;
+}
+
+.footer-content {
+  margin: 0 auto;
+  width: 960px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer nav  {
+  height: 115px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-content a {
+  font-size: 20px;
+}
+
+
+.design-author {
+  font-family: 'OpenSans', 'Helvetica', sans-serif;
+  font-size: 12px;
+  text-shadow: 1px 1px 1px rgba(1, 1, 1, 0.4);
+}
+
+.design-author a {
+  font-size: 12px;
+  font-weight: bolder;
+  color: #fff;
+  text-decoration: none;
+  padding-left: 3px;
+}
+
+@media (max-width: 960px) {
+
+  body {
+  }
+
+  header {
+    display: block;
+  }
+
+  .nav-first,
+  nav a {
+    padding-left: 0;
+  }
+
+
+  .slider-content {
+    max-width: 768px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .slider-content-text {
+    width: 310px;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .slider {
+    margin-bottom: 35px;
+  }
+
+  .slider-pins {
+    float: right;
+    margin-right: 100px;
+  }
+
+  .about-us-columns {
+    width: 768px;
+    margin: 0 auto;
+    display: flex;
+    color: #fff;
+    margin-top: 78px;
+  }
+
+  .about {
+    margin-right: 10px;
+  }
+
+  .about h3 {
+    margin-left: 10px;
+  }
+
+  .about a {
+    margin-right: 0;
+  }
+
+  .about p {
+    margin-left: 42px;
+  }
+
+
+  .testimonials-left,
+  .testimonials-right {
+    width: 315px;
+  }
+
+  .testimonials-container {
+    position: absolute;
+    height: 320px;
+    margin-top: 100px;
+    left: calc(50% - 370px);
+    display: flex;
+    width: 768px;
+  }
+
+  .testimonials-message {
+    width: 320px;
+  }
+
+  .testimonials-right-content {
+    width: 370px;
+  }
+
+  .message-content p {
+    padding-right: 10px;
+    padding-top: 95px;
+    font-size: 15px;
+  }
+
+  .news-container {
+    margin-top: 50px;
+    width: 768px;
+  }
+
+  .footer-content {
+    width: 768px;
+  }
+
+  .starts {
+    display: block;
+    margin-left: 30px;
+  }
+
+  .testimonials-paragraphs p {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .testimonials-bullets {
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+
+
 }
