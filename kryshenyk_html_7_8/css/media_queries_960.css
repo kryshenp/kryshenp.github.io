@@ -1,0 +1,156 @@
+@media all and (min-width: 768px) and (max-width: 960px) {
+
+  body {
+  }
+
+  header {
+    display: block;
+  }
+
+  .logo {
+    margin-left: 10px;
+  }
+
+  nav {
+    margin-left: 10px;
+  }
+
+  .nav-first,
+  nav a {
+    padding-left: 0;
+  }
+
+
+  .slider-content {
+    max-width: 768px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .slider-content-text {
+    width: 310px;
+    margin-left: 10px;
+  }
+
+  .slider-content-text p {
+    height: 100px;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .slider {
+    margin-bottom: 35px;
+  }
+
+  .slider-pins {
+    float: right;
+    margin-right: 40px;
+  }
+
+  .about-us-columns {
+    width: 768px;
+    margin: 0 auto;
+    display: flex;
+    color: #fff;
+    margin-top: 78px;
+  }
+
+  .about {
+    margin-right: 10px;
+  }
+
+  .about h3 {
+    margin-left: 10px;
+  }
+
+  .about a {
+    margin-right: 0;
+  }
+
+  .about p {
+    margin-left: 42px;
+  }
+
+
+  .testimonials-left,
+  .testimonials-right {
+    width: 315px;
+  }
+
+  .testimonials-container {
+    position: absolute;
+    height: 320px;
+    width: 960px;
+    margin-top: 100px;
+    left: calc(50% - 370px);
+    display: flex;
+    width: 768px;
+  }
+
+  .testimonials-message {
+    width: 320px;
+  }
+
+  .pingbuller {
+    display: block;
+  }
+
+  .starts {
+    display: block;
+  }
+
+  .testimonials-right-content {
+    width: 370px;
+  }
+
+  .testimonials-heading {
+    padding-top: 15px;
+  }
+
+  .message-content {
+    height: 235px;
+    overflow: hidden;
+  }
+
+  .message-content p {
+    padding-right: 10px;
+    padding-top: 20px;
+    font-size: 15px;
+
+  }
+
+  .news-container {
+    margin-top: 50px;
+    width: 768px;
+  }
+
+  .footer-content {
+    width: 768px;
+  }
+
+  .starts {
+    display: block;
+    margin-left: 30px;
+  }
+
+  .testimonials-paragraphs p {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .testimonials-bullets {
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+
+  .news-1 {
+    margin-left: 10px;
+  }
+}
