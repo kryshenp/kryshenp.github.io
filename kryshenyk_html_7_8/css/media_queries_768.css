@@ -1,0 +1,154 @@
+@media all and (min-width: 480px) and (max-width: 767px) {
+
+  footer,
+  .news,
+  .sponsors,
+  .testimonials-wrapper,
+  .about-us {
+    width: 100%;
+  }
+
+  .slider-content,
+  .about-us-columns,
+  .testimonials-container,
+  .news-container,
+  .separator {
+    width: 440px;
+  }
+
+
+  .testimonials-heading {
+    padding: 20px;
+    margin-left: 20px;
+  }
+
+  .pingbuller {
+    margin-left: 0px;
+    display: block;
+  }
+
+  .starts {
+    margin-left: 0px;
+  }
+
+  .message-content p {
+    margin-top: 95px;
+  }
+
+  footer {
+    height: 200px;
+  }
+
+  .footer-content {
+    display: block;
+  }
+
+  footer nav {
+    height: 105px;
+  }
+
+  .footer-content ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  .above-the-fold {
+    height: 548px;
+  }
+
+  .slider {
+    margin-bottom: 20px;
+  }
+
+  .slider,
+  .slider-content {
+    height: 245px;
+  }
+
+  .slider-content-text {
+    width: 225px;
+  }
+
+  .slider-content-text h2 {
+    font-size: 18px;
+  }
+
+  .slider-content-text p {
+    display: none;
+  }
+
+  .phones {
+    height: 265px;
+    width: 193px;
+    background-size: 100%;
+    margin-top: -5px;
+    background-repeat: no-repeat;
+  }
+
+  .play-btn {
+    top: 105px;
+    left: 100px;
+    width: 50px;
+    height: 50px;
+    background-image: url('../img/play.png');
+    background-size: cover;
+    border-radius: 50px;
+  }
+
+  .play-btn i {
+    font-size: 18px;
+    top: 17px;
+    left: 21px;
+  }
+
+  .news {
+    height: 670px;
+  }
+
+  .news-container {
+    width: 440px;
+    height: 520px;
+    overflow-y: hidden;
+    display: block;
+    margin-top: 80px;
+  }
+
+  .news-container div {
+    margin-right: 0;
+    width: 440px;
+    height: 183px;
+  }
+
+  .footer-content {
+    width: 440px;
+    display: block;
+  }
+
+  footer nav  {
+    height: 115px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer li {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  footer a {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .design-author {
+    display: block;
+    width: 135px;
+    margin: 0 auto;
+  }
+
+  nav a:hover {
+    text-shadow: rgb(255, 255, 255) 0px 0px 10px;
+  }
+
+}

@@ -1,0 +1,174 @@
+@media all and (max-width: 480px) {
+
+  .phones,
+  footer nav {
+    display: none;
+  }
+
+  header {
+    width: 320px;
+  }
+
+  .above-the-fold {
+    height: 500px;
+  }
+
+  .slider {
+    background: none;
+    height: 140px;
+    margin-bottom: 70px;
+  }
+
+  .slider-container {
+    height: 200px;
+    margin-top: 80px;
+  }
+
+  .slider-content {
+    width: 320px;
+    height: auto;
+  }
+
+  .slider-content-text {
+    width: 210px;
+    height: 60px;
+    margin: 0 auto;
+    display: block;
+    overflow: hidden;
+  }
+
+  .slider-content-text h1 {
+    font-size: 36px;
+  }
+
+  .slider-content-text h2 {
+    font-size: 18px;
+  }
+
+  .about-us-columns {
+    width: 320px;
+  }
+
+  .about {
+    display: block;
+    margin: 0 auto;
+    width: 260px;
+    height: 170px;
+  }
+
+  .about h3 {
+    margin-left: 25px;
+  }
+  .about p {
+    height: 70px;
+    overflow: hidden;
+  }
+
+  .about a {
+    margin-top: 20px;
+    margin-right: 0;
+  }
+
+  .testimonials-container {
+    width: calc(100% - 40px);
+  }
+
+  .testimonials-left {
+    margin: 0 auto;
+    width: calc(100% - 40px);
+    min-width: 290px;
+  }
+
+  .testimonials-face {
+    padding: 0;
+    margin: 0;
+  }
+
+  .testimonials-message {
+    width: calc(100% - 30px);
+  }
+
+  .testimonials-message {
+    margin-left: 28px;
+    margin-right: 28px;
+    height: 275px;
+  }
+
+  .testimonials-message div {
+    display: block;
+    position: static;
+    padding: 0;
+    margin-bottom: 0px;
+  }
+
+  .pingbuller,
+  .starts {
+    margin-left: 0;
+  }
+
+  .testimonials-message h3 {
+    display: block;
+    font-size: 24px;
+  }
+
+  .message-content {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .testimonials-message div {
+
+  }
+
+  .message-content p {
+    padding-top: 0;
+    padding-right: 20px;
+    overflow: hidden;
+    height: 180px;
+    margin-top: 0;
+  }
+
+  .slider-pins {
+    padding-left: 40px;
+  }
+
+  .testimonials-right,
+  .testimonials-right-content {
+    width: calc(100% -40px);
+  }
+
+  .testimonials-paragraphs {
+    width: 220px;
+  }
+
+  .testimonials-paragraphs h4 {
+    width: 150px;
+    overflow: hidden;
+    height: 25px;
+  }
+
+  .sponsors {
+    height: 410px;
+  }
+
+  .sponsors-logos {
+    width: 240px;
+  }
+
+  .sponsors-logos div {
+    margin-bottom: 60px;
+  }
+
+  .news {
+    display: none;
+  }
+
+  .footer-content {
+    width: 100%;
+  }
+
+  .design-author {
+    margin: 40px auto;
+  }
+
+}

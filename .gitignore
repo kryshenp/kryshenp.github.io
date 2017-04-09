@@ -14,3 +14,6 @@ public/stylesheets/all*
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+SASS
+/sass-lessons
