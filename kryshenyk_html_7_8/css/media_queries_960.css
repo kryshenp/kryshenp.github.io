@@ -4,29 +4,29 @@
     display: block;
   }
 
-  .logo,
-  nav,
-  .about h3 {
+  .above-the-fold__logo,
+  .above-the-fold__nav,
+  .about-us__third-heading {
     margin-left: 10px;
   }
 
   .nav-first,
-  nav a {
+  .above-the-fold__nav-link {
     padding-left: 0;
   }
 
-  .slider-content {
+  .above-the-fold__slider-content {
     display: flex;
     justify-content: space-between;
     max-width: 768px;
   }
 
-  .slider-content-text {
+  .above-the-fold__slider-text {
     margin-left: 10px;
     width: 310px;
   }
 
-  .slider-content-text p {
+  .above-the-fold__paragraph {
     overflow: hidden;
     height: 100px;
   }
@@ -39,16 +39,16 @@
     font-size: 24px;
   }
 
-  .slider {
+  .above-the-fold__slider {
     margin-bottom: 35px;
   }
 
-  .slider-pins {
+  .above-the-fold__pins {
     float: right;
     margin-right: 40px;
   }
 
-  .about-us-columns {
+  .about-us__columns {
     color: #fff;
     display: flex;
     margin: 0 auto;
@@ -56,15 +56,15 @@
     width: 768px;
   }
 
-  .about {
+  .about-us__content {
     margin-right: 10px;
   }
 
-  .about a {
+  .about-us__read-more-link {
     margin-right: 0;
   }
 
-  .about p {
+  .about-us__paragraph {
     margin-left: 42px;
   }
 
@@ -111,12 +111,12 @@
     padding-top: 20px;
   }
 
-  .news-container {
+  .news__container {
     margin-top: 50px;
     width: 768px;
   }
 
-  .footer-content {
+  .footer {
     width: 768px;
   }
 
@@ -135,7 +135,12 @@
     margin-top: 10px;
   }
 
-  .news-1 {
+  .news__left-column {
     margin-left: 10px;
   }
+
+  .footer__list-item {
+    padding: 0 10px 0 10px;  
+  }
+
 }
