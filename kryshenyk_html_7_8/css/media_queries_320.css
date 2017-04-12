@@ -1,4 +1,4 @@
-@media all and (max-width: 480px) {
+@media all and (max-width: 478px) {
 
   .above-the-fold__phones,
   .footer__nav {
@@ -69,62 +69,62 @@
     margin-right: 0;
   }
 
-  .testimonials-container {
+  .testimonials__container {
     width: calc(100% - 40px);
   }
 
-  .testimonials-left {
+  .testimonials__left-block {
     margin: 0 auto;
     width: calc(100% - 40px);
     min-width: 290px;
   }
 
-  .testimonials-face {
+  .testimonials__portrait {
     padding: 0;
     margin: 0;
   }
 
-  .testimonials-message {
+  .testimonials__message-wrap {
     width: calc(100% - 30px);
   }
 
-  .testimonials-message {
+  .testimonials__message-wrap {
     margin-left: 28px;
     margin-right: 28px;
     height: 275px;
   }
 
-  .testimonials-message div {
+  .testimonials__message-wrap div {
     display: block;
     position: static;
     padding: 0;
     margin-bottom: 0px;
   }
 
-  .pingbuller,
-  .starts {
+  .testimonials__third-heading,
+  .testimonials__third-heading_colored {
     margin-left: 0;
   }
 
-  .testimonials-message h3 {
+  .testimonials__message-wrap h3 {
     display: block;
     font-size: 24px;
   }
 
-  .message-content {
+  .testimonials__paragraph-left {
     margin-top: 0;
     padding-top: 0;
   }
 
-  .testimonials-message div {
+  .testimonials__message-wrap div {
 
   }
 
-  .message-content p {
+  .testimonials__paragraph-left p {
     padding-top: 0;
     padding-right: 20px;
     overflow: hidden;
-    height: 180px;
+    height: 155px;
     margin-top: 0;
   }
 
@@ -132,27 +132,27 @@
     padding-left: 40px;
   }
 
-  .testimonials-right,
-  .testimonials-right-content {
+  .testimonials__right-block,
+  .testimonials__content-right {
     width: calc(100% -40px);
   }
 
-  .testimonials-paragraphs {
+  .testimonials__paragraph-right {
     width: 220px;
   }
 
-  .testimonials-paragraphs h4 {
-    width: 150px;
-    overflow: hidden;
-    height: 25px;
+  .testimonials__paragraph-right {
+    width: 210px;
+    height: 220px;
+    font-size: 16px;
   }
 
   .sponsors {
-    height: 410px;
+    height: 410px !important;
   }
 
   .sponsors__logos {
-    width: 240px;
+    width: 240px !important;
   }
 
   .sponsors__logos div {
@@ -167,8 +167,15 @@
     width: 100%;
   }
 
+  .footer {
+    width: 100%;
+  }
+
   .footer__design-author {
     margin: 40px auto;
   }
 
+  .testimonials__bullets {
+    margin-right: 10px;
+  }
 }

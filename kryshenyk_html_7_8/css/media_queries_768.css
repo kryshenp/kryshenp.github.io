@@ -1,37 +1,37 @@
-@media all and (min-width: 480px) and (max-width: 767px) {
+@media all and (min-width: 479px) and (max-width: 768px) {
 
   footer,
   .news,
   .sponsors,
-  .testimonials-wrapper,
+  .testimonials,
   .about-us {
     width: 100%;
   }
 
   .above-the-fold__slider-content,
   .about-us__columns,
-  .testimonials-container,
+  .testimonials__container,
   .news__container,
   .separator {
     width: 440px;
   }
 
 
-  .testimonials-heading {
+  .testimonials__title {
     padding: 20px;
     margin-left: 20px;
   }
 
-  .pingbuller {
+  .testimonials__third-heading {
     margin-left: 0px;
     display: block;
   }
 
-  .starts {
+  .testimonials__third-heading_colored {
     margin-left: 0px;
   }
 
-  .message-content p {
+  .testimonials__paragraph-left p {
     margin-top: 95px;
   }
 

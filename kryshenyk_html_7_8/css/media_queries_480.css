@@ -1,4 +1,4 @@
-@media all and (max-width: 767px) {
+@media all and (max-width: 768px) {
 
   .above-the-fold__logo {
     display: block;
@@ -84,12 +84,12 @@
     height: 600px;
   }
 
-  .testimonials-wrapper {
+  .testimonials {
     width: 100%;
     height: 780px;
   }
 
-  .testimonials-container {
+  .testimonials__container {
     padding-top: 60px;
     width: 100%;
     display: block;
@@ -97,29 +97,29 @@
     position: static;
   }
 
-  .testimonials-right {
+  .testimonials__right-block {
     margin: 0 auto;
     width: calc(100% - 100px);
   }
 
-  .testimonials-right-content {
+  .testimonials__content-right {
     width: calc(100% - 50px);
     margin-bottom: 130px;
   }
 
-  .testimonials-paragraphs h4 {
+  .testimonials__forth-heading {
     width: 200px;
     overflow: hidden;
     height: 25px;
   }
 
-  .testimonials-paragraphs p {
+  .testimonials__paragraph-right p {
     height: 24px;
     overflow-y: hidden;
     width: 220px;
   }
 
-  .testimonials-message-triangle {
+  .testimonials__triangle {
     display: none;
   }
 
