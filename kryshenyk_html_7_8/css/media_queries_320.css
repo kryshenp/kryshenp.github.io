@@ -101,6 +101,10 @@
     margin-bottom: 0px;
   }
 
+  .testimonials__portrait {
+    margin-left: -25px;
+  }
+
   .testimonials__third-heading,
   .testimonials__third-heading_colored {
     margin-left: 0;
@@ -134,7 +138,7 @@
 
   .testimonials__right-block,
   .testimonials__content-right {
-    width: calc(100% -40px);
+    width: calc(100% - 40px);
   }
 
   .testimonials__paragraph-right {
