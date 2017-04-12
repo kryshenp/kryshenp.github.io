@@ -1,6 +1,6 @@
-@media all and (max-width: 767px) {
+@media all and (max-width: 768px) {
 
-  .logo {
+  .above-the-fold__logo {
     display: block;
     margin: 0 auto;
     width: 160px;
@@ -11,11 +11,11 @@
     margin-bottom: 100px;
   }
 
-  .slider-content-text h1 {
+  .above-the-fold__first-heading {
     font-size: 36px;
   }
 
-  .nav-mobile {
+  .above-the-fold__nav {
     position: absolute;
     z-index: 10;
     left: calc(50% - 122px);
@@ -27,11 +27,11 @@
     border: 1px solid #0f191f;
   }
 
-  .nav-mobile ul {
+  .above-the-fold__nav_block {
     display: block;
   }
 
-  .nav-mobile li {
+  .above-the-fold__list-item {
     display: block;
     margin: 0 auto;
     height: 40px;
@@ -44,54 +44,52 @@
     line-height: 40px;
   }
 
-  .nav-mobile li:hover {
+  .above-the-fold__list-item:hover {
     box-shadow: inset 0px -2px 0px 0px rgba(237,191,255,1);
     background-color: rgba(0, 0, 0, 0.3);
   }
 
-  .nav-mobile a {
+  .above-the-fold__nav-link {
     padding-bottom: 1px;
   }
 
-   ul .nav-first {
+   .above-the-fold__first-list-item {
     border-top: none;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
   }
 
-  ul .nav-last {
+  .above-the-fold__last-list-item {
     padding-left: 0;
     border-bottom: none;
     border-bottom-left-radius: 9px;
     border-bottom-right-radius: 9px;
   }
 
-  ul .nav-last a {
+  .above-the-fold__last-list-item a {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
 
-  .about {
+  .about-us__content {
     height: 165px;
+    margin-bottom: 20px;
   }
 
-  .about-us-columns {
+  .about-us__columns {
     display: block;
     margin-top: 40px;
   }
   .about-us {
     height: 600px;
   }
-  .about {
-    margin-bottom: 20px;
-  }
 
-  .testimonials-wrapper {
+  .testimonials {
     width: 100%;
     height: 780px;
   }
 
-  .testimonials-container {
+  .testimonials__container {
     padding-top: 60px;
     width: 100%;
     display: block;
@@ -99,29 +97,29 @@
     position: static;
   }
 
-  .testimonials-right {
+  .testimonials__right-block {
     margin: 0 auto;
     width: calc(100% - 100px);
   }
 
-  .testimonials-right-content {
+  .testimonials__content-right {
     width: calc(100% - 50px);
     margin-bottom: 130px;
   }
 
-  .testimonials-paragraphs h4 {
+  .testimonials__forth-heading {
     width: 200px;
     overflow: hidden;
     height: 25px;
   }
 
-  .testimonials-paragraphs p {
+  .testimonials__paragraph-right p {
     height: 24px;
     overflow-y: hidden;
     width: 220px;
   }
 
-  .testimonials-message-triangle {
+  .testimonials__triangle {
     display: none;
   }
 
@@ -130,7 +128,7 @@
     height: 231px;
   }
 
-  .sponsors-logos {
+  .sponsors__logos {
     margin: 0 auto;
     height: 155px;
     width: 350px;
@@ -138,7 +136,7 @@
     display: block;
   }
 
-  .sponsors-logos div {
+  .sponsors__logos div {
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 25px;
@@ -146,7 +144,7 @@
     float: left;
   }
 
-  .billabong {
+  .sponsors__billabong {
     height: 64px;
     width: 104px;
     background-position: left;

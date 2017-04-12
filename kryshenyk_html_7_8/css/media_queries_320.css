@@ -1,7 +1,7 @@
-@media all and (max-width: 480px) {
+@media all and (max-width: 478px) {
 
-  .phones,
-  footer nav {
+  .above-the-fold__phones,
+  .footer__nav {
     display: none;
   }
 
@@ -13,23 +13,23 @@
     height: 500px;
   }
 
-  .slider {
+  .above-the-fold__slider {
     background: none;
     height: 140px;
     margin-bottom: 70px;
   }
 
-  .slider-container {
+  .above-the-fold__slider-container {
     height: 200px;
     margin-top: 80px;
   }
 
-  .slider-content {
+  .above-the-fold__slider-content {
     width: 320px;
     height: auto;
   }
 
-  .slider-content-text {
+  .above-the-fold__slider-text {
     width: 210px;
     height: 60px;
     margin: 0 auto;
@@ -37,138 +37,149 @@
     overflow: hidden;
   }
 
-  .slider-content-text h1 {
+  .above-the-fold__first-heading {
     font-size: 36px;
   }
 
-  .slider-content-text h2 {
+  .above-the-fold__second-heading {
     font-size: 18px;
   }
 
-  .about-us-columns {
+  .about-us__columns {
     width: 320px;
   }
 
-  .about {
+  .about-us__content {
     display: block;
     margin: 0 auto;
     width: 260px;
     height: 170px;
   }
 
-  .about h3 {
+  .about-us__third-heading {
     margin-left: 25px;
   }
-  .about p {
+  .about-us__paragraph {
     height: 70px;
     overflow: hidden;
   }
 
-  .about a {
+  .about-us__read-more-link {
     margin-top: 20px;
     margin-right: 0;
   }
 
-  .testimonials-container {
+  .testimonials__container {
     width: calc(100% - 40px);
   }
 
-  .testimonials-left {
+  .testimonials__left-block {
     margin: 0 auto;
     width: calc(100% - 40px);
     min-width: 290px;
   }
 
-  .testimonials-face {
+  .testimonials__portrait {
     padding: 0;
     margin: 0;
   }
 
-  .testimonials-message {
+  .testimonials__message-wrap {
     width: calc(100% - 30px);
   }
 
-  .testimonials-message {
+  .testimonials__message-wrap {
     margin-left: 28px;
     margin-right: 28px;
     height: 275px;
   }
 
-  .testimonials-message div {
+  .testimonials__message-wrap div {
     display: block;
     position: static;
     padding: 0;
     margin-bottom: 0px;
   }
 
-  .pingbuller,
-  .starts {
+  .testimonials__portrait {
+    margin-left: -25px;
+  }
+
+  .testimonials__third-heading,
+  .testimonials__third-heading_colored {
     margin-left: 0;
   }
 
-  .testimonials-message h3 {
+  .testimonials__message-wrap h3 {
     display: block;
     font-size: 24px;
   }
 
-  .message-content {
+  .testimonials__paragraph-left {
     margin-top: 0;
     padding-top: 0;
   }
 
-  .testimonials-message div {
+  .testimonials__message-wrap div {
 
   }
 
-  .message-content p {
+  .testimonials__paragraph-left p {
     padding-top: 0;
     padding-right: 20px;
     overflow: hidden;
-    height: 180px;
+    height: 155px;
     margin-top: 0;
   }
 
-  .slider-pins {
+  .above-the-fold__pins {
     padding-left: 40px;
   }
 
-  .testimonials-right,
-  .testimonials-right-content {
-    width: calc(100% -40px);
+  .testimonials__right-block,
+  .testimonials__content-right {
+    width: calc(100% - 40px);
   }
 
-  .testimonials-paragraphs {
+  .testimonials__paragraph-right {
     width: 220px;
   }
 
-  .testimonials-paragraphs h4 {
-    width: 150px;
-    overflow: hidden;
-    height: 25px;
+  .testimonials__paragraph-right {
+    width: 210px;
+    height: 220px;
+    font-size: 16px;
   }
 
   .sponsors {
-    height: 410px;
+    height: 410px !important;
   }
 
-  .sponsors-logos {
-    width: 240px;
+  .sponsors__logos {
+    width: 240px !important;
   }
 
-  .sponsors-logos div {
-    margin-bottom: 60px;
+  .sponsors__logos div {
+    margin-bottom: 60px !important;
   }
 
   .news {
     display: none;
   }
 
-  .footer-content {
+  footer {
     width: 100%;
   }
 
-  .design-author {
+  .footer {
+    width: 100%;
+  }
+
+  .footer__design-author {
     margin: 40px auto;
   }
 
+  .testimonials__bullets {
+    margin-right: 10px;
+  }
 }
