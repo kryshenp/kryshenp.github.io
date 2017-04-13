@@ -7,7 +7,7 @@
   }
 
   header {
-    width: 480px;
+    -width: 480px;
     margin-bottom: 100px;
   }
 
