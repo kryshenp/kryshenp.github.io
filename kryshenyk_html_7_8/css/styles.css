@@ -529,6 +529,7 @@ h3 {
   min-height: 387px;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 .news__container div {
