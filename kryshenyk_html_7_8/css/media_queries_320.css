@@ -21,7 +21,8 @@
 
   .above-the-fold__slider-container {
     height: 200px;
-    margin-top: 80px;
+    margin: 0 auto;
+    max-width: 320px;
   }
 
   .above-the-fold__slider-content {
@@ -45,9 +46,10 @@
     font-size: 18px;
   }
 
+
   .about-us__columns {
-    width: 320px;
-  }
+    max-width: 320px;
+}
 
   .about-us__content {
     display: block;
@@ -73,12 +75,6 @@
     width: calc(100% - 40px);
   }
 
-  .testimonials__left-block {
-    margin: 0 auto;
-    width: calc(100% - 40px);
-    min-width: 290px;
-  }
-
   .testimonials__portrait {
     padding: 0;
     margin: 0;
@@ -94,15 +90,21 @@
     height: 275px;
   }
 
-  .testimonials__message-wrap div {
+  /*.testimonials__message-wrap div {
     display: block;
     position: static;
     padding: 0;
     margin-bottom: 0px;
-  }
+  }*/
 
   .testimonials__portrait {
     margin-left: -25px;
+  }
+
+  .testimonials__title {
+    padding-left: 40px;
+    margin-left: 0;
+    padding-bottom: 10px;
   }
 
   .testimonials__third-heading,
@@ -132,9 +134,6 @@
     margin-top: 0;
   }
 
-  .above-the-fold__pins {
-    padding-left: 40px;
-  }
 
   .testimonials__right-block,
   .testimonials__content-right {
@@ -152,7 +151,7 @@
   }
 
   .sponsors {
-    height: 410px !important;
+    min-height: 400px !important;
   }
 
   .sponsors__logos {
@@ -160,7 +159,15 @@
   }
 
   .sponsors__logos div {
-    margin-bottom: 60px !important;
+    -margin-bottom: 60px !important;
+  }
+
+  .sponsors__second-row {
+    margin-bottom: 60px;
+  }
+
+  .sponsors__third-row {
+    margin-bottom: 0 !important;
   }
 
   .news {
