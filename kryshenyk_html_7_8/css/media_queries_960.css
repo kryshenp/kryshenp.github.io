@@ -18,7 +18,7 @@
   }
 
   .above-the-fold {
-    height: 800px;
+    max-height: 800px;
   }
 
   .above-the-fold__logo,
@@ -40,7 +40,8 @@
 
   .above-the-fold__paragraph {
     overflow: hidden;
-    height: 100px;
+    max-height: 100px;
+    margin-top: 20px;
   }
 
   h1 {
@@ -100,10 +101,6 @@
     display: block;
   }
 
-  .testimonials__content-right {
-    width: 370px;
-  }
-
   .testimonials__title {
     padding-top: 15px;
   }
@@ -112,10 +109,6 @@
     font-size: 15px;
     padding-right: 10px;
     padding-top: 20px;
-  }
-
-  .news__container {
-    min-width: 768px;
   }
 
   .news__container div {
@@ -128,7 +121,6 @@
   }
 
   .footer {
-    min-width: 768px;
     margin-bottom: 100px;
   }
 
@@ -157,5 +149,22 @@
 
   .footer__design-author {
     margin-top: 60px;
+  }
+
+  @-moz-document url-prefix() {
+    .above-the-fold__paragraph {
+      max-height: 92px;
+      line-height: 23px;
+    }
+
+    .testimonials__paragraph-right h4 {
+      line-height: 30px;
+    }
+
+    .testimonials__paragraph-right p {
+      line-height: 30px;
+      max-height: 30px;
+      overflow-y: hidden;
+    }
   }
 }

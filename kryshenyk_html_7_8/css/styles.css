@@ -167,12 +167,13 @@ header {
 }
 
 .above-the-fold__phones {
-  background-image: url('../img/phones.png');
-  height: 370px;
   margin-top: -60px;
   position: relative;
-  width: 270px;
-  margin-right: 75px;
+}
+
+.above-the-fold__phones img {
+  width: 90%;
+  display: block;
 }
 
 .above-the-fold__slider-text {
@@ -209,7 +210,7 @@ h2 {
   height: 75px;
   position: absolute;
   top: 150px;
-  left: 135px;
+  left: 120px;
   width: 75px;
   z-index: 1;
 }
@@ -387,8 +388,6 @@ h3 {
   padding: 0 40px;
 }
 
-
-
 .testimonials__pin {
   background-color: #fff;
   border: 1px solid #f0f0f0;
@@ -409,7 +408,6 @@ h3 {
   width: 8px;
 }
 
-
 .testimonials__pin_inactive {
   display: none;
 }
@@ -425,9 +423,7 @@ h3 {
 
 .testimonials__bullets {
   margin-right: 15px;
-  width: 50px;
 }
-
 
 .testimonials__bullet {
   border-radius: 47px;
@@ -456,6 +452,10 @@ h3 {
 
 .testimonials__forth-heading {
   font-weight: 800;
+}
+
+.testimonials__paragraph-right {
+  max-width: 320px;
 }
 
 .testimonials__paragraph-right p {
@@ -637,4 +637,14 @@ h3 {
 
 .footer__signature {
   color: #fff;
+}
+
+@-moz-document url-prefix() {
+  .about-us__paragraph {
+    line-height: 23px;
+  }
+
+  .testimonials__paragraph-left {
+    line-height: 22px;
+  }
 }

@@ -8,21 +8,9 @@
     width: 100%;
   }
 
-  .above-the-fold__slider-content,
-  .about-us__columns,
-  .testimonials__container,
-  .news__container,
-  .separator {
-    min-width: 479px;
-  }
-
-.above-the-fold__slider-text {
+  .above-the-fold__slider-text {
   margin-left: 20px;
-}
-
-.above-the-fold__phones {
-  margin-right: 20px;
-}
+  }
 
   .testimonials__title {
     padding: 20px;
@@ -38,22 +26,22 @@
     margin-left: 0px;
   }
 
-  .testimonials__paragraph-left p {
-    -margin-top: 95px;
+  .testimonials__message-wrap {
+    max-width: none;
+    width: calc(100% - 40px);
   }
 
-.testimonials__message-wrap {
-  max-width: none;
-  width: calc(100% - 40px);
-}
+  .testimonials__paragraph-right {
+      max-width: 100%;
+  }
 
   footer {
-    height: 200px;
+    min-height: 200px;
     display: block;
   }
 
   .footer__nav {
-    height: 105px;
+    min-height: 105px;
   }
 
   .footer__list {
@@ -66,7 +54,7 @@
   }
 
   .above-the-fold {
-    height: 548px;
+    max-height: 548px;
   }
 
   .above-the-fold__slider {
@@ -75,11 +63,11 @@
 
   .above-the-fold__slider,
   .above-the-fold__slider-content {
-    height: 245px;
+    max-height: 245px;
   }
 
   .above-the-fold__slider-text {
-    width: 225px;
+    max-width: 225px;
   }
 
   .above-the-fold__second-heading {
@@ -100,7 +88,7 @@
 
   .above-the-fold__play-btn {
     top: 105px;
-    left: 100px;
+    left: 90px;
     width: 50px;
     height: 50px;
     background-image: url('../img/play.png');
@@ -114,16 +102,10 @@
     left: 21px;
   }
 
-  .news {
-    -height: 670px;
-  }
-
   .news__container {
     display: block;
     padding-top: 80px;
     padding-bottom: 80px;
-    -padding-left: 20px;
-    -padding-right: 20px;
     width: calc(100% - 40px);
     margin: 0 auto;
   }
@@ -136,7 +118,6 @@
   }
 
   .footer {
-    -width: 440px;
     display: block;
   }
 
@@ -157,9 +138,8 @@
   }
 
   .footer__design-author {
-    display: block;
-    width: 135px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
   }
 
   .above-the-fold__nav-link:hover {
@@ -167,11 +147,9 @@
   }
 
   .about-us__content {
-    min-width: 440px;
     max-width: 750px;
     margin: 0 auto;
     margin-left: 20px;
     margin-right: 20px;
-}
-
+  }
 }
