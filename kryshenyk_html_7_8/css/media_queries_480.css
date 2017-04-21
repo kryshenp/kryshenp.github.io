@@ -1,13 +1,10 @@
 @media all and (max-width: 768px) {
 
   .above-the-fold__logo {
-    display: block;
     margin: 0 auto;
-    width: 160px;
   }
 
   header {
-    width: 480px;
     margin-bottom: 100px;
   }
 
@@ -20,7 +17,6 @@
     z-index: 10;
     left: calc(50% - 122px);
     top: 130px;
-    width: 245px;
     background-color: #6d507a;
     opacity: .9;
     border-radius: 10px;
@@ -34,10 +30,8 @@
   .above-the-fold__list-item {
     display: block;
     margin: 0 auto;
-    height: 40px;
-    width: 245px;
-    padding-left: 0;
-    padding-right: 0;
+    min-width: 245px;
+    padding: 0;
     text-align: center;
     border-bottom: 1px solid #36283e;
     border-top: 1px solid #523f5a;
@@ -71,22 +65,20 @@
     border-bottom-right-radius: 0;
   }
 
+  .about-us {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+  }
+
   .about-us__content {
-    height: 165px;
-    margin-bottom: 20px;
+    margin-bottom: 30px !important;
+    margin-top: 30px !important;
   }
 
   .about-us__columns {
     display: block;
-    margin-top: 40px;
-  }
-  .about-us {
-    height: 600px;
-  }
-
-  .testimonials {
-    width: 100%;
-    height: 780px;
+    align-self: center;
   }
 
   .testimonials__container {
@@ -95,28 +87,41 @@
     display: block;
     margin: 0 auto;
     position: static;
+    margin-bottom: 30px;
+  }
+
+  .testimonials__left-block {
+    margin: 0 auto;
+    width: calc(100% - 40px);
+    min-width: 290px;
+  }
+
+  .testimonials__paragraph-left p {
+    padding-top: 0;
+    padding-right: 20px;
+    overflow: hidden;
+    max-height: 155px;
+    margin-top: 0;
   }
 
   .testimonials__right-block {
     margin: 0 auto;
-    width: calc(100% - 100px);
+    width: calc(100% - 50px);
   }
 
   .testimonials__content-right {
     width: calc(100% - 50px);
-    margin-bottom: 130px;
   }
 
   .testimonials__forth-heading {
-    width: 200px;
     overflow: hidden;
-    height: 25px;
+    max-height: 25px;
   }
 
   .testimonials__paragraph-right p {
-    height: 24px;
+    max-height: 24px;
     overflow-y: hidden;
-    width: 220px;
+    width: 100%;
   }
 
   .testimonials__triangle {
@@ -125,15 +130,17 @@
 
   .sponsors {
     width: 100%;
-    height: 231px;
+    min-height: 231px;
+    display: flex;
+    justify-content: center;
   }
 
   .sponsors__logos {
     margin: 0 auto;
-    height: 155px;
+    min-height: 155px;
     width: 350px;
-    margin-top: 38px;
     display: block;
+    align-self: center;
   }
 
   .sponsors__logos div {
@@ -144,53 +151,37 @@
     float: left;
   }
 
-  .sponsors__billabong {
-    height: 64px;
-    width: 104px;
-    background-position: left;
-    background-image: url('../img/sponsors2.png');
-    background-position: 18px 0;
+  .sponsors__second-row {
+    margin-bottom: 0;
   }
 
-  .dc {
-    height: 64px;
-    width: 104px;
-    background-position: left;
-    background-image: url('../img/sponsors2.png');
-    background-position: -99px 0;
+  .above-the-fold__nav {
+    visibility: hidden;
   }
 
-  .skt {
-    height: 64px;
-    width: 104px;
-    background-position: left;
-    background-image: url('../img/sponsors2.png');
-    background-position: -201px 0;
+  .above-the-fold__nav-link_initial,
+  .above-the-fold__nav:hover {
+    visibility: visible;
   }
 
-  .awsm {
-    height: 64px;
-    width: 104px;
-    background-position: left;
-    background-image: url('../img/sponsors2.png');
-    background-position: 390px 0;
+  .above-the-fold__nav-link {
+    border-bottom: 2px solid #edbfff;
   }
 
-  .rvca {
-    height: 64px;
-    width: 104px;
-    background-position: left;
-    background-image: url('../img/sponsors2.png');
-    background-position: 260px 0;
+  .above-the-fold__nav:hover .above-the-fold__nav-link {
+    border-bottom: none;
   }
 
-  .vonzipper {
-    height: 64px;
-    width: 104px;
-    background-image: none;
-    background-position: left;
-    background-image: url('../img/sponsors2.png');
-    background-position: 132px 0;
-  }
+  @-moz-document url-prefix() {
 
+    .testimonials__paragraph-right h4 {
+      line-height: 24px;
+    }
+
+    .testimonials__paragraph-right p {
+      line-height: 24px;
+      max-height: 24px;
+      overflow-y: hidden;
+    }
+  }
 }

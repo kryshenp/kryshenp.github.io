@@ -2,6 +2,23 @@
 
   header {
     display: block;
+    margin-bottom: 70px;
+  }
+
+  .above-the-fold,
+  .about-us,
+  .separator,
+  .testimonials,
+  .sponsors,
+  .news,
+  footer {
+    width: 100%;
+    min-width: 760px;
+    max-width: 960px;
+  }
+
+  .above-the-fold {
+    max-height: 800px;
   }
 
   .above-the-fold__logo,
@@ -11,24 +28,20 @@
   }
 
   .nav-first,
-  .above-the-fold__nav-link {
+  .above-the-fold__nav-link,
+  .above-the-fold__first-list-item {
     padding-left: 0;
-  }
-
-  .above-the-fold__slider-content {
-    display: flex;
-    justify-content: space-between;
-    max-width: 768px;
   }
 
   .above-the-fold__slider-text {
     margin-left: 10px;
-    width: 310px;
+    max-width: 340px;
   }
 
   .above-the-fold__paragraph {
     overflow: hidden;
-    height: 100px;
+    max-height: 100px;
+    margin-top: 20px;
   }
 
   h1 {
@@ -45,19 +58,19 @@
 
   .above-the-fold__pins {
     float: right;
-    margin-right: 40px;
+    margin-right: 140px;
   }
 
   .about-us__columns {
     color: #fff;
     display: flex;
     margin: 0 auto;
-    margin-top: 78px;
-    width: 768px;
   }
 
   .about-us__content {
     margin-right: 10px;
+    max-width: 284px;
+    min-width: 248px;
   }
 
   .about-us__read-more-link {
@@ -71,20 +84,16 @@
 
   .testimonials__left-block,
   .testimonials__right-block {
-    width: 315px;
+    margin-left: 20px;
   }
 
   .testimonials__container {
     display: flex;
-    position: absolute;
-    height: 320px;
-    left: calc(50% - 370px);
-    margin-top: 100px;
-    width: 768px;
+    min-width: 728px;
   }
 
   .testimonials__message-wrap {
-    width: 320px;
+    min-width: 320px;
   }
 
   .testimonials__third-heading,
@@ -92,17 +101,8 @@
     display: block;
   }
 
-  .testimonials__content-right {
-    width: 370px;
-  }
-
   .testimonials__title {
     padding-top: 15px;
-  }
-
-  .testimonials__paragraph-left {
-    height: 235px;
-    overflow: hidden;
   }
 
   .testimonials__paragraph-left p {
@@ -111,13 +111,17 @@
     padding-top: 20px;
   }
 
-  .news__container {
-    margin-top: 50px;
-    width: 768px;
+  .news__container div {
+    min-width: 200px;
+    margin-right: 30px;
+  }
+
+  footer {
+    max-height: 200px;
   }
 
   .footer {
-    width: 768px;
+    margin-bottom: 100px;
   }
 
   .testimonials__third-heading_colored {
@@ -143,4 +147,24 @@
     padding: 0 10px 0 10px;
   }
 
+  .footer__design-author {
+    margin-top: 60px;
+  }
+
+  @-moz-document url-prefix() {
+    .above-the-fold__paragraph {
+      max-height: 92px;
+      line-height: 23px;
+    }
+
+    .testimonials__paragraph-right h4 {
+      line-height: 30px;
+    }
+
+    .testimonials__paragraph-right p {
+      line-height: 30px;
+      max-height: 30px;
+      overflow-y: hidden;
+    }
+  }
 }
