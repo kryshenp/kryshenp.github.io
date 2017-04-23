@@ -5,18 +5,6 @@
     margin-bottom: 70px;
   }
 
-  .above-the-fold,
-  .about-us,
-  .separator,
-  .testimonials,
-  .sponsors,
-  .news,
-  footer {
-    width: 100%;
-    min-width: 760px;
-    max-width: 960px;
-  }
-
   .above-the-fold {
     max-height: 800px;
   }
@@ -35,7 +23,7 @@
 
   .above-the-fold__slider-text {
     margin-left: 10px;
-    max-width: 340px;
+    width: 50%;
   }
 
   .above-the-fold__paragraph {
@@ -57,8 +45,9 @@
   }
 
   .above-the-fold__pins {
-    float: right;
-    margin-right: 140px;
+    justify-content: flex-end;
+    -float: right;
+    margin-right: 70px;
   }
 
   .about-us__columns {
@@ -69,8 +58,6 @@
 
   .about-us__content {
     margin-right: 10px;
-    max-width: 284px;
-    min-width: 248px;
   }
 
   .about-us__read-more-link {
@@ -81,52 +68,32 @@
     margin-left: 42px;
   }
 
-
-  .testimonials__left-block,
-  .testimonials__right-block {
-    margin-left: 20px;
-  }
-
-  .testimonials__container {
-    display: flex;
-    min-width: 728px;
-  }
-
-  .testimonials__message-wrap {
-    min-width: 320px;
-  }
-
   .testimonials__third-heading,
   .testimonials__third-heading_colored {
     display: block;
   }
 
+  .testimonials__third-heading {
+    margin-left: 0px;
+  }
+
   .testimonials__title {
     padding-top: 15px;
+    margin-left: 40px;
   }
 
   .testimonials__paragraph-left p {
     font-size: 15px;
-    padding-right: 10px;
-    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-top: 5px;
   }
 
   .news__container div {
-    min-width: 200px;
     margin-right: 30px;
   }
 
-  footer {
-    max-height: 200px;
-  }
-
-  .footer {
-    margin-bottom: 100px;
-  }
-
   .testimonials__third-heading_colored {
-    display: block;
-    margin-left: 30px;
+    margin-left: 0;
   }
 
   .testimonials__paragraph-right p {
@@ -134,9 +101,17 @@
     margin-bottom: 10px;
   }
 
-  .testimonials__bullets {
-    margin-right: 10px;
-    margin-top: 10px;
+  .testimonials__article-body {
+    max-width: 260px;
+  }
+
+  .testimonials__article-paragraph {
+    max-height: 26px;
+    overflow-y: hidden;
+  }
+
+  .testimonials__remo-link {
+    padding-right: 50px;
   }
 
   .news__left-column {

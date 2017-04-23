@@ -1,36 +1,19 @@
 @media all and (max-width: 478px) {
 
   .above-the-fold__phones,
-  .footer__nav {
+  .footer__nav,
+  .above-the-fold__paragraph,
+  .news {
     display: none;
-  }
-
-  .above-the-fold {
-    max-height: 500px;
   }
 
   .above-the-fold__slider {
     background: none;
-    max-height: 140px;
-    margin-bottom: 70px;
-  }
-
-  .above-the-fold__slider-container {
-    min-height: 200px;
-    margin: 0 auto;
-    min-width: 320px;
-  }
-
-  .above-the-fold__slider-content {
-    min-width: 320px;
   }
 
   .above-the-fold__slider-text {
     display: block;
     margin: 0 auto;
-    max-width: 210px;
-    max-height: 60px;
-    overflow: hidden;
   }
 
   .above-the-fold__first-heading {
@@ -41,31 +24,24 @@
     font-size: 18px;
   }
 
-  .about-us__columns {
-    min-width: 320px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
   .about-us__content {
-    display: block;
-    margin: 0 auto;
-    height: 170px;
-    min-width: 320px;
-    max-width: 100%;
+    width: 100%;
   }
 
   .about-us__third-heading {
     margin-left: 25px;
   }
+
   .about-us__paragraph {
-    max-height: 70px;
+    max-height: 64px;
+    line-height: 21px;
     overflow: hidden;
   }
 
   .about-us__read-more-link {
     margin-top: 20px;
     margin-right: 0;
+    padding-right: 20px;
   }
 
   .testimonials__container {
@@ -81,11 +57,6 @@
     width: calc(100% - 30px);
   }
 
-  .testimonials__message-wrap {
-    margin-left: 28px;
-    margin-right: 28px;
-  }
-
   .testimonials__portrait {
     margin-left: -25px;
   }
@@ -96,9 +67,12 @@
     padding-bottom: 10px;
   }
 
-  .testimonials__third-heading,
-  .testimonials__third-heading_colored {
+  .testimonials__third-heading {
     margin-left: 0;
+  }
+
+  .testimonials__third-heading_colored {
+    margin-left: 7px;
   }
 
   .testimonials__message-wrap h3 {
@@ -111,49 +85,25 @@
     padding-top: 0;
   }
 
-  .testimonials__right-block,
-  .testimonials__content-right {
+  .testimonials__right-block {
     width: calc(100% - 40px);
   }
 
-  .testimonials__paragraph-right {
-    font-size: 16px;
+  .testimonials__forth-heading {
+    max-height: 25px;
+    overflow-y: hidden;
   }
 
-  .sponsors {
-    min-height: 400px !important;
-  }
-
-  .sponsors__logos {
-    max-width: 240px;
-  }
-
-  .sponsors__second-row {
-    margin-bottom: 60px;
-  }
-
-  .sponsors__third-row {
-    margin-bottom: 0 !important;
-  }
-
-  .news {
-    display: none;
-  }
-
-  footer {
-    width: 100%;
+  .sponsors__item {
+    padding: 25px 0;
   }
 
   .footer {
-    width: 100%;
+    padding-bottom: 100px;
   }
 
   .footer__design-author {
-    margin: 40px auto;
-  }
-
-  .testimonials__bullets {
-    margin-right: 10px;
+    margin: 0 auto;
   }
 
   @-moz-document url-prefix() {

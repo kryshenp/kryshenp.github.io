@@ -1,13 +1,5 @@
 @media all and (min-width: 479px) and (max-width: 768px) {
 
-  footer,
-  .news,
-  .sponsors,
-  .testimonials,
-  .about-us {
-    width: 100%;
-  }
-
   .above-the-fold__slider-text {
   margin-left: 20px;
   }
@@ -17,57 +9,26 @@
     margin-left: 20px;
   }
 
-  .testimonials__third-heading {
-    margin-left: 0px;
-    display: block;
-  }
-
-  .testimonials__third-heading_colored {
-    margin-left: 0px;
-  }
-
   .testimonials__message-wrap {
-    max-width: none;
     width: calc(100% - 40px);
   }
 
-  .testimonials__paragraph-right {
-      max-width: 100%;
-  }
-
-  footer {
-    min-height: 200px;
-    display: block;
-  }
-
   .footer__nav {
-    min-height: 105px;
+    padding: 35px 0;
   }
 
   .footer__list {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    margin-left: 50px;
-    margin-right: 50px;
-
-  }
-
-  .above-the-fold {
-    max-height: 548px;
+    width: 85%;
   }
 
   .above-the-fold__slider {
     margin-bottom: 20px;
   }
 
-  .above-the-fold__slider,
-  .above-the-fold__slider-content {
-    max-height: 245px;
-  }
-
   .above-the-fold__slider-text {
-    max-width: 225px;
+    width: 40%;
   }
 
   .above-the-fold__second-heading {
@@ -79,21 +40,14 @@
   }
 
   .above-the-fold__phones {
-    height: 265px;
-    width: 193px;
-    background-size: 100%;
-    margin-top: -5px;
-    background-repeat: no-repeat;
+    margin-top: -25px;
   }
 
   .above-the-fold__play-btn {
-    top: 105px;
-    left: 90px;
+    top: 135px;
+    left: 130px;
     width: 50px;
     height: 50px;
-    background-image: url('../img/play.png');
-    background-size: cover;
-    border-radius: 50px;
   }
 
   .above-the-fold__icon {
@@ -104,17 +58,23 @@
 
   .news__container {
     display: block;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding: 80px 0;
     width: calc(100% - 40px);
-    margin: 0 auto;
   }
 
   .news__container div {
-    margin-right: 0;
     margin-bottom: 10px;
     margin-top: 10px;
-    max-width: calc(100% - 10px);
+    width: 100%;
+  }
+
+  .sponsors__logos {
+    width: 66%;
+    flex-wrap: wrap;
+  }
+
+  .sponsors__item {
+    width: 33.3%;
   }
 
   .footer {
@@ -127,19 +87,9 @@
     justify-content: center;
   }
 
-  .footer__list-item {
-    padding-left: 0;
-    padding-right: 10px;
-  }
-
+  .footer__list-item,
   .footer__link {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-  .footer__design-author {
-    display: flex;
-    justify-content: center;
+    padding: 0;
   }
 
   .above-the-fold__nav-link:hover {
@@ -147,9 +97,7 @@
   }
 
   .about-us__content {
-    max-width: 750px;
+    width: 90%;
     margin: 0 auto;
-    margin-left: 20px;
-    margin-right: 20px;
   }
 }
