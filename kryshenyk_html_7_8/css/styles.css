@@ -611,6 +611,44 @@ h3 {
   color: #fff;
 }
 
+.sponsors__item a {
+  height: 64px;
+  width: 104px;
+}
+
+.sponsors__billabong,
+.sponsors__dc,
+.sponsors__skt,
+.sponsors__awsm,
+.sponsors__rvca,
+.sponsors__vonzipper {
+  background-image: url('../img/sponsors2.png');
+}
+
+.sponsors__billabong {
+  background-position: 18px 0;
+}
+
+.sponsors__dc {
+  background-position: -99px 0;
+}
+
+.sponsors__skt {
+  background-position: -202px 0;
+}
+
+.sponsors__awsm {
+  background-position: 392px 0;
+}
+
+.sponsors__rvca {
+  background-position: 260px 0;
+}
+
+.sponsors__vonzipper {
+  background-position: 133px -3px;
+}
+
 @-moz-document url-prefix() {
   .about-us__paragraph {
     line-height: 23px;

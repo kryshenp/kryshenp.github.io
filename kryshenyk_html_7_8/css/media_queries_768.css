@@ -68,11 +68,6 @@
     width: 100%;
   }
 
-  .sponsors__logos {
-    width: 66%;
-    flex-wrap: wrap;
-  }
-
   .sponsors__item {
     width: 33.3%;
   }
