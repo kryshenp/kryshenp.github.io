@@ -114,5 +114,9 @@
     .testimonials__paragraph-left {
       line-height: 22px;
     }
+
+    .about-us__paragraph {
+      max-height: none;
+    }
   }
 }
