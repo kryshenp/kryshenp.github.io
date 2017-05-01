@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-weight: lighter;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+ol {
+  padding: 40px;
+}
+
+ul {
+  padding: 0 40px 40px 40px;
+}
+
+li {
+  padding-bottom: 10px;
+}
+
+p {
+  color: #FF0000;
+  padding-left: 40px;
+  font-weight: bold;
+}
+
+a {
+  color: ##a300ff;
+  text-decoration: none;
+  font-weight: bold;
+}
