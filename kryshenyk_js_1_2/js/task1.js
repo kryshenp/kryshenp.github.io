@@ -1,5 +1,5 @@
-var base = parseInt(prompt('Enter the base: '));
-var power = parseInt(prompt('Enter the power: '));
+var base = parseInt(prompt('Enter the base: ', ''));
+var power = parseInt(prompt('Enter the power: ', ''));
 var result = 1;
 
 function calcPow(base, power) {
