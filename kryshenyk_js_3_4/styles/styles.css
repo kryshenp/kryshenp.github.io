@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+}
+
+#root {
+  background-color: gray;
+  min-width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.formContainer {
+  background-color: white;
+  width: 80%;
+  height: 100%;
+}
+
+.btn-caption {
+  margin: 0;
+}
+
+.ql-container{
+  padding-left: 5%;
+}
+
+.centred {
+  display: flex !important;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.my-button {
+  margin-bottom: 50px !important;
+}
+
+.main-heading {
+  margin-top: 50px !important;
+}
+
+.my-label {
+  padding-left: 10px;
+}
