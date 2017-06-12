@@ -18,9 +18,9 @@ document.onload = (function generateForm() {
   formContainer.appendChild(pageHeading);
 
   var quiz = {
-    questions: function () {
+    questions: function blab() {
 
-      var questionsList = document.createElement("div");
+      var questionsList = document.createElement('div');
       questionsList.classList.add("ql-container");
       formContainer.appendChild(questionsList);
 
@@ -31,7 +31,7 @@ document.onload = (function generateForm() {
         caption.appendChild(document.createTextNode(i +". " + "Question # " + i));
         question.appendChild(caption);
 
-        for (var j = 1; j <= 3 ; j++) {
+        for (var j = 1; j < 4 ; j++) {
           var answerContainer = document.createElement('li');
           answerContainer.classList.add("list-unstyled");
           question.appendChild(answerContainer);
@@ -45,10 +45,9 @@ document.onload = (function generateForm() {
           input.setAttribute("type", "checkbox");
           answer.appendChild(input);
 
-
-          var crm = document.createElement('span');
-          crm.appendChild(document.createTextNode(' Option # ' + j));
-          answer.appendChild(crm);
+          var optionCaption = document.createElement('span');
+          optionCaption.appendChild(document.createTextNode(' Option # ' + j));
+          answer.appendChild(optionCaption);
         }
       }
     },
