@@ -1,70 +1,69 @@
 /*
-Written by Pavlo Kryshenyk 10.5.2017
+Fixed by Pavlo Kryshenyk 13.5.2017
 */
 document.onload = (function generateForm() {
   'use strict';
 
-  var root = document.createElement('div');
-  root.setAttribute("id", "root");
-  document.body.appendChild(root);
+  var test = {
+    data: {
+      title: 'Javascript Programming Quiz',
+      questions: [{
+        title: 'Question #1',
+        answers: ['Option 1', 'Option 2', 'Option 3']
+      },
+      {
+        title: 'Question #2',
+        answers: ['Option 1', 'Option 2', 'Option 3']
+      },
+      {
+        title: 'Question #3',
+        answers: ['Option 1', 'Option 2', 'Option 3']
+      }]
+    },
 
-  var formContainer = document.createElement('form');
-  formContainer.classList.add("formContainer");
-  root.appendChild(formContainer);
+    generateQuiz: function () {
 
-  var pageHeading = document.createElement('h1');
-  pageHeading.classList.add("centred", "main-heading");
-  pageHeading.appendChild(document.createTextNode('Javascript Programming Quiz'));
-  formContainer.appendChild(pageHeading);
+      var formContainer = document.createElement('form');
+      formContainer.classList.add('formContainer');
+      root.appendChild(formContainer);
 
-  var quiz = {
-    questions: function blab() {
+      var pageHeading = document.createElement('h1');
+      pageHeading.classList.add('centred', 'main-heading');
+      pageHeading.appendChild(document.createTextNode(test.data.title));
+      formContainer.appendChild(pageHeading);
 
-      var questionsList = document.createElement('div');
-      questionsList.classList.add("ql-container");
-      formContainer.appendChild(questionsList);
+      for (var i = 0; i < test.data.questions.length; i++) {
 
-      for (var i = 1; i < 4; i++) {
-        var question = document.createElement('ul');
-        questionsList.appendChild(question);
         var caption = document.createElement('h4');
-        caption.appendChild(document.createTextNode(i +". " + "Question # " + i));
-        question.appendChild(caption);
+        formContainer.appendChild(caption);
+        caption.appendChild(document.createTextNode(i+1 +'. ' + 'Question # ' + (i+1)));
 
-        for (var j = 1; j < 4 ; j++) {
+        var question = document.createElement('ul');
+        formContainer.appendChild(question);
+
+        for (var j = 0; j < test.data.questions[i].answers.length; j++) {
           var answerContainer = document.createElement('li');
-          answerContainer.classList.add("list-unstyled");
+          answerContainer.classList.add('list-unstyled');
           question.appendChild(answerContainer);
 
           var answer = document.createElement('label');
-          answer.classList.add("my-label");
-          answer.setAttribute("id", "checkbox");
+          answer.classList.add('my-label');
           answerContainer.appendChild(answer);
 
           var input = document.createElement('input');
-          input.setAttribute("type", "checkbox");
+          input.setAttribute('type', 'checkbox');
           answer.appendChild(input);
-
-          var optionCaption = document.createElement('span');
-          optionCaption.appendChild(document.createTextNode(' Option # ' + j));
-          answer.appendChild(optionCaption);
+          answer.appendChild(document.createTextNode(test.data.questions[i].answers[j]));
         }
       }
-    },
 
-    button: function () {
-      var button = document.createElement("button");
-      button.classList.add("btn", "btn-default", "centred", "my-button");
+      var button = document.createElement('button');
+      button.classList.add('btn', 'btn-default', 'centred', 'my-button');
+      button.appendChild(document.createTextNode('Submit Form'));
       formContainer.appendChild(button);
-
-      var buttonCaption = document.createElement("p");
-      buttonCaption.appendChild(document.createTextNode('Submit Form'));
-      buttonCaption.classList.add("btn-caption");
-      button.appendChild(buttonCaption);
     }
-  }
+  };
 
-  quiz.questions();
-  quiz.button();
+  test.generateQuiz();
 
 })();
