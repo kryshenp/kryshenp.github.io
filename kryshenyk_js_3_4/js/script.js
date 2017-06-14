@@ -13,11 +13,11 @@ document.onload = (function generateForm() {
       },
       {
         title: 'Question #2',
-        answers: ['Option 1', 'Option 2', 'Option 3']
+        answers: ['Option 1', 'Option 2', 'Option 3', 'Option 4']
       },
       {
         title: 'Question #3',
-        answers: ['Option 1', 'Option 2', 'Option 3']
+        answers: ['Option 1', 'Option 2']
       }]
     },
 
@@ -42,7 +42,7 @@ document.onload = (function generateForm() {
         formContainer.appendChild(question);
 
         for (var j = 0; j < test.data.questions[i].answers.length; j++) {
-          
+
           var answerContainer = document.createElement('li');
           answerContainer.classList.add('list-unstyled');
           question.appendChild(answerContainer);
