@@ -42,6 +42,7 @@ document.onload = (function generateForm() {
         formContainer.appendChild(question);
 
         for (var j = 0; j < test.data.questions[i].answers.length; j++) {
+          
           var answerContainer = document.createElement('li');
           answerContainer.classList.add('list-unstyled');
           question.appendChild(answerContainer);
@@ -62,7 +63,7 @@ document.onload = (function generateForm() {
       button.appendChild(document.createTextNode('Submit Form'));
       formContainer.appendChild(button);
     }
-  };
+  }
 
   test.generateQuiz();
 
