@@ -29,7 +29,7 @@ document.onload = (function generateForm() {
 
       var pageHeading = document.createElement('h1');
       pageHeading.classList.add('centred', 'main-heading');
-      pageHeading.appendChild(document.createTextNode(test.data.title));
+      pageHeading.appendChild(document.createTextNode(this.data.title));
       formContainer.appendChild(pageHeading);
 
       for (var i = 0; i < test.data.questions.length; i++) {
@@ -41,7 +41,7 @@ document.onload = (function generateForm() {
         var question = document.createElement('ul');
         formContainer.appendChild(question);
 
-        for (var j = 0; j < test.data.questions[i].answers.length; j++) {
+        for (var j = 0; j < this.data.questions[i].answers.length; j++) {
 
           var answerContainer = document.createElement('li');
           answerContainer.classList.add('list-unstyled');
@@ -54,7 +54,7 @@ document.onload = (function generateForm() {
           var input = document.createElement('input');
           input.setAttribute('type', 'checkbox');
           answer.appendChild(input);
-          answer.appendChild(document.createTextNode(test.data.questions[i].answers[j]));
+          answer.appendChild(document.createTextNode(this.data.questions[i].answers[j]));
         }
       }
 
