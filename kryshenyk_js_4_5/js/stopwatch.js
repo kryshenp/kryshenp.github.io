@@ -6,6 +6,9 @@ function Stopwatch(elem) {
   var interval;
   var offset;
 
+  var timeInfo = document.getElementById("infa");
+  timeInfo.classList.add('centred', 'time-info');
+
   this.isOn = false;
 
   function delta() {
@@ -19,13 +22,11 @@ function Stopwatch(elem) {
         if (this.isOn) {
             time += delta();
         }
-        elem.textContent = timeFormatter(time);
-        console.log(timeFormatter(time));
+        elem.textContent = formatTime(time);
+
   };
 
-
-
-  function timeFormatter(timeInMilliseconds) {
+  function formatTime(timeInMilliseconds) {
     var time = new Date(timeInMilliseconds);
     var minutes = time.getMinutes().toString();
     var seconds = time.getSeconds().toString();
@@ -46,17 +47,16 @@ function Stopwatch(elem) {
     return minutes + ' : ' + seconds + ' . ' + milliseconds;
   }
 
-  this.start = function () {
-    while (!this.isOn) {
+  this.startStop = function () {
+    if (!this.isOn) {
       interval = setInterval(this.update.bind(this), 8);
       offset = Date.now();
       this.isOn = true;
     }
-  };
-
-  this.stop = function () {
-    while (this.isOn) {
+    else {
       clearInterval(interval);
+      timeInfo.appendChild(document.createTextNode('STOP ON  '+ (formatTime(time))));
+      timeInfo.appendChild(document.createElement("br"));
       this.isOn = false;
     }
   };
@@ -64,6 +64,12 @@ function Stopwatch(elem) {
   this.reset = function () {
     time = 0;
     this.update();
+
+  };
+
+  this.split = function () {
+    timeInfo.appendChild(document.createTextNode('SPLIT ON  '+ (formatTime(time))));
+    timeInfo.appendChild(document.createElement("br"));
   };
 
 }

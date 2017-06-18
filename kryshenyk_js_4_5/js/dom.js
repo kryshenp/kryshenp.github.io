@@ -17,6 +17,11 @@ document.onload = (function() {
       startStopBtn.setAttribute("id", "startStopBtn");
       timerContainer.appendChild(startStopBtn);
 
+      var splitBtn = document.createElement('button');
+      splitBtn.appendChild(document.createTextNode('SPLIT'));
+      splitBtn.setAttribute("id", "splitBtn");
+      timerContainer.appendChild(splitBtn);
+
       var resetBtn = document.createElement('button');
       resetBtn.appendChild(document.createTextNode('RESET'));
       resetBtn.setAttribute("id", "resetBtn");
@@ -26,6 +31,10 @@ document.onload = (function() {
       timer.setAttribute("id", "timer");
       timer.appendChild(document.createTextNode('00 : 00'));
       timerContainer.appendChild(timer);
+
+      var infa = document.createElement('div');
+      infa.setAttribute("id", "infa");
+      timerContainer.appendChild(infa);
 
     }
   };
