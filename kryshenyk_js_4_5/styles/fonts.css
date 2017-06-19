@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'COMPUTER-Robot';
+    src:url('../fonts/COMPUTER-Robot.ttf.woff') format('woff'),
+        url('../fonts/COMPUTER-Robot.ttf.svg#COMPUTER-Robot') format('svg'),
+        url('../fonts/COMPUTER-Robot.ttf.eot'),
+        url('../fonts/COMPUTER-Robot.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}

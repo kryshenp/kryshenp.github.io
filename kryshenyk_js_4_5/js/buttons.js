@@ -1,3 +1,6 @@
+/*
+  Written by Pavlo Kryshenyk 18.5.2017
+*/
 
 (function () {
 

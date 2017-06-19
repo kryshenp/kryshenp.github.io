@@ -1,3 +1,7 @@
+/*
+  Written by Pavlo Kryshenyk 18.5.2017
+*/
+
 function Stopwatch(elem) {
 
   'use strict';
@@ -6,8 +10,8 @@ function Stopwatch(elem) {
   var interval;
   var offset;
 
-  var timeInfo = document.getElementById("infa");
-  timeInfo.classList.add('centred', 'time-info');
+  var timeInfo = document.getElementById("timeInfo");
+  timeInfo.classList.add('time-info');
 
   this.isOn = false;
 
@@ -18,44 +22,48 @@ function Stopwatch(elem) {
     return timePassed;
   }
 
-  this.update = function () {
+  this.updateTime = function () {
         if (this.isOn) {
             time += delta();
         }
-        elem.textContent = formatTime(time);
+        elem.textContent = timeView(time);
 
   };
 
-  function formatTime(timeInMilliseconds) {
-    var time = new Date(timeInMilliseconds);
-    var minutes = time.getMinutes().toString();
-    var seconds = time.getSeconds().toString();
-    var milliseconds = time.getMilliseconds().toString();
+  function timeView(msTime) {
+    var time = new Date(msTime);
+    var min = time.getMinutes().toString();
+    var sec = time.getSeconds().toString();
+    var ms = time.getMilliseconds().toString();
 
-    if (minutes.length < 2) {
-      minutes = '0' + minutes;
+    if (min.length < 2) {
+      min = '0' + min;
     }
 
-    if(seconds.length < 2) {
-      seconds = '0' + seconds;
+    if(sec.length < 2) {
+      sec = '0' + sec;
     }
 
-    if(milliseconds.length < 2) {
-      milliseconds = '0' + milliseconds;
+    if(ms.length == 1) {
+      ms = '00' + ms;
+    } else if (ms.length == 2) {
+      ms = '0' + ms;
+    } else {
+      ms = ms;
     }
 
-    return minutes + ' : ' + seconds + ' . ' + milliseconds;
+    return min + ' : ' + sec + ' . ' + ms;
   }
 
   this.startStop = function () {
     if (!this.isOn) {
-      interval = setInterval(this.update.bind(this), 8);
+      interval = setInterval(this.updateTime.bind(this), 1);
       offset = Date.now();
       this.isOn = true;
     }
     else {
       clearInterval(interval);
-      timeInfo.appendChild(document.createTextNode('STOP ON  '+ (formatTime(time))));
+      timeInfo.appendChild(document.createTextNode('STOP ON ' + (timeView(time))));
       timeInfo.appendChild(document.createElement("br"));
       this.isOn = false;
     }
@@ -63,13 +71,12 @@ function Stopwatch(elem) {
 
   this.reset = function () {
     time = 0;
-    this.update();
+    this.updateTime();
 
   };
 
   this.split = function () {
-    timeInfo.appendChild(document.createTextNode('SPLIT ON  '+ (formatTime(time))));
+    timeInfo.appendChild(document.createTextNode('SPLIT ON  ' + (timeView(time))));
     timeInfo.appendChild(document.createElement("br"));
   };
-
 }
