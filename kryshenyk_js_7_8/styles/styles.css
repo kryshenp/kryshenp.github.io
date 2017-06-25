@@ -1,0 +1,26 @@
+* {
+  margin: 10px;
+  padding: 10px;
+}
+
+
+.root { }
+
+.menu {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  cursor: pointer;
+}
+
+.tab-content{
+			display: none;
+			background: #ededed;
+			padding: 15px;
+		}
+
+		.tab-content.current{
+			display: inherit;
+		}
