@@ -1,11 +1,11 @@
 $(document).ready(function() {
-  $('ul.menu li').click(function() {
+  $('ul.menu-list li').click(function() {
     var tab_id = $(this).attr('data-tab');
 
-    $('ul.menu li').removeClass('current');
-    $('.tab-content').removeClass('current');
+    $('ul.menu-list li').removeClass('active');
+    $('.tab-content').removeClass('active');
 
-    $(this).addClass('current');
-		$("#"+tab_id).addClass('current');
+    $(this).addClass('active');
+		$("#"+tab_id).addClass('active');
   });
 });
