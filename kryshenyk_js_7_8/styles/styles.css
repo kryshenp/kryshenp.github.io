@@ -13,6 +13,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .container {
@@ -20,6 +21,7 @@ body {
   max-width: 50%;
   align-items: center;
   justify-content: center;
+  margin-bottom: 50px;
 
 }
 
@@ -38,6 +40,20 @@ p {
   padding-bottom: 10px;
 }
 
+fieldset {
+  border: 1px solid #DCDCDC;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+input {
+  margin-left: 10px;
+}
+
+.input {
+  padding: 5px;
+}
+
 .tab-content {
   display: none;
 	background: #DCDCDC;
@@ -46,6 +62,32 @@ p {
   overflow-y: auto;
 }
 
-.tab-content.active{
-		display: inherit;
+.active{
+		display: inherit  !important;
+}
+
+.input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.help {
+  position: absolute;
+  display: none;
+  margin-left: 230px;
+  font-size: 12px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+label {
+  font-size: 13px;
+}
+
+button {
+  padding: 10px;
 }
