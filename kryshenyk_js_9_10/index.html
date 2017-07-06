@@ -4,16 +4,27 @@
     <meta charset="utf-8">
     <title>Homework JS 9-10</title>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
-    <script type="text/javascript" src="js/jquery.jcarousel.js"></script>
-    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!--CAROUSEL SCRIPTS-->
+    <script type="text/javascript" src="js/checkbox/jquery.checkbox.js"></script>
+    <script type="text/javascript" src="js/carousel/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="js/carousel/jquery.jcarousel.js"></script>
+    <!--CHECKBOX SCRIPTS-->
+    <!--<script type="text/javascript" src="js/jquery.js"></script>-->
+    <!--DROPDOWN MENU SCRIPT-->
+    <script type="text/javascript" src="js/dropdown/jquery.dropdown.js"></script>
+    <script type="text/javascript" src="js/jquery.color.js"></script>
+
+
+    <!--MY STYLES-->
+    <link rel="stylesheet" href="styles/jcarousel.css">
+    <link rel="stylesheet" href="styles/checkboxes.css">
+    <link rel="stylesheet" href="styles/dropdown.css">
+
   </head>
   <body>
     <div class="root">
-      <h1>Pictures carousel example</h1>
-
-      <p>This example shows how to setup a basic carousel with prev/next controls and pagination.</p>
-
+      <h2>Pictures carousel example</h2>
       <div class="jcarousel-wrapper">
         <div class="jcarousel">
           <ul>
@@ -36,10 +47,61 @@
         <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
         <a href="#" class="jcarousel-control-next">&rsaquo;</a>
 
-        <p class="jcarousel-pagination">
-
-        </p>
+        <p class="jcarousel-pagination"></p>
       </div>
+
+      <h2>jQuery Dropdown example</h2>
+      <nav>
+        <ul>
+          <li><a href="#">Nav 1</a></li>
+          <li><a href="#">Nav 2</a></li>
+          <li class="dropdown">
+            <a href="#">Nav 3</a>
+            <ul class="sub-menu colored">
+              <li class="sub-menu-list"><a href="#">Nav 3.1</a></li>
+              <li class="sub-menu-list"><a href="#">Nav 3.2</a></li>
+              <li class="sub-menu-list"><a href="#">Nav 3.3</a></li>
+              <li class="dropdown sub-menu-list">
+                <a href="#">Nav 3.4 alk</a>
+                <ul class="sub-menu colored">
+                  <li class="sub-menu-list"><a href="#">Nav 3.4.1</a></li>
+                  <li class="dropdown sub-menu-list">
+                    <a href="#">Nav 3.4.2</a>
+                    <ul class="sub-menu colored">
+                      <li class="sub-menu-list"><a href="#">Nav 3.4.2.1</a></li>
+                      <li class="sub-menu-list"><a href="#">Nav 3.4.2.2</a></li>
+                      <li class="sub-menu-list"><a href="#">Nav 3.4.2.3</a></li>
+                      <li class="sub-menu-list"><a href="#">Nav 3.4.2.4</a></li>
+                      <li class="sub-menu-list"><a href="#">Nav 3.4.2.5</a></li>
+                    </ul>
+                  </li>
+                  <li class="sub-menu-list"><a href="#">Nav 3.4.3</a></li>
+                  <li class="sub-menu-list"><a href="#">Nav 3.4.4</a></li>
+                  <li class="sub-menu-list"><a href="#">Nav 3.4.5</a></li>
+                </ul>
+              </li>
+              <li class="sub-menu-list"><a href="#">Nav 3.5</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Nav 4</a></li>
+          <li><a href="#">Nav 5</a></li>
+        </ul>
+      </nav>
+
+      <h2>jQuery checkbox example</h2>
+      <div class="jcheckbox-wrapper">
+        <span class="niceCheck">
+          <input type="checkbox" name="ch1" id="ch1"/>
+          <label for="ch1">jQuery?</label>
+        </span>
+      </div>
+
+      <h2>CSS checkbox example</h2>
+      <div class="csscheckbox">
+        <input type="checkbox" id="test-check1" />
+        <label for="test-check1">or CSS?</label>
+      </div>
+
     </div>
   </body>
 </html>
