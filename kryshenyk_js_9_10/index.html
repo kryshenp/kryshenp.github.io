@@ -6,20 +6,20 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!--CAROUSEL SCRIPTS-->
-    <script type="text/javascript" src="js/checkbox/jquery.checkbox.js"></script>
     <script type="text/javascript" src="js/carousel/jquery.jcarousel.min.js"></script>
     <script type="text/javascript" src="js/carousel/jquery.jcarousel.js"></script>
     <!--CHECKBOX SCRIPTS-->
-    <!--<script type="text/javascript" src="js/jquery.js"></script>-->
+    <script type="text/javascript" src="js/checkbox/jquery.checkbox.js"></script>
     <!--DROPDOWN MENU SCRIPT-->
     <script type="text/javascript" src="js/dropdown/jquery.dropdown.js"></script>
-    <script type="text/javascript" src="js/jquery.color.js"></script>
-
+    <!--SELECT MENU SCRIPT-->
+    <script src="js/select/jquery.nice-select.js"></script>
 
     <!--MY STYLES-->
     <link rel="stylesheet" href="styles/jcarousel.css">
     <link rel="stylesheet" href="styles/checkboxes.css">
     <link rel="stylesheet" href="styles/dropdown.css">
+    <link rel="stylesheet" href="styles/nice-select.css">
 
   </head>
   <body>
@@ -101,6 +101,24 @@
         <input type="checkbox" id="test-check1" />
         <label for="test-check1">or CSS?</label>
       </div>
+
+
+      <!--initialize niceSelect-->
+      <script type="text/javascript">
+        $(document).ready(function() {
+          $('select').niceSelect();
+        });
+      </script>
+
+      <h2>SELECT niceSELECT</h2>
+
+      <select>
+        <option data-display="Select">Nothing</option>
+        <option value="1">Some option</option>
+        <option value="2">Another option</option>
+        <option value="3" disabled>A disabled option</option>
+        <option value="4">Potato</option>
+    </select>
 
     </div>
   </body>
