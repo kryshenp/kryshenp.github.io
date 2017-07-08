@@ -6,7 +6,7 @@ $(document).ready(function() {
         },
 
         function(){
-            $(this).children('.sub-menu').slideUp(500);
+            $(this).children('.sub-menu').slideUp(1500);
             $('.sub-menu-list').parent().switchClass( "black", "colored", 200 )
         }
     );

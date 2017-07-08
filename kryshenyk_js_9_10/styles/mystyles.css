@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+h2 {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 3em;
+}
+
+body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
+.root {
+  width: 80%;
+  margin: 0 10%;
+}
+
+.controls-carousel {
+  padding-bottom: 20px;
+}
+
+.photo-credits {
+  padding-bottom: 10px;
+  font-size: 0.1em !important;
+}
+
+.nav-menu {
+  height: 450px;
+  background-color: #D3D3D3	;
+}
+
+.checkboxes-container {
+  padding-bottom: 50px;
+}
+
+.select-caption {
+  padding-bottom: 10px;
+}
