@@ -7,7 +7,7 @@ $(document).ready(function() {
 
         function(){
             $(this).children('.sub-menu').slideUp(1500);
-            $('.sub-menu-list').parent().switchClass( "black", "colored", 200 )
+            $('.sub-menu-list').parent().switchClass( "black", "colored", 200 ).stop( true, true );
         }
     );
 });
