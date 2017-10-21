@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Homework 11 - 12</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="js/slider.js"></script>
+    <script src="js/tmpl.js"></script>
+    <script src="js/second.js"></script>
+  </head>
+  <body>
+    <h2>First task</h2>
+    <p>Создать карусель по туториалу. Оформить её как jQuery-плагин</p>
+    <div class="clearfix">
+      <div class="carousel-arrow-left"><span>Left</span></div>
+      <div class="carousel-hider">
+        <ul class="carousel-list">
+          <li class="carousel-element"><img src="img/1.jpeg" alt="img1"><p class="image-caption">Description 1</p></li>
+          <li class="carousel-element"><img src="img/2.jpeg" alt="img2"><p class="image-caption">Description 2</p></li>
+          <li class="carousel-element"><img src="img/3.jpg" alt="img3"><p class="image-caption">Description 3</p></li>
+          <li class="carousel-element"><img src="img/4.jpg" alt="img4"><p class="image-caption">Description 4</p></li>
+          <li class="carousel-element"><img src="img/5.jpeg" alt="img1"><p class="image-caption">Description 5</p></li>
+          <li class="carousel-element"><img src="img/1.jpeg" alt="img2"><p class="image-caption">Description 6</p></li>
+          <li class="carousel-element"><img src="img/2.jpeg" alt="img3"><p class="image-caption">Description 7</p></li>
+          <li class="carousel-element"><img src="img/3.jpg" alt="img4"><p class="image-caption">Description 8</p></li>
+          <li class="carousel-element"><img src="img/4.jpg" alt="img1"><p class="image-caption">Description 10</p></li>
+          <li class="carousel-element"><img src="img/5.jpeg" alt="img2"><p class="image-caption">Description 11</p></li>
+          <li class="carousel-element"><img src="img/1.jpeg" alt="img3"><p class="image-caption">Description 12</p></li>
+          <li class="carousel-element"><img src="img/2.jpeg" alt="img4"><p class="image-caption">Description 13</p></li>
+        </ul>
+      </div>
+      <div class="carousel-arrow-right"><span>Right</span></div>
+    </div>
+
+    <h2>Second task</h2>
+    <p>Подключить шаблонизатор. Отрендерить с его помощью несложную html-структуру. Можно вывести простой профиль пользователя, как в первом домашнем задании</p>
+    <script type="text/html" id="profile">
+      <div>
+        <% for (var i = 0; i < data.length; i++) { %>
+          <p><%= data[i].point0 %></p>
+          <% for (var i = 1; i < data.length; i++) { %>
+            <div class="underlined">
+            <h3><%= data[i].title %></h3>
+            <% if (i == 1) { %>
+              <ul>
+                <li><%= data[i].point1 %></li>
+                <li><%= data[i].point2 %></li>
+                <li><%= data[i].point3 %></li>
+              </ul>
+              <% }; %>
+            <a href= "<%= data[i].url %>" target="_blank" ><%= data[i].link %></a>
+            <p><%= data[i].point4 %></p>
+          </div>
+          <% }; %>
+        <% }; %>
+      </div>
+    </script>
+
+  </body>
+</html>
