@@ -36,27 +36,32 @@
 
     <h2>Second task</h2>
     <p>Подключить шаблонизатор. Отрендерить с его помощью несложную html-структуру. Можно вывести простой профиль пользователя, как в первом домашнем задании</p>
-    <script type="text/html" id="profile">
-      <div>
-        <% for (var i = 0; i < data.length; i++) { %>
-          <p><%= data[i].point0 %></p>
-          <% for (var i = 1; i < data.length; i++) { %>
-            <div class="underlined">
-            <h3><%= data[i].title %></h3>
-            <% if (i == 1) { %>
-              <ul>
-                <li><%= data[i].point1 %></li>
-                <li><%= data[i].point2 %></li>
-                <li><%= data[i].point3 %></li>
-              </ul>
-              <% }; %>
-            <a href= "<%= data[i].url %>" target="_blank" ><%= data[i].link %></a>
-            <p><%= data[i].point4 %></p>
-          </div>
-          <% }; %>
-        <% }; %>
-      </div>
-    </script>
 
+      <script type="text/html" id="profile">
+        <div class="second-task-body" id="second-task">
+          <div class="wrapper">
+          <h1 class="student-name">Pavlo Kryshenyk</h1>
+          <img src="img/picture.jpg" alt="this is me">
+          <% for (var i = 0; i < data.length; i++) { %>
+            <p class="underlined student-name"><%= data[i].point0 %></p>
+            <% for (var i = 1; i < data.length; i++) { %>
+              <div class="underlined">
+              <h3 class="subtitle" ><%= data[i].title %></h3>
+              <% if (i == 1) { %>
+                <ul class="dotted">
+                  <li><%= data[i].point1 %></li>
+                  <li><%= data[i].point2 %></li>
+                  <li><%= data[i].point3 %></li>
+                </ul>
+                <% }; %>
+              <a href= "<%= data[i].url %>" target="_blank" ><%= data[i].link %></a>
+              <p><%= data[i].point4 %></p>
+            </div>
+            <% }; %>
+          <% }; %>
+        </div>
+      </div>
+      </div>
+      </script>
   </body>
 </html>
