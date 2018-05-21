@@ -11,7 +11,8 @@ class App extends Component {
       { name: 'Veronika', age: 29 },
       { name: 'X', age: 0 },
     ],
-    otherState: 'some other value'
+    otherState: 'some other value',
+    showPersons: false
   }
 
   switchNameHandler = (newName) => {
@@ -36,6 +37,11 @@ class App extends Component {
     } )
   }
 
+  togglePersonsHandler = () => {
+    const doesShow = this.state.showPersons; //if doesShow is true, showPersons is false
+    this.setState({showPersons: !doesShow}); // if doesShow is false, showPersons is true
+  }
+
   render() {
     const style = {
       backgroundColor: 'white',
@@ -48,24 +54,30 @@ class App extends Component {
 
     return (
       <div className="App">
-       <h1>Hi, I'm a React App</h1>
-       <p>Works!</p>
-       <button
-         style={style}
-         onClick={() => this.switchNameHandler('Pavlyk!!!')}>Switch name</button>
-       <Person
-         name={this.state.persons[0].name}
-         age={this.state.persons[0].age}
-        />
-       <Person
-         name={this.state.persons[1].name}
-         age={this.state.persons[1].age}
-         click={this.switchNameHandler.bind(this, 'Pablos')}
-         changed={this.nameChangedHandler}>My Profession: Psychiatrist</Person>
-       <Person
-         name={this.state.persons[2].name}
-         age={this.state.persons[2].age}
-        />
+        <h1>Hi, I'm a React App</h1>
+        <p>Works!</p>
+        <button
+           style={style}
+           onClick={this.togglePersonsHandler}>Toggle persons</button>
+         {
+          this.state.showPersons === true ?
+          // could be also: this.state.showPersons ?
+          <div>
+           <Person
+             name={this.state.persons[0].name}
+             age={this.state.persons[0].age}
+            />
+           <Person
+             name={this.state.persons[1].name}
+             age={this.state.persons[1].age}
+             click={this.switchNameHandler.bind(this, 'Pablos')}
+             changed={this.nameChangedHandler}>My Profession: Psychiatrist</Person>
+           <Person
+             name={this.state.persons[2].name}
+             age={this.state.persons[2].age}
+            />
+        </div> : null
+      }
       </div>
     );
     //  return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Hi, I\'m a React App'));
