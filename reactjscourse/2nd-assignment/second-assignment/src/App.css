@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+}
+
+button {
+  background-color: #ccc;
+}
+
+* {
+  -background-color: #EFEFFB;
+}
+
+body {
+  background-image: url('http://bit.ly/2gPLxZ4');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+button {
+  margin-top: 10px;
+  background: inherit;
+ -position: absolute;
+ box-shadow: inset 0 0 0 30px rgba(239,239,251,0.3);
+ filter: blur(0.1px);
+}
+
+ol {
+  text-align: left;
+  color: #fff;
+}
+
+ol>li {
+  padding-bottom: 10px;
+  font-size: 1.2em;
+}
+
+p {
+  color: #ffff00
+}
