@@ -11,7 +11,7 @@ const charMax = (props) => {
 
   return (
     <div style={style}>
-      <p>4th task styling Max</p>
+      <p>4th task styling Maxes approach</p>
     </div>
   )
 };

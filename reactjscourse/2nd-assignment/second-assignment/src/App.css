@@ -11,7 +11,7 @@ button {
 }
 
 body {
-  background-image: url('http://bit.ly/2gPLxZ4');
+  background-image: url('https://bit.ly/2sYC8RZ');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -37,4 +37,17 @@ ol>li {
 
 p {
   color: #ffff00
+
+}
+
+.taskParagraph {
+  color: #fff;
+  text-align: left;
+  padding-left: 5%;
+  font-size: 1.1em;
+}
+
+.Task {
+  margin-top: 10%;
+  padding-left: 5%;
 }
