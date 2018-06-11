@@ -6,7 +6,7 @@ const Char = (props) => {
 
   return (
     <div className="Char">
-      <p>4th task styling</p>
+      <p>{props.character}</p>
     </div>
   )
 };

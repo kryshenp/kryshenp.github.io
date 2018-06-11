@@ -7,13 +7,17 @@ import './App.css';
 
 class App extends Component {
   state = {
-      userInput: 'Pavlo Kryshenyk'
+      userInput: 'Kryshenyk'
   }
   inputChangedHandler = (event) => {
     this.setState({userInput: event.target.value});
   }
 
   render() {
+    const charactersList = this.state.userInput.toUpperCase().split('').map((char, index) => {
+      return <Char character={char} key={index} />;
+    });
+
     return (
       <div className="App">
         <ol>
@@ -32,7 +36,8 @@ class App extends Component {
           value={this.state.userInput}/>
         <p>{this.state.userInput.length}</p>
         <Validation inputTextLength={this.state.userInput.length}/>
-        <Char />
+        {charactersList}
+        <br />
         <CharMax />
       </div>
     );
