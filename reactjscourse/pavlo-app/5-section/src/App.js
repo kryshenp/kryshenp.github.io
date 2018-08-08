@@ -73,7 +73,7 @@ class App extends Component {
 
   render() {
     const style = {
-      backgroundColor: 'white',
+      backgroundColor: 'green',
       font: 'inherit',
       border: '1px solid blue',
       padding: '8px',
@@ -97,12 +97,30 @@ class App extends Component {
           })}
       </div>
       );
+      // if we click on the button its color is red 5.62
+      style.backgroundColor = 'red';
+    }
+
+    // create an array classes and join them wit an
+    // empty space: result = "red bold"
+    // I want to set up the class of this paragraph dynamically
+    // depending on the length of the elements in my persons array
+    // let classes = ['red', 'bold'].join(' ');
+    // ------
+
+    const classes = [];
+    if (this.state.persons.length <= 2) {
+      classes.push('red'); // classes =['red']
+    }
+    if (this.state.persons.length <= 1) {
+      classes.push('bold'); // classes =['red', 'bold']
     }
 
     return (
       <div className="App">
         <h1>Hi, I'm a React App</h1>
-        <p>Works!</p>
+
+        <p className={classes.join(' ')}>This is really working!</p>
         <button
            style={style}
            onClick={this.togglePersonsHandler}>Toggle persons</button>
