@@ -3,9 +3,6 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Person from './Person/Person';
-// to avoid the errors in console we can simply wrap the entire app in a special
-// component provided by radium
-import Radium, { StyleRoot  } from 'radium';
 
 class App extends Component {
   state = {
@@ -81,12 +78,7 @@ class App extends Component {
       border: '1px solid blue',
       padding: '8px',
       cursor: 'pointer',
-      color: 'white',
-      ':hover': {
-        backgroundColor: 'salmon',
-        color: 'black'
-      },
-
+      color: 'white'
     };
 
     let persons = null;
@@ -107,10 +99,6 @@ class App extends Component {
       );
       // if we click on the button its color is red 5.62
       style.backgroundColor = 'red';
-      style[':hover'] = {
-        backgroundColor: 'lightred',
-        color: 'black'
-      }
     }
 
     // create an array classes and join them wit an
@@ -129,7 +117,6 @@ class App extends Component {
     }
 
     return (
-      <StyleRoot>
         <div className="App">
           <h1>Hi, I'm a React App</h1>
           <p className={classes.join(' ')}>This is really working!</p>
@@ -138,12 +125,9 @@ class App extends Component {
              onClick={this.togglePersonsHandler}>Toggle persons</button>
           {persons}
         </div>
-    </StyleRoot>
     );
     //  return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Hi, I\'m a React App'));
   }
 }
 
-// call Radium as a function and wrap my App with it
-// this is called a higher order Component
-export default Radium(App);
+export default App;
