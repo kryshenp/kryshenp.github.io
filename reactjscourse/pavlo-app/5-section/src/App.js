@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Person from './Person/Person';
+import Radium from 'radium';
 
 class App extends Component {
   state = {
@@ -78,6 +79,11 @@ class App extends Component {
       border: '1px solid blue',
       padding: '8px',
       cursor: 'pointer',
+      color: 'white',
+      ':hover': {
+        backgroundColor: 'salmon',
+        color: 'black'
+      },
 
     };
 
@@ -99,6 +105,10 @@ class App extends Component {
       );
       // if we click on the button its color is red 5.62
       style.backgroundColor = 'red';
+      style[':hover'] = {
+        backgroundColor: 'lightred',
+        color: 'black'
+      }
     }
 
     // create an array classes and join them wit an
@@ -131,4 +141,6 @@ class App extends Component {
   }
 }
 
-export default App;
+// call Radium as a function and wrap my App with it
+// this is called a higher order Component
+export default Radium(App);
