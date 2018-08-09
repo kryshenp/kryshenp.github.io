@@ -80,7 +80,7 @@ class App extends Component {
     const doesShow = this.state.showPersons; //if doesShow is true, showPersons is false
     this.setState({
       showPersons: !doesShow
-    }); // if doesShow is false, showPersons is true
+    }); // if doesShow is false, showPersons is truegit 
   }
 
   render() {
