@@ -5,20 +5,38 @@ import Person from './Person/Person';
 class Persons extends Component {
   constructor(props) {
      super(props);
-     console.log('[Persons.js] Inside Constructor', props);
+     console.log( '[Persons.js] Inside Constructor', props );
   }
 
   componentWillMount() {
-    console.log('[Persons.js] Inside componentWillMount');
+    console.log( '[Persons.js] Inside componentWillMount' );
   }
 
   componentDidMount() {
-    console.log('[Persons.js] Inside componentDidMount');
+    console.log( '[Persons.js] Inside componentDidMount' );
 
   }
 
+  componentWillReceiveProps(nextProps) {
+    console.log( '[UPDATE Persons.js] Inside componentWillReceiveProps', nextProps );
+  }
+
+  // returns true or false
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log( '[UPDATE Presons.js] Inside shouldComponentUpdate', nextProps, nextState );
+    return nextProps.persons !== this.props.persons;
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    console.log( '[UPDATE Persons.js] Inside componentWillUpdate', nextProps, nextState );
+  }
+
+  componentDidUpdate() {
+    console.log( '[UPDATE Persons.js] Inside componentDidUpdate' );
+  }
+
   render () {
-    console.log('[Persons.js] Inside render()');
+    console.log( '[Persons.js] Inside render()' );
     return this.props.persons.map((person, index) => {
         // anonymous function is executed in every element in persons array
         return <Person
