@@ -6,6 +6,34 @@ import Cockpit from '../components/Cockpit/Cockpit';
 
 
 class App extends Component {
+  constructor(props) {
+     super(props);
+     console.log('[App.js] Inside Constructor', props);
+  //    this.state = {
+  //      persons: [
+  //        {
+  //          id: 'soiadif',
+  //          name: 'Pavlo',
+  //          age: 30
+  //        }, {
+  //          id: 'sadiljf',
+  //          name: 'Veronika',
+  //          age: 29
+  //        }, {
+  //          id: 'sdilfud',
+  //          name: 'X',
+  //          age: 0
+  //        }
+  //      ],
+  //      otherState: 'some other value',
+  //      showPersons: false
+  //    };
+  }
+
+  componentWillMount() {
+    console.log('[App.js] Inside componentWillMount');
+  }
+
   state = {
     persons: [
       {
@@ -24,6 +52,11 @@ class App extends Component {
     ],
     otherState: 'some other value',
     showPersons: false
+  }
+
+  componentDidMount() {
+    console.log('[App.js] Inside componentDidMount');
+
   }
 
   // switchNameHandler = (newName) => {
@@ -85,7 +118,7 @@ class App extends Component {
   }
 
   render() {
-
+    console.log('[App.js] Inside render()');
     let persons = null;
 
     if (this.state.showPersons) {
