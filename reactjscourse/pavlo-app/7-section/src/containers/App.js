@@ -130,10 +130,12 @@ class App extends PureComponent {
 
   togglePersonsHandler = () => {
     const doesShow = this.state.showPersons; //if doesShow is true, showPersons is false
-    this.setState({
-      showPersons: !doesShow,
-      toggleClicked: this.state.toggleClicked + 1 
-    }); // if doesShow is false, showPersons is truegit
+    this.setState( (prevState, props ) => {
+      return {
+        showPersons: !doesShow,
+        toggleClicked: prevState.toggleClicked + 1
+      }
+    } ); // if doesShow is false, showPersons is truegit
   }
 
   render() {
