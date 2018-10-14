@@ -53,7 +53,8 @@ class App extends PureComponent {
       }
     ],
     otherState: 'some other value',
-    showPersons: false
+    showPersons: false,
+    toggleClicked: 0
   }
 
   componentDidMount() {
@@ -130,7 +131,8 @@ class App extends PureComponent {
   togglePersonsHandler = () => {
     const doesShow = this.state.showPersons; //if doesShow is true, showPersons is false
     this.setState({
-      showPersons: !doesShow
+      showPersons: !doesShow,
+      toggleClicked: this.state.toggleClicked + 1 
     }); // if doesShow is false, showPersons is truegit
   }
 
