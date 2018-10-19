@@ -1,0 +1,8 @@
+brand new project created with create-react-app
+
+to enable css modules
+to be sure that css classes I create in a css file can be scoped to a specific
+component in the app so that they are not applied globally when I accidentally
+reuse the same css class
+
+for that I need eject the project by 'yarn eject' 
