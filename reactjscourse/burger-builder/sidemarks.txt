@@ -19,4 +19,16 @@ file
 Then I copy these 2 lines with `modules` and `localIdentName` and copy them to the
 config file of the production build.
 
-With that I have my project setup and can get started. 
+With that I have my project setup and can get started.
+
+----------------------------
+
+Do some cleanup work:
+remove logo svg file which was created automatically and I don't need
+and remove its import in the App.js file, and cleanup the appjs content here.
+remove the className APP from the parent div and remove the App.css import
+and remove the app.css file
+
+in index.css I want to use Open Sans font family, choose it form google fonts, customize
+it and with the embed link add it to the public/index.html file and add it right above
+the title
