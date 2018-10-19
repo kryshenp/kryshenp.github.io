@@ -5,4 +5,18 @@ to be sure that css classes I create in a css file can be scoped to a specific
 component in the app so that they are not applied globally when I accidentally
 reuse the same css class
 
-for that I need eject the project by 'yarn eject' 
+for that I need eject the project by 'yarn eject', so I have an access to the config
+in the config folder and there to 2 webpack configuration files.
+
+In part where I have CSS test and the css-loader, there i have to add `modules: true,`
+to the options of that loader and add `localIdentName: '[name]__[local]__[hash:base64:5]'
+option to basically define the css class name it will automatically generate and
+assign. This should take the original name then the local name of the component and
+then a randomly generated hash. This will generate this unique css classnames, which
+are then assign automatically once we import them through that object from the css
+file
+
+Then I copy these 2 lines with `modules` and `localIdentName` and copy them to the
+config file of the production build.
+
+With that I have my project setup and can get started. 
