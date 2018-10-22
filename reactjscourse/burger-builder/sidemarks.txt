@@ -26,9 +26,33 @@ With that I have my project setup and can get started.
 Do some cleanup work:
 remove logo svg file which was created automatically and I don't need
 and remove its import in the App.js file, and cleanup the appjs content here.
-remove the className APP from the parent div and remove the App.css import
+remove the className APP from the root div and remove the App.css import
 and remove the app.css file
 
 in index.css I want to use Open Sans font family, choose it form google fonts, customize
 it and with the embed link add it to the public/index.html file and add it right above
 the title
+
+I created 2 folders components and containers in my src.
+Containers are basically stateful components, so typically components created with
+the class keyword, whereas components are stateless components - typically fucntional
+components
+
+Now I will create a layout in the components folder, cause now I don't need to manange any
+state there
+So in components I create a subfolder which I name layout and there create Layout.js
+
+Then assets folder where we'll add a logo. For redux store I'll add the folder later.
+
+In Layout.js I create a component with the Toolbar, SideDrawer and Backdrop
+then create <main> in which I wrap the component we made in Layout so I'll use
+{props.children}. Don't forget to add props as an argument to the function.
+
+then i'll go with the higher order component(hoc) approach and create such utility auxilliary
+component. For that I create a new folder `hoc`  in a src folder and there I create Aux.js file
+
+auxilliary component is a functional stateless component
+
+then i can wrap everything with the <Aux>
+
+Now we can use it in the App.js file in our root component
