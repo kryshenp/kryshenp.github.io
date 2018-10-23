@@ -104,3 +104,39 @@ In the next step I add the Burger components and burger ingredients which should
 be rendered there.
 
 ----------------------------
+
+In components folder I create a new subfolder `Burger`, where Burger related
+things go. Add there a couple of subcomponents, i.e. Burger.js file which should
+be a burger we rendering to the screen. For ingredients I create another subfolder
+inside of the Burger folder BurgerIngredient/BurgerIngredient.js.
+
+In BurgerIngredient.css there is a code for burger ingredients styles.
+Now I fill the BurgerIngredient component with life. Create a finction -
+so a stateless component burgerIngredient with some props and return smth. Use
+{} cause I want to run some logic before I return jsx (don't forget to import
+react cause I want to write some jsx in the end) and of course export this as
+default.
+
+I need some logic to render the jsx code. This logic is required cause there are
+different types of ingredients and I expect to get the info about which ingr to
+render via props.
+
+in burgerIngredient I'll create an ingredient variable and set it to null.
+Initially I won't render anything, i.e. if smth invalid is passed in.
+
+Now I'll switch (normal JS switch statement) and analyse to type of my ingredient.
+So type is a property I expect to receive. Now I have a couple of different CASE_SENSITIVE
+for example a `bread-bottom`. MY ingredient there should be <div> with the
+className. For that I need to import my classes from the BurgerIngredient.css file
+and assign {classes.BreadBottom} for the ingredient <div>;. then break;
+After the break I want to add another case `bread-top`. On this ingredient there
+will be some seeds, so here I actually return some multiline. Inside of the .BreadTop
+<div> i need 2 other <div>s, which represent the seeds with .Seeds1 and .Seeds2.
+
+ then break again. the next cases are `meat`,`cheese`,`bacon`,`salad`.
+ then setup a default case there in case smth incorrect is passed there ->
+ ingredient should = null;
+
+after this big switch statement here we can safely the ingredient here.
+In the next steps I'll add the propType validation here, cause I want to make
+sure that I do receive a type property.
