@@ -65,4 +65,42 @@ so just simply add the "Open-Sans" font family as a main font to the index.css f
 With that I got a roof of my app finished for now.
 
 P.S. I had a problem with the absence of the `babel-loader` module. I've solved it
-by updating node version from `v8.9.4` to `v9.10.0` and rebuild the app -> `yarn && yarn. start`.
+by updating node version from `v8.9.4` to `v9.10.0` and rebuild the app ->
+`yarn && yarn. start`.
+
+----------------------------
+
+Start implementing the burger builder component. This will be a container, because
+there I plan of managing the state for the burger.
+In the containers folder where I create a new subfolder BurgerBulder and BurgerBulder.js
+file and there I create the component with the class keyword, cause I want to manage state
+there. I name it BurgerBulder and I need to extend this Component object we can
+import from React, I also import React to be able to write jsx.
+
+I need to implement the lifecycle `render` method. This is a must because I must
+tell react what I want to render. There I need to some jsx code.
+
+For now I want to render 2 different things (wrapped into <Aux>). For that I can
+use my Auxiliary component. Import it. Here I want to return 2 jsoned components
+in the end. For now I use <div>s as a placeholders. I want to return a burger I
+built - a graphical representation of the burger with all the ingredients, and
+below that I want to have my build controls - so basically the area where I
+can add or remove the ingredients. This is a basic setup of it.
+
+Now I import BurgerBulder in my App.js file and replace Test with it. BurgerBuilder
+can be a self-closing component, I don't need to wrap any content with the
+selectors.
+
+Improve some styling. Make some margin between my Toolbar placeholder and other part.
+I'll do this in the Layout component because there I have the area for the
+Toolbar and the area for the main part. So I simply want to add a css class to
+the <main> element there to make sure that it has some margin.
+For that I'll add a new css file Layout.css and in that file I'll create a new
+class .Content where I add margin-top 16px. Then I import classes from the
+Layout.css file to the component. Add className to the <main> element.
+className={classes.Content}.
+
+In the next step I add the Burger components and burger ingredients which should
+be rendered there.
+
+----------------------------
