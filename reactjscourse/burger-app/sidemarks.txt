@@ -1,0 +1,68 @@
+brand new project created with create-react-app
+
+to enable css modules
+to be sure that css classes I create in a css file can be scoped to a specific
+component in the app so that they are not applied globally when I accidentally
+reuse the same css class
+
+for that I need eject the project by 'yarn eject', so I have an access to the config
+in the config folder and there to 2 webpack configuration files.
+
+In part where I have CSS test and the css-loader, there i have to add `modules: true,`
+to the options of that loader and add `localIdentName: '[name]__[local]__[hash:base64:5]'
+option to basically define the css class name it will automatically generate and
+assign. This should take the original name then the local name of the component and
+then a randomly generated hash. This will generate this unique css classnames, which
+are then assign automatically once we import them through that object from the css
+file
+
+Then I copy these 2 lines with `modules` and `localIdentName` and copy them to the
+config file of the production build.
+
+With that I have my project setup and can get started.
+
+----------------------------
+
+Do some cleanup work:
+remove logo svg file which was created automatically and I don't need
+and remove its import in the App.js file, and cleanup the appjs content here.
+remove the className APP from the root div and remove the App.css import
+and remove the app.css file
+
+in index.css I want to use Open Sans font family, choose it form google fonts, customize
+it and with the embed link add it to the public/index.html file and add it right above
+the title
+
+I created 2 folders components and containers in my src.
+Containers are basically stateful components, so typically components created with
+the class keyword, whereas components are stateless components - typically fucntional
+components
+
+Now I will create a layout in the components folder, cause now I don't need to manange any
+state there
+So in components I create a subfolder which I name layout and there create Layout.js
+
+Then assets folder where we'll add a logo. For redux store I'll add the folder later.
+
+In Layout.js I create a component with the Toolbar, SideDrawer and Backdrop
+then create <main> in which I wrap the component we made in Layout so I'll use
+{props.children}. Don't forget to add props as an argument to the function.
+
+then i'll go with the higher order component(hoc) approach and create such utility auxiliary
+component. For that I create a new folder `hoc`  in a src folder and there I create Aux.js file
+
+Auxiliary component is a functional stateless component
+
+then i can wrap everything in Layout.js with the <Aux></Aux>. Export the Layout
+component.
+
+Now we can use it in the App.js file in our root component. Import Layout.js to the
+App.js. Let's wrap a <p> Test with <Layout>.
+
+Then add "Open-Sans" font into index.css. We did add the import to the public folder,
+so just simply add the "Open-Sans" font family as a main font to the index.css file.
+
+With that I got a roof of my app finished for now.
+
+P.S. I had a problem with the absence of the `babel-loader` module. I've solved it
+by updating node version from `v8.9.4` to `v9.10.0` and rebuild the app -> `yarn && yarn. start`.
