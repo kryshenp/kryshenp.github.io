@@ -1,3 +1,6 @@
+----------------------------
+113. Setting up the Project
+
 brand new project created with create-react-app
 
 to enable css modules
@@ -22,6 +25,7 @@ config file of the production build.
 With that I have my project setup and can get started.
 
 ----------------------------
+114. Creating a Layout Component
 
 Do some cleanup work:
 remove logo svg file which was created automatically and I don't need
@@ -69,6 +73,7 @@ by updating node version from `v8.9.4` to `v9.10.0` and rebuild the app ->
 `yarn && yarn. start`.
 
 ----------------------------
+115. Starting Implementation of The Burger Builder Container
 
 Start implementing the burger builder component. This will be a container, because
 there I plan of managing the state for the burger.
@@ -104,6 +109,7 @@ In the next step I add the Burger components and burger ingredients which should
 be rendered there.
 
 ----------------------------
+116. Adding a Dynamic Ingredient Component
 
 In components folder I create a new subfolder `Burger`, where Burger related
 things go. Add there a couple of subcomponents, i.e. Burger.js file which should
@@ -140,3 +146,41 @@ will be some seeds, so here I actually return some multiline. Inside of the .Bre
 after this big switch statement here we can safely the ingredient here.
 In the next steps I'll add the propType validation here, cause I want to make
 sure that I do receive a type property.
+
+----------------------------
+117. Adding Prop Type Validation
+
+Now I can add props type validation. For this I cancel the dev server and then
+run `yarn add prop-types`. This package is provided by React team to validate
+the prop types of my react properties. Then import PropTypes to the BurgerIngredient
+file. Then restart the dev server. I can use PropTypes on components which
+are created with the class keyword. In BurgerIngredient I have a stateless component
+created as a function. I can simply convert it and this doesn't automatically
+turn it into container. It's still dumb stateless component without any
+state which now is created with the class keyword. This is an important
+thing to understand: I DON'T decide if something is a container or not
+with the CLASS keyword, I can create all my components as a CLASS if I
+want, it's just a good practice to use FUNCTIONAL form as often as possible.
+But it's NOT a must.
+With that i renamed const burgerIngredient to class BurgerIngredient, to have
+a capital 'B' to follow the naming convention of classes. Also import Component
+as a named import from 'react'. So now BurgerIngredient should EXTEND Component:
+`class BurgerIngredient extends Component`.
+Then I add the class {body} where I need to implement the RENDER method.
+Inside render () {} I execute my logic - my switch statement and in the end
+return the ingredient. Remove the relict down under the render (), and export
+my new BurgerIngredient. props.type won't work because because in class
+I need props with this.props.type <- add THIS in front of props.
+
+Now I can add a propType validation by adding a className.propTypes property
+with the lowercase 'p' and setting it equal to the JavaScript object. In
+my case it'd be BurgerIngredient.propTypes = {}; In this object I want to
+configure the type property using the PropTypes I imported from that package.
+The type should be a string and I also chain another condition, that it is
+required `type: PropTypes.string.isRequired`.So if I ever try to use the
+ingredient component without passing a type, i'll get an error. BurgerIngredient
+component is basically finished and I want to see it in action, so now I
+start to build my burger in the Burger component.
+
+----------------------------
+118. Starting the Burger Component
