@@ -184,3 +184,33 @@ start to build my burger in the Burger component.
 
 ----------------------------
 118. Starting the Burger Component
+
+Burger component has been created in the functional form again as a
+function named 'burger', which receive some props with curly braces {},
+so I can add some JS logic before returning jsx.
+For now all I do there is return some jsx though, but I'll revisit this
+component to enhance it and conditionally render smth else later.
+Because I use jsx I have to import react, and export the default burger.
+The jsx in return should simply use the burger ingredients components I
+created, but I also want to wrap everything in a <div>, cause it'll be a
+wrapper which this burger component essentially is - wrapper around all the
+ingredients. I give it some styling to define width and height of the burger.
+For that I add a new file Burger.css and there I add the .Burger css class
+with some rules for the .Burger wrapper and some @media rules. Import css to
+the Burger wrapper component. Then import BurgerIngredient and then use it
+as a self-closing component, but I have to define a type.
+The type has be a string, cause we implemented propType checking.
+For now I'll create a burger of 4 ingredients - bread top, cheese, meat
+and bread-bottom. Self-closing components look like this:
+<BurgerIngredient type="cheese"/>. As we exported the burger, I can go
+to the BurgerBuilder container at `containers/BurgerBuilder/BurgerBuilder.js`
+and there replace the dummy <div>Burger</div> with our burger.
+First I have to import Burger from components/Burger/Burger and replace
+that <div> with the self-closing <Burger /> component.
+
+Not great is that everything about the burger is in the end hardcoded. I'm
+using components, but I'm not able to change this burger dynamically and I'm
+not even rendering it dynamically. Next work will be with managing the state
+and rendering burger dynamically.
+
+----------------------------
