@@ -148,7 +148,7 @@ In the next steps I'll add the propType validation here, cause I want to make
 sure that I do receive a type property.
 
 ----------------------------
-117. Adding Prop Type Validation
+118. Adding Prop Type Validation
 
 Now I can add props type validation. For this I cancel the dev server and then
 run `yarn add prop-types`. This package is provided by React team to validate
@@ -183,7 +183,7 @@ component is basically finished and I want to see it in action, so now I
 start to build my burger in the Burger component.
 
 ----------------------------
-118. Starting the Burger Component
+119. Starting the Burger Component
 
 Burger component has been created in the functional form again as a
 function named 'burger', which receive some props with curly braces {},
@@ -214,3 +214,41 @@ not even rendering it dynamically. Next work will be with managing the state
 and rendering burger dynamically.
 
 ----------------------------
+120. Outputting Burger Ingredients Dynamically
+First important step is handling burger ingredients in the state of our burger
+Builder, cause this is where we ultimately edit them to. This is also a reason
+why this is a stateful component.
+I initialise state as a property. There is also a possibility to add a constructor,
+where I receive the props call super with the props and then initialise this.state
+'this', cause I'm inside method
+constructor(props) {
+  super(props);
+  this.state = {...}
+}
+this will also work, this is an alternative. This will be commented out, cause
+a bit modern approach with shorter syntax will be used.
+Inside a state it will be ingredients object. I'll have KEY-VALUE pairs, where
+the keys are the names of the ingredients and the values is the amount. Later I'll
+add the more state like a price, but for now let's go with the burger fundamentals.
+As I have my ingredients, the goal now is to pass this array to my burger. On the
+<Burger /> at the ingredients property I pass {this.state.ingredients}. The thing
+is - the burger doesn't receive any ingredients :( yet.
+I copy that over to the burger component and want to start outputing the ingredients
+dynamically. In the Burger.js component we receiving ingredients as a props, but if
+I inspect ingredients in a state of the BurgerBuilder - it's an Object, it's
+NOT an array, so I can't use map on that, I can't just loop through that - it's an Object.
+Instead I have to transform this Object into an Array. To be precise I have to convert
+this Object into an Array of values of the ingredients.
+In the burger function in the Burger.js component I'll create a new const, which i name
+'transformedIngredients' and there I'll use the Object object. That's default
+JavaScript object not provided by React. It has a keys method, which extracts the
+keys of a given Object and turns that into an Array - gives me an array of the keys.
+const transformedIngredients = Object.keys(props.ingredients); For my objects it gives us an array, which contains
+a string salad, string bacon etc. The values 1 1 2 2 are not part of the array.
+Into Object.keys I'll pass props.ingredients, now I have that array of keys in the end.
+I'll chain a method with the .map method in a new line to be easier to read, which
+i can execute since keys returns me an array. .map() executes a function on an
+each element in an array. I'll give it an argument I receive in the array 'igKey'
+for ingredient key, cause that is what jus part of the array is. In that function
+here I want to transform this string value into an array of as many elements as
+I have in the ingredients for a given ingredient 4:46. 
