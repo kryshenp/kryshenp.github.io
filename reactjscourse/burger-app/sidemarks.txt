@@ -245,10 +245,45 @@ JavaScript object not provided by React. It has a keys method, which extracts th
 keys of a given Object and turns that into an Array - gives me an array of the keys.
 const transformedIngredients = Object.keys(props.ingredients); For my objects it gives us an array, which contains
 a string salad, string bacon etc. The values 1 1 2 2 are not part of the array.
-Into Object.keys I'll pass props.ingredients, now I have that array of keys in the end.
+Into Object.keys I'll pass (props.ingredients), now I have that array of keys in the end.
+
 I'll chain a method with the .map method in a new line to be easier to read, which
-i can execute since keys returns me an array. .map() executes a function on an
-each element in an array. I'll give it an argument I receive in the array 'igKey'
-for ingredient key, cause that is what jus part of the array is. In that function
-here I want to transform this string value into an array of as many elements as
-I have in the ingredients for a given ingredient 4:46. 
+i can execute since keys returns me an array.
+.map() executes a function on an each element in an array. I'll give it
+an argument I receive in the array 'igKey' for ingredient key, cause that is
+what just part of the array is. In that function here I want to transform this
+string value into an array with as many elements as I have in the ingredients for
+a given ingredient.
+So if I have 2 cheese ingredients in the state at BurgerBulder, then I want to
+transform the cheese stirng into an arry which simply contains 2 elements. I don't
+care which elements,  if this are 2 As two 1s or whatever, but it should have a
+length of 2, so in my Object.keys()map(igKey => {...}), I'll return an array and
+use the SPREAD operator,  to spread a new array I have to construct, and I'll construct
+it with the [...Array()] method provided by JavaScript. The length of this array
+should be the amount of the given ingredients. So props.ingredients[igKey]. I'm
+accesing the given [igKey] key from up because I'm stil l in that function of my
+.map() method, which runs on an array, which contains all our keys. In this point of
+time I have an array with 2 elements. The values don't matter to me.
+I'll execute .map() on that array (I'm still inide my outer .map() method). I don't
+care about an element itself, so I use underscore '_' as an argument name, to indicate,
+that it's a blank, but the INDEX of the element is important to me.
+So inside the inner .map() method I  return my <BurgerIngredient>, cause I need to return
+JSX in the end, where I'll set the key key={igKey + i}. igKey is smth like a salad and
+i is 1,2,3, and so on, so {igKey + i} creates a unique key for rach ingredient.
+ And the type simply as igKey type={igKey}. This is why I don't care about the first
+ argument, where i put '_', .map((_, i). I'm only interested in the type, which
+ I got right from the start since i extract all the types, all the property
+ names of my ingredients state here Object.keys( props.ingredients ). That's
+ also implies that the keys I used in the BurgerBulder state have to equal the
+ keys I check for in the BurgerIngredient: meat, cheese and so on, they have
+ to have the same case in and  the same name. This is what I return in the internal
+ .map() method and therefore I map my object into an array of ingredients in the
+ end. It's just a way to transform an Object of key-value pairs into an Array
+ of Burger Ingredients, where the value of that object is important to decide how many
+ingredients I need, and the key is important for which type of ingredient I need.
+Since I have my transformedIngredients, it's time to return them. I'll always
+have bread top and bread bottom, but in between I output {transformedIngredients}.
+Now I have a generic web method of outputting. Next I'll wor on allowing user to
+add and remove the ingredients.
+
+----------------------------
