@@ -287,3 +287,51 @@ Now I have a generic web method of outputting. Next I'll wor on allowing user to
 add and remove the ingredients.
 
 ----------------------------
+121. Calculating the Ingredient Sum Dynamically
+A list of ingredients starts as an Object which I then transform into an Array.
+Now I set all ingredients to 0 in the Burger.js state and have an empty burger.
+Instead of an empty burger I'd like to show some message like "Please add some
+ingredients!".
+transformedIngredients is always going to be an Array, just an array of empty
+arrays in the end. How to find out if I got ingredients or not?
+I can reduce the transformed ingredients array. For now I console.log(transformedIngredients),
+to have an idea how it looks like. Checking the length doesn't do the trick,
+cause length is 4 empty inner arrays.
+I can flaten this array to make sure, that I pull out the values of inner arrays
+and create 1 array only, which contains all these values.
+I can do that by adding .reduce() to my transformedIngredients logic. .reduce()
+is a built in array function which allows us to transform an array into something
+else. It takes a function as input and this function recieves 2 arguments passed
+in automatically by JavaScript. The previous value (arr) and the current value(el).
+The .reduce() method doesn't only accept the callback here, which is executed on
+every element in this array I return from the .map(), it also accepts an initial
+value - let's say an empty array - so the initial value of the reduced value.
+Of course I want to adjust this reduced value by returning something. And it will
+then loop through all the elements and simply add them to the initial value step by step.
+In .reduce() I want to return the updated value starting with the initial one []
+is then stored in this first argument which I receive in each loop (arr). So array -
+this arr argument is always updated root array, which I want to return in the end.
+So I'll simply arr.concat(el) something to that concat el. This will simply take
+the given element for which I looping and add it to this array. Now I'm getting an
+empty Array [] in console and if I reintroduce an ingredient e.g. cheese: 2, I get
+an array (2) [{...}, {...}] with 2 Objects with type="cheese". This is how I can
+flatten the array.
+CHECK OUT THE DOCUMENTATION ON THESE DEFAULT JS ARRAY FUNCTIONS: .map() and .reduce()
+With that I got an array which is either empty or gets jsx elements and since it might
+be empty I can simpy check if transformedIngredients.length === 0 then I want to
+output a <p>Please start adding ingredients!</p>
+I will therefore convert const transformedIngredients to let transformedIngredients.
+and inside of if statement I'll set transformedIngredients= <p>please...</p>. I still
+output {transformedIngredients} down inside of the <div className={classes.Burger}>.
+    .reduce((arr, el) => {
+      return arr.concat(el);
+    }, []);
+
+    if (transformedIngredients.length === 0 ) {
+      transformedIngredients = <p>Please start adding ingredients!</p>
+    }
+After I update the BurgerBuilder to cheese: 0, I see this message on start adding ings.
+In the next step I'll start adding controls to let the user to add or remove the
+ingredients.
+
+----------------------------
