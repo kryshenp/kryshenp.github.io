@@ -335,3 +335,25 @@ In the next step I'll start adding controls to let the user to add or remove the
 ingredients.
 
 ----------------------------
+122. Adding the Build Control Component
+Now I'd like to add some controls so the user can control which ingredients he
+the burger should have.
+In the Burger folder I'll addd a BuildControls subfolder and BuildControls.js file.
+Build controls will be a functional component - it's a function, which receives
+(props) and which will return some jsx. Import eract, export default.
+I create a <div> which I use to give this area some styling, and inside of this
+div I want to have various build controls. For styling that area I'll create
+BuildControls.css in the same subfolder. It makes sence to outsource the builder
+controls, it's not just 1 button - it's a label and 2 buttons and it's basically
+a reusable UI element, so putting it in its own component makes a lot of sence.
+Inside BuildControls subfolder I'll ad the BuildControl subfolder with BuildControl.js
+and BuildControl.css files.
+BuildControl сomponent will also be a function, will receive props and return some
+jsx. import react and export default buildControl. For styling I'll use <div> as
+a wrapper and inside of it 2 <button>s for MORE and LESS controls. Also I want to
+output label dynamically and I set {props.label} inside of the div. I'll receive a
+prop for this and I'll name it label. I import the classes object from my css file.
+and attach a className to the wrapping and label divs. The next step is create an
+array of such build controls in the BuildControls component.
+
+----------------------------
