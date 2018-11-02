@@ -357,3 +357,30 @@ and attach a className to the wrapping and label divs. The next step is create a
 array of such build controls in the BuildControls component.
 
 ----------------------------
+123. Outputting Multiple Build Controls
+To output build controls I create a constant, not a state, not a property, just
+another constant in BuildControls file, which I name controls. I want to have an
+Array through which I can loop to conviniantly build this controls and render them.
+Inside of an array I want to have a couple of JS objects, each of them should
+have { label: ..., type: ... }, e.g. { label: 'Salad', type: 'salad' },. The types
+btw should meet the types I'm checking for in the BurgerIngredient component in the
+switch statement, with the same casing. Now I have an array of controls, which I can
+use in my buildControls component. To use BuildControls.css class I have to
+import it and assign className to the wrapping <div>. Inside of a <div> i want to
+loop through all the controls and render a buildControl for each of them. Firs I
+have to import BuildControl from BuildControl folder. Then inide of tthe BuildControls
+wrapping <div> I create a loop with the curly braces {} to inline it. Take controls
+constant, which is a part of this file and which I can access here, call .map() and
+map each control (ctrl) - each element of an array into a BuildControl - a self
+closing tag, where I set a key (that's required), the key can be a label, cas it's
+a unique identifier and then also pass label to this BuildControl component.
+    <div className={classes.BuildControls}>
+      {controls.map(ctrl => (
+        <BuildControl key={ctrl.label} label={ctrl.label}/>
+      ))}
+    </div>
+The type will become important later. After I export BuildControls in the
+BurgerBuilder.js I can isert it instead of the placeholder in <Aux>. I have to
+import BuildControls and simply output it instead of the placeholder div as
+<BuildControls />. Now after saving I should see build controls below the burger.
+They are doing nothing yet.
