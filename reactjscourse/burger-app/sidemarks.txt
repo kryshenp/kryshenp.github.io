@@ -357,7 +357,7 @@ and attach a className to the wrapping and label divs. The next step is create a
 array of such build controls in the BuildControls component.
 
 ----------------------------
-123. Outputting Multiple Build Controls
+159. Outputting Multiple Build Controls
 To output build controls I create a constant, not a state, not a property, just
 another constant in BuildControls file, which I name controls. I want to have an
 Array through which I can loop to conviniantly build this controls and render them.
@@ -384,3 +384,104 @@ BurgerBuilder.js I can isert it instead of the placeholder in <Aux>. I have to
 import BuildControls and simply output it instead of the placeholder div as
 <BuildControls />. Now after saving I should see build controls below the burger.
 They are doing nothing yet.
+
+----------------------------
+160. Connecting State to Build Controls
+I'd like to tie up the <BuildControls /> with our real ingredients, so the user can really
+manage the burger on his own. For that I'll create a couple of methods in the BurgerBuilder to
+update the ingredients - to add or remove them.  In the BurgerBuilder below the state I'll add
+2 methods: the addIngredientHandler and removeIngredientHandler. addIngredientHandler will receive
+a type of the ingredient. for which I want to add one. removeIngredientHandler also needs to know for 
+which type I want to remove the ingredient. To add ingredient I first want to know what old 
+ingredient count is, so I'll add the const oldCount and access this.state.ingredients[type] for the 
+given type. Then I'll calculate the updated count const updatedCount which equals the oldCount + 1;
+Now I need to update my ingredients. I'll create a new const updatedIngredients, because as we learned,
+state should be updated in the inmutable way. So I'll create a new JS object, and use the ES6 spread 
+operator {...this.state.ingredients} to distribute the properties of the old ingredients state into the new object,
+I'm creating here. Then I'm taking my updatedIngredients object, access the type, for which I have to update the
+ingredients and set the count - the value, where amount of ingredients = to updatedCount.
+Now I can call this set state to to update my ingredients in my state. 
+addIngredientHandler = (type) => {
+    const oldCount = this.state.ingredients[type];
+    const updatedCount = oldCount + 1; 
+    const updatedIngredients = {
+      ...this.state.ingredients 
+    };
+    updatedIngredients[type] = updatedCount;
+  }
+I also want to want to start keeping track of the price though. So I'll add the total price property
+to my ingredients and let's say the base price for the burger is 4$. totalPrice: 4; 
+Here `updatedIngredients[type] = updatedCount` I want to update this price, so I need to have a mapping of
+which ingredient costs what. For that I'll create a new constant outside of the class, but in the same file,
+which I name const INGREDIENT_PRICES = {
+  salad: 0.5,
+  ...
+}
+Global constant are typically named in all capital characters. INGREDIENT_PRICES is a JS object, where are the 
+prices for ingredients (e.g salad: 0.5). Now I want to update the total price with the price for the type, we added. 
+So priceAddition basically is INGREDIENT_PRICES for a given type. Because, keep in mind we're also using the same types,
+we're using everywhere else in the app: salad, cheese, meat, bacon, with the same casing and so on. So for that type I can
+fetch the price, and since I'm always adding one unit as a time I don't need to multiply this with anything. So I can now take 
+my const oldPrice from this.state.totalPrice; and set the const newPrice equal to oldPrice + priceAddition, with that I can now 
+call this.setState({totalPrice: newPrice, ingredients: updatedIngredients }), and there set totalPrice to the newPrice
+and I can set ingredients equal to updatedIngredients. So this is now a state update I want to do  when the new ingredient has added. 
+Update the ingredients and update the price.
+addIngredientHandler = (type) => {
+    const oldCount = this.state.ingredients[type];
+    const updatedCount = oldCount + 1; 
+    const updatedIngredients = {
+      ...this.state.ingredients 
+    };
+    updatedIngredients[type] = updatedCount;
+    const priceAddition = INGREDIENT_PRICES[type];
+    const oldPrice = this.state.totalPrice;
+    const newPrice = oldPrice + priceAddition;
+    this.setState({totalPrice: newPrice, ingredients: updatedIngredients});
+  }
+  With that let's hook that addIngredientHandler up to the "More" button in our <BuildControls />. To do that I need to pass the 
+  property to the <BuildControls />. There I'll simply add ingredientAdded property, which holds the reference to this addIngredientHandler.
+   <BuildControls
+          ingredientAdded={this.addIngredientHandler} />
+  Now inside of the <BuildControls /> I need to distribute ingredientAdded correctly, so I'll go to the BuildControls.js component, 
+  where I need to pass ingredientAdded to the individual <BuildControl /> I have. We not only have the key and the label, but I also
+  have the "More" button in there. So when "added" or "more" (I can name this props anything I want) clicked, then I want to pass on the
+  props.ingredientAdded, so the property we do recieve in the buildControl is the property I set up in the BuildControls. 
+  <BuildControl
+        key={ctrl.label}
+        label={ctrl.label}
+        added={props.ingredientAdded(ctrl.type)
+  />
+  Now with that in BuildControls I pass it on to the individual BuildControl, so that this BuildControl can call that.
+  However, I also need to of course keep track of which type this BuildControl is of, so which type this BuildControl has. 
+  I do have this type property in the controls array, which we use to create all this controls, so I should also pass the 
+  type to my ingredient: type={ctrl.type} <- of course I could do that, but essentially that's unnecessary extra loop.
+  I would now implement the click listener to the BuildControl, to just return everything back up. So I can just remove 
+  type={ctrl.type} and instead set up ES6 function to added:  added={ () => props.ingredientAdded(ctrl.type)} />, execute
+  props.ingredientAdded, so the function reference will receive in buildControls,  and there simply pass back ctrl.type. 
+  Remember I have access to control type here, cause inside that map loop I'm looping through all the controls, and each control has 
+  a type. 
+  const buildControls = (props) => (
+  <div className={classes.BuildControls}>
+    {controls.map(ctrl => (
+      <BuildControl
+        key={ctrl.label}
+        label={ctrl.label}
+        added={ () => props.ingredientAdded(ctrl.type)} />
+    ))}
+  </div>
+);
+This leads to addIngredientHandler being executed, and there I expect to get a type as an argument, which is why I'm passing 
+(ctrl. type) here added={ () => props.ingredientAdded(ctrl.type)} /> in buildControls. 
+Of course for this to work, the 'added' property, which we're passing to a single BuildControl needs to be connected to the "More" 
+button in the BuildControl.js. So on that buttobn I'll add the onClick listener, and there I access props.added, which should in the end trigger this 
+method:  added={ () => props.ingredientAdded(ctrl.type)} />.  
+const buildControl = ( props ) => (
+  <div className={classes.BuildControl}>
+    <div className={classes.Label}>{props.label}</div>
+    <button className={classes.Less}>Less</button>
+    <button className={classes.More} onClick={props.added}>More</button>
+  </div>
+);
+Now after I save and go to the burger, I'm able to add the ingredients using the More button. 
+
+
