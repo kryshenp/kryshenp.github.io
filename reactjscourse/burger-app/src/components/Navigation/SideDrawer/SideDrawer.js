@@ -1,5 +1,5 @@
 import React from 'react'
-import Aux from '../../../hoc/Aux'
+import Aux from '../../../hoc/Aux/Aux'
 import Logo from '../../Burger/Logo/Logo'
 import Backdrop from '../../UI/Backdrop/Backdrop'
 import NavigationItems from '../NavigationItems/NavigationItems'
