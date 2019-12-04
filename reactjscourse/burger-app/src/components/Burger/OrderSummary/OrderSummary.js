@@ -1,7 +1,6 @@
-import React from 'react';
-
-import Aux from '../../../hoc/Aux';
-import Button from '../../UI/Button/Button';
+import React from 'react'
+import Aux from '../../../hoc/Aux'
+import Button from '../../UI/Button/Button'
 
 const orderSummary = props => {
   const ingredientSummary = Object.keys(props.ingredients).map(igKey => {
@@ -11,8 +10,8 @@ const orderSummary = props => {
           {igKey}: {props.ingredients[igKey]}
         </span>
       </li>
-    );
-  });
+    )
+  })
 
   return (
     <Aux>
@@ -30,7 +29,7 @@ const orderSummary = props => {
         CONTINUE
       </Button>
     </Aux>
-  );
-};
+  )
+}
 
-export default orderSummary;
+export default orderSummary

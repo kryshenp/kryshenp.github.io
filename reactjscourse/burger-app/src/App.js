@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-
-import Layout from './components/Layout/Layout';
-import BurgerBulder from './containers/BurgerBuilder/BurgerBuilder';
+import React, { Component } from 'react'
+import Layout from './components/Layout/Layout'
+import BurgerBulder from './containers/BurgerBuilder/BurgerBuilder'
 
 class App extends Component {
   render() {
@@ -11,8 +10,8 @@ class App extends Component {
           <BurgerBulder />
         </Layout>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

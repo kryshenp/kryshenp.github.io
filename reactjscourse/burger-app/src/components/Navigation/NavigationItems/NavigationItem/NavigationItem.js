@@ -1,6 +1,5 @@
-import React from 'react';
-
-import classes from './NavigationItem.css';
+import React from 'react'
+import classes from './NavigationItem.css'
 
 const navigationItem = props => (
   <li className={classes.NavigationItem}>
@@ -8,6 +7,6 @@ const navigationItem = props => (
       {props.children}
     </a>
   </li>
-);
+)
 
-export default navigationItem;
+export default navigationItem
